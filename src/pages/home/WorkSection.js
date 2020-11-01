@@ -128,7 +128,7 @@ const CarouselCard = ({ item }) => {
               />
             </div>
           </div>
-          <Link href="/portfolio/index">
+          <Link href="/portfolio/PortfolioList">
             <button className={styles["work-button"]}>
               <p
                 className={styles["work-button-text"]}

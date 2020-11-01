@@ -9,15 +9,17 @@ import WorkSection from "./home/WorkSection";
 import Contact from "./home/Contact";
 
 const Home = () => {
+  
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+    });
   }, []);
 
   return (
     <MyLayout
       title="Jia Sheng Yeap"
       keywords="UI Designer and Developer"
-      // description="UI Designer and Developer"
+      description="UI Designer and Developer"
     >
       <LandingSection />
       <About />

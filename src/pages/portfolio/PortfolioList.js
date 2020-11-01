@@ -1,8 +1,9 @@
-import React from "react";
+import { useEffect } from "react";
 import MyLayout from "../../components/MyLayout";
-import styles from "../styles/portfolioindex.module.css";
+import styles from "../styles/PortfolioList.module.css";
 import LazyImage from "../../components/lazy-image";
 import Link from "next/link";
+import AOS from "aos";
 
 // work logo
 import snailer from "../../../public/gif/snailer.gif";
@@ -17,7 +18,12 @@ import urcheckintower from "../../../public/images/UrcheckinTwinTower.png";
 import urcheckinsign from "../../../public/images/UrcheckinRoadSign.png";
 import phone from "../../../public/images/iphonexmock.png";
 
-const Portfolios = () => {
+const PortfolioList = () => {
+  useEffect(() => {
+    AOS.init({
+    });
+  }, []);
+
   const PortfolioList = [
     {
       logo: snailer,
@@ -136,4 +142,4 @@ const Portfolio = ({ item }) => {
   );
 };
 
-export default Portfolios;
+export default PortfolioList;

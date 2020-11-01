@@ -8,7 +8,9 @@ const Navbar = () => {
     <nav>
       <div className={styles["header-container"]}>
         <Link href="/">
-          <div data-aos="zoom-in" data-aos-delay="100">
+          <div 
+          data-aos="zoom-in" data-aos-delay="100"
+          >
             <a className={styles["logo-container"]}>
               <div className={styles["logo-image-wrapper"]}>
                 <img
@@ -24,7 +26,7 @@ const Navbar = () => {
 
         <div className={styles["header-navigation"]}>
           <li>
-            <Link href="/portfolio/index">
+            <Link href="/portfolio/PortfolioList">
               <a className={styles["portfolio-text"]}>Portfolio</a>
             </Link>
           </li>

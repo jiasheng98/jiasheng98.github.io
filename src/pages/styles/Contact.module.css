@@ -1,0 +1,73 @@
+.contact-wrap {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.contact-container {
+  background-color: var(--primarytext);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.contact-header {
+  color: var(--primary);
+  font-family: GothamBold;
+  text-shadow: 4px 3px 3px rgba(206, 89, 55, 0.5);
+  font-size: 7rem;
+  line-height: 1;
+  text-align: center;
+}
+
+#contact {
+  position: relative;
+}
+
+.contact-side-top-right {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.contact-side-bottom-left {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: scaleX(-1) scaleY(-1);
+  transform: scaleX(-1) scaleY(-1);
+}
+
+@media (max-width: 900px) {
+  .contact-container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .contact-header {
+    font-size: 5rem;
+  }
+  .contact-side-top-right {
+    width: 50%;
+    height: 50%;
+  }
+
+  .contact-side-bottom-left {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .contact-header {
+    font-size: 2rem;
+  }
+}

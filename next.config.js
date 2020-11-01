@@ -13,8 +13,9 @@
 //   }
 // };
 
-// const withImages = require("next-images");
-// const withFonts = require("next-fonts");
+const withImages = require("next-images");
+const withFonts = require("next-fonts");
+
 // const withCSS = require("@zeit/next-css");
 // const withPurgeCss = require("next-purgecss");
 
@@ -32,7 +33,13 @@
 
 // module.exports = withImages(withFonts());
 
-module.exports = {
-  poweredByHeader: false,
-  //  compress: false,  //offload compression to NGINX from Node.js on production
-}
+module.exports = withImages(withFonts(
+  {
+    poweredByHeader: false,
+  }
+  ));
+
+// module.exports = {
+//   poweredByHeader: false,
+//   //  compress: false,  //offload compression to NGINX from Node.js on production
+// }

@@ -1,0 +1,122 @@
+.header-container {
+  background-color: var(--primary);
+  height: 100px;
+  display: flex;
+  padding: 0 3rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+.logo-container:focus,
+.logo-container:hover {
+  text-decoration: none;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.logo-container:active {
+  transform: scale(1);
+}
+
+.logo-image-wrapper {
+  width: 5rem;
+  height: 4rem;
+}
+
+.logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo-name {
+  margin-left: 10px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.logo-name:focus,
+.logo-name:hover {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.header-navigation {
+  display: flex;
+  list-style: none;
+}
+
+.resume-style {
+  border: 1px solid var(--primarytext);
+  margin-left: 2rem;
+}
+
+.resume-text {
+  font-size: 12px;
+  display: block;
+  padding: 1rem 1.5rem;
+  color: var(--primarytext);
+  text-align: center;
+  align-self: center;
+  font-family: Gotham;
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in-out;
+}
+
+.resume-text:focus,
+.resume-text:hover {
+  color: var(--primary);
+  background-color: var(--primarytext);
+  text-decoration: none;
+  transform: scale(1);
+}
+
+.resumeText:active {
+  transform: scale(1);
+}
+
+.portfolio-text {
+  font-size: 12px;
+  display: block;
+  padding: 1rem 1.5rem;
+  color: var(--primarytext);
+  text-align: center;
+  align-self: center;
+  font-family: Gotham;
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in-out;
+}
+
+.portfolio-text:focus,
+.portfolio-text:hover {
+  text-decoration: none;
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .header-navigation {
+    display: none;
+  }
+  .header-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-image-wrapper {
+    width: 3rem;
+    height: 4rem;
+  }
+  .logo-name {
+    font-size: 0.8rem;
+  }
+}

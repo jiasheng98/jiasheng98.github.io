@@ -1,11 +1,30 @@
-import Layout from '../components/layout';
+import { useEffect } from "react";
+import AOS from "aos";
+import MyLayout from "../components/MyLayout.js";
 
-const Index = props => {
+// Screens
+import LandingSection from "./home/LandingSection";
+import About from "./home/About";
+import WorkSection from "./home/WorkSection";
+import Contact from "./home/Contact";
+
+const Home = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <Layout>
-      <p>Hello Next.js</p>
-    </Layout>
+    <MyLayout
+      title="Jia Sheng Yeap"
+      keywords="UI Designer and Developer"
+      // description="UI Designer and Developer"
+    >
+      <LandingSection />
+      <About />
+      <WorkSection />
+      <Contact />
+    </MyLayout>
   );
 };
 
-export default Index
+export default Home;

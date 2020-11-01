@@ -1,0 +1,238 @@
+/* Working-Card */
+.work-section {
+  padding: 5rem 5rem;
+}
+
+.work-card-container {
+  margin: auto;
+  border-radius: 5px;
+  width: 95%;
+  height: 500px;
+  display: flex;
+}
+
+.work-card-body {
+  padding: 0rem 2rem 1rem;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.work-title-row {
+  display: flex;
+  align-items: center;
+}
+
+.work-gif-logo {
+  width: 150px;
+  height: 150px;
+  margin-right: 2rem;
+  object-fit: contain;
+}
+
+.work-card-title {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: GothamBold;
+  color: var(--white);
+  margin-bottom: 0;
+}
+
+.work-card-subtitle {
+  font-weight: bold;
+  font-family: Gotham;
+  color: var(--white);
+  line-height: 2rem;
+  width: 73%;
+}
+
+.work-card-image-1 {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.work-card-image-wrapper {
+  width: 100%;
+  height: 200px;
+}
+
+.work-card-image-container {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 3rem;
+  margin-right: 3rem;
+  z-index: -1;
+  width: 70%;
+}
+
+.work-button-text {
+  margin-bottom: 0;
+  padding: 1rem 1rem;
+  font-family: Gotham;
+  letter-spacing: 1px;
+}
+
+.work-button {
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  width: 74%;
+}
+
+.work-button:focus {
+  outline: none;
+}
+
+.work-button:hover {
+  transform: scale(1.02);
+}
+
+.work-button:active {
+  transform: scale(1);
+}
+
+.work-card-phone {
+  height: 550px;
+  width: 550px;
+  position: absolute;
+  top: -25px;
+  right: -10rem;
+  z-index: 1;
+}
+
+.work-card-phone-image {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 1250px) {
+  .work-card-body {
+    padding: 1rem 2rem 1rem;
+  }
+  .work-card-phone {
+    height: 400px;
+    width: 400px;
+    top: 0.5rem;
+    right: -4rem;
+  }
+  .work-card-image-container {
+    width: 60%;
+    margin-bottom: 2rem;
+    margin-right: 3rem;
+  }
+  .work-button {
+    width: 100%;
+  }
+  .work-card-subtitle {
+    width: 66%;
+    font-size: 0.8rem;
+  }
+  .work-gif-logo {
+    width: 100px;
+    height: 100px;
+  }
+  .work-card-title {
+    font-size: 2rem;
+  }
+  .work-section {
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .work-card-phone {
+    height: 350px;
+    width: 350px;
+    top: 0.5rem;
+    right: -4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-card-phone {
+    display: none;
+  }
+  .work-card-image-container {
+    width: 80%;
+  }
+  .work-card-subtitle {
+    width: 100%;
+  }
+  .work-gif-logo {
+    width: 100px;
+    height: 100px;
+  }
+  .work-card-title {
+    font-size: 1.5rem;
+  }
+  .work-card-container {
+    height: 450px;
+    margin: 3rem auto;
+  }
+  .my-work-header {
+    font-size: 2rem;
+  }
+  .work-section {
+    padding: 0.1rem 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .work-card-phone {
+    display: none;
+  }
+  .work-card-image-container {
+    width: 80%;
+  }
+  .work-card-subtitle {
+    width: 100%;
+    font-size: 0.5rem;
+    line-height: 1.3rem;
+    text-align: justify;
+    margin-top: 0.5rem;
+  }
+  .work-gif-logo {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+  }
+  .work-card-title {
+    font-size: 1rem;
+  }
+  .work-card-container {
+    height: 370px;
+    margin: 2rem auto;
+  }
+  .work-title-row {
+    flex-direction: column;
+  }
+  .work-card-body {
+    padding: 0rem 1rem 1rem;
+  }
+  .work-button-text {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.6rem;
+  }
+  .work-card-image-container {
+    width: 85%;
+    margin-bottom: -0.5rem;
+    margin-right: 0rem;
+    height: 200px;
+  }
+  .my-work-header {
+    font-size: 1.5rem;
+  }
+  .work-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}

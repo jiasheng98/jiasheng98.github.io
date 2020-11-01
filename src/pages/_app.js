@@ -3,7 +3,7 @@ import {store, persistor} from '../state/redux/store';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
 
-export default ({Component, pageProps}) => {
+export default function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>

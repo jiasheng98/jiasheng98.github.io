@@ -1,0 +1,27 @@
+.landing-section-container {
+    height: 750px;
+    display: flex;
+    padding: 3rem;
+    justify-content: center;
+}
+
+.image-container {
+    height: 100%;
+    object-fit: contain;
+}
+
+.description-section-container {
+    background-color: var(--white);
+    height: 750px;
+}
+
+.description-wrapper {
+    padding: 5rem;
+    margin: auto;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.title-text {
+    font-family: GothamBold;
+}

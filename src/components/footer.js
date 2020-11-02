@@ -1,9 +1,9 @@
-import styles from "./styles/footer.module.css";
+import styles from './styles/footer.module.css';
 
 const Footer = () => {
   return (
-    <footer className={styles["footer-container"]}>
-      <h6 className={styles["footer-text"]}>
+    <footer className={styles['footer-container']}>
+      <h6 className={styles['footer-text']}>
         Copyright © 2020 Jia Sheng. All Rights Reserved.
       </h6>
     </footer>

@@ -1,6 +1,7 @@
-import { useEffect } from "react";
-import AOS from "aos";
-import MyLayout from "../../components/MyLayout";
+import {useEffect} from 'react';
+import AOS from 'aos';
+import MyLayout from '../../components/MyLayout';
+import ProjectDetail from '../../components/ProjectDetail';
 
 const Snailer = () => {
   useEffect(() => {
@@ -9,11 +10,7 @@ const Snailer = () => {
 
   return (
     <MyLayout title="Snailer">
-      <div>
-        <p>
-          hi
-        </p>
-      </div>
+      <ProjectDetail />
     </MyLayout>
   );
 };

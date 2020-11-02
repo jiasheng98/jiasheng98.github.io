@@ -1,10 +1,10 @@
-import Header from "./Header";
-import Footer from "./Footer";
-import Head from "next/head";
+import Header from './Header';
+import Footer from './Footer';
+import Head from 'next/head';
 
 export default function Layout({
   children,
-  title = "Jia Sheng Yeap",
+  title = 'Jia Sheng Yeap',
   description,
   keywords,
   ld_json,
@@ -17,7 +17,7 @@ export default function Layout({
         <meta name="keywords" content={keywords} />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(ld_json) }}
+          dangerouslySetInnerHTML={{__html: JSON.stringify(ld_json)}}
         />
       </Head>
       <Header />

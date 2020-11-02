@@ -35,6 +35,7 @@ const PortfolioList = () => {
       image1: snailerfood,
       image2: snailergrocery,
       image3: snailercar,
+      href: "/index"
     },
     {
       logo: urcheckin,
@@ -46,6 +47,7 @@ const PortfolioList = () => {
       image1: urcheckinsign,
       image2: urcheckinwalau,
       image3: urcheckintower,
+      href: "/index"
     },
   ];
 
@@ -115,7 +117,7 @@ const Portfolio = ({ item }) => {
                 />
               </div>
             </div>
-            <Link href="/index">
+            <Link href={item.href}>
               <button className={styles["work-button"]}>
                 <p
                   className={styles["work-button-text"]}

@@ -8,7 +8,7 @@ const Urcheckin = () => {
   });
 
   return (
-    <MyLayout title="CW Rewards">
+    <MyLayout title="Urcheckin">
       <div>
         <p>
           hi

@@ -1,12 +1,31 @@
+import {useState} from 'react';
 import Link from "next/link";
 import Logo from "../../public/Logo.png";
-
+import HamburgerMenu from 'react-hamburger-menu';
 import styles from "./styles/Header.module.css";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = (params) => {
+    setOpen((prev) => !prev);
+  };
+
   return (
     <nav>
       <div className={styles["header-container"]}>
+      <HamburgerMenu
+          isOpen={open}
+          menuClicked={handleOpen}
+          width={18}
+          height={15}
+          strokeWidth={1}
+          rotate={0}
+          color='var(--primarytext)'
+          borderRadius={0}
+          animationDuration={0.5}
+          className={styles['hamburger-menu']}
+        />
         <Link href="/">
           <div 
           data-aos="zoom-in" data-aos-delay="100"

@@ -8,7 +8,7 @@ const Snailer = () => {
   });
 
   return (
-    <MyLayout title="CW Rewards">
+    <MyLayout title="Snailer">
       <div>
         <p>
           hi

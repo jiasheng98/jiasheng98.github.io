@@ -30,7 +30,7 @@ const WorkSection = () => {
       image1: snailerfood,
       image2: snailergrocery,
       image3: snailercar,
-      href: "/portfolio/PortfolioList"
+      href: "/portfolio/Snailer"
     },
     {
       logo: urcheckin,
@@ -42,7 +42,7 @@ const WorkSection = () => {
       image1: urcheckinsign,
       image2: urcheckinwalau,
       image3: urcheckintower,
-      href: "/portfolio/PortfolioList"
+      href: "/portfolio/Urcheckin"
     },
   ];
 

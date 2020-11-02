@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import MyLayout from "../../components/MyLayout";
 
-const Urcheckin = () => {
+const Snailer = () => {
   useEffect(() => {
     AOS.init();
   });
@@ -18,4 +18,4 @@ const Urcheckin = () => {
   );
 };
 
-export default Urcheckin;
+export default Snailer;

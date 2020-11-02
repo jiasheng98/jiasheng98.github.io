@@ -35,7 +35,7 @@ const PortfolioList = () => {
       image1: snailerfood,
       image2: snailergrocery,
       image3: snailercar,
-      href: "/index"
+      href: "/portfolio/Snailer"
     },
     {
       logo: urcheckin,
@@ -47,7 +47,7 @@ const PortfolioList = () => {
       image1: urcheckinsign,
       image2: urcheckinwalau,
       image3: urcheckintower,
-      href: "/index"
+      href: "/portfolio/Urcheckin"
     },
   ];
 

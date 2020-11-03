@@ -1,27 +1,14 @@
 import styles from './styles/ProjectDetail.module.css';
 
-import phone from '../../public/images/iphonexmock.png';
+// Assets
+import appstore from '../../public/images/appstore.png';
+import playstore from '../../public/images/playstore.png';
 
-const ProjectDetail = () => {
-  const PortfolioList = {
-    title: 'Snailer',
-    projectdescription:
-      'Snailer is a mobile application and website for food/grocery delivery and vehicle hiring services.',
-    projectdescription1:
-      'There are total 3 apps and 1 website, mainly Consumer App, Rider App, Merchant App and Snailer Landing Page. The apps and website are designed using playful, clean and modern approach.',
-    backgroundColor: '#22c639',
-    landingimage: phone,
-    href: '/portfolio/Snailer',
-    role: 'UI/UX Designer, UI Developer',
-    roledescription:
-      'Interaction, Visual design, Prototyping, Wireframe, Testing and Copywriting',
-    projectdate: 'July - December 2020',
-  };
-
+const ProjectDetail = ({item, data, website}) => {
   return (
     <>
-      <LandingSection item={PortfolioList} />
-      <DescriptionSection item={PortfolioList} />
+      <LandingSection item={item} />
+      <DescriptionSection item={item} data={data} website={website} />
     </>
   );
 };
@@ -36,7 +23,7 @@ const LandingSection = ({item}) => {
   );
 };
 
-const DescriptionSection = ({item}) => {
+const DescriptionSection = ({item, data, website}) => {
   return (
     <div className={styles['description-section-container']}>
       <div className={styles['description-wrapper']}>
@@ -54,39 +41,52 @@ const DescriptionSection = ({item}) => {
             <p>{item.projectdate}</p>
           </div>
         </div>
-        <div className={styles['button-container']}>
-          <a
-            style={{backgroundColor: item.backgroundColor}}
-            className={styles['prototype-button']}
-            href="/">
-            <div>
-              <p>See Prototype (Consumer)</p>
+        {item.prototype === true ? (
+          <div className={styles['button-container']}>
+            {data.map((data) => {
+              return (
+                <a
+                  style={{backgroundColor: item.backgroundColor}}
+                  className={styles['prototype-button']}
+                  target="_BLANK"
+                  href={data.href}>
+                  <div>
+                    <p>See Prototype ({data.label})</p>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+        ) : null}
+        <div className={styles['button-container-app']}>
+          <a 
+          href={item.appstorelink}
+          target="_BLANK"
+          className={styles['prototype-button']}>
+            <div className={styles['app-button-container']}>
+              <img className={styles['app-button']} src={appstore} />
             </div>
           </a>
-          <a
-            style={{backgroundColor: item.backgroundColor}}
-            className={styles['prototype-button']}
-            href="/">
-            <div>
-              <p>See Prototype (Rider)</p>
+          <a 
+          href={item.playstorelink}
+          target="_BLANK"
+          className={styles['prototype-button']}>
+            <div className={styles['app-button-container']}>
+              <img className={styles['app-button']} src={playstore} />
             </div>
           </a>
+          {website.map((website) => {
+              return (
           <a
-            style={{backgroundColor: item.backgroundColor}}
-            className={styles['prototype-button']}
-            href="/">
+            className={styles['website-button']}
+            href={website.href}
+            target="_BLANK">
             <div>
-              <p>See Prototype (Merchant)</p>
+              <p>See Website ({website.label})</p>
             </div>
           </a>
-          <a
-            style={{backgroundColor: item.backgroundColor}}
-            className={styles['prototype-button']}
-            href="/">
-            <div>
-              <p>See Prototype (Landing Page)</p>
-            </div>
-          </a>
+                   );
+                  })}
         </div>
       </div>
     </div>

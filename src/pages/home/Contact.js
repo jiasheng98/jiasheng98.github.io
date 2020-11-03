@@ -16,8 +16,8 @@ const Contact = () => {
         data-aos-delay="200"
       >
         <div>
-          <p className={styles["contact-header"]}>Want More?</p>
-          <p className={styles["contact-header"]}>Want Me?</p>
+          <p className={styles["contact-header"]}>Let's Connect!</p>
+          {/* <p className={styles["contact-header"]}>Want Me?</p> */}
         </div>
       </div>
     </section>

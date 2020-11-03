@@ -65,3 +65,59 @@
 .prototype-button:active {
     transform: scale(1);
 }
+
+.app-button-container {
+    height: 78px;
+    width: 256px;
+}
+
+.app-button {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    transition: all 0.2s ease-in-out;
+}
+
+.app-button:focus,
+.app-button:hover {
+    text-decoration: none;
+    color: var(--white);
+    transform: scale(1.05);
+}
+
+.app-button:active {
+    transform: scale(1);
+}
+
+.app-button-container {
+    display: flex;
+    margin-top: 0rem;
+}
+
+.button-container-app {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.website-button {
+    text-decoration: none;
+    border-radius: 5px;
+    color: var(--white);
+    background-color: var(--black);
+    padding: 1rem;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.9rem;
+    margin-top: 1.2rem;
+    transition: all 0.2s ease-in-out;
+    margin-left: 1rem;
+}
+
+.website-button:focus,
+.website-button:hover {
+    text-decoration: none;
+    color: var(--white);
+    transform: scale(1.05);
+}

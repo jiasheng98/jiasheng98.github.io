@@ -52,4 +52,16 @@
     justify-content: center;
     align-items: center;
     margin-right: 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.prototype-button:focus,
+.prototype-button:hover {
+    text-decoration: none;
+    color: var(--white);
+    transform: scale(1.05);
+}
+
+.prototype-button:active {
+    transform: scale(1);
 }

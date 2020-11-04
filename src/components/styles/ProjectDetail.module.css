@@ -46,6 +46,7 @@
     text-decoration: none;
     border-radius: 5px;
     color: var(--white);
+    text-align: center;
     padding: 1rem;
     padding-bottom: 0;
     display: flex;
@@ -102,6 +103,7 @@
 .website-button {
     text-decoration: none;
     border-radius: 5px;
+    text-align: center;
     color: var(--white);
     background-color: var(--black);
     padding: 1rem;
@@ -120,4 +122,17 @@
     text-decoration: none;
     color: var(--white);
     transform: scale(1.05);
+}
+
+@media (max-width: 1200px) {
+    .app-button-container {
+        height: 50px;
+        width: 150px;
+    }
+    .website-button {
+        font-size: 0.8rem;
+    }
+    .prototype-button {
+        font-size: 0.8rem;
+    }    
 }

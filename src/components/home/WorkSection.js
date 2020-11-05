@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Carousel from "react-bootstrap/Carousel";
-import LazyImage from "../../components/lazy-image";
+import LazyImage from "../lazy-image";
 
 import styles from "../styles/WorkSection.module.css";
 

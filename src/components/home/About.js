@@ -1,4 +1,4 @@
-import LazyImage from "../../components/lazy-image";
+import LazyImage from "../lazy-image";
 import Tilt from "react-parallax-tilt";
 
 import styles from "../styles/About.module.css";

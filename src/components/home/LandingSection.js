@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import Tilt from "react-parallax-tilt";
-import LazyImage from "../../components/lazy-image";
+import LazyImage from "../lazy-image";
 import Typed from "typed.js";
 
 import styles from "../styles/LandingSection.module.css";

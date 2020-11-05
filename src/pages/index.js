@@ -3,10 +3,10 @@ import AOS from "aos";
 import MyLayout from "../components/MyLayout.js";
 
 // Screens
-import LandingSection from "./home/LandingSection";
-import About from "./home/About";
-import WorkSection from "./home/WorkSection";
-import Contact from "./home/Contact";
+import LandingSection from "../components/home/LandingSection";
+import About from "../components/home/About";
+import WorkSection from "../components/home/WorkSection";
+import Contact from "../components/home/Contact";
 
 const Home = () => {
   

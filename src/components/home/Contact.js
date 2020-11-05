@@ -1,4 +1,4 @@
-import LazyImage from "../../components/lazy-image";
+import LazyImage from "../lazy-image";
 
 import styles from "../styles/Contact.module.css";
 

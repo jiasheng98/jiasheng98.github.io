@@ -59,34 +59,34 @@ const DescriptionSection = ({item, data, website}) => {
           </div>
         ) : null}
         <div className={styles['button-container-app']}>
-          <a 
-          href={item.appstorelink}
-          target="_BLANK"
-          className={styles['prototype-button']}>
+          <a
+            href={item.appstorelink}
+            target="_BLANK"
+            className={styles['prototype-button']}>
             <div className={styles['app-button-container']}>
               <img className={styles['app-button']} src={appstore} />
             </div>
           </a>
-          <a 
-          href={item.playstorelink}
-          target="_BLANK"
-          className={styles['prototype-button']}>
+          <a
+            href={item.playstorelink}
+            target="_BLANK"
+            className={styles['prototype-button']}>
             <div className={styles['app-button-container']}>
               <img className={styles['app-button']} src={playstore} />
             </div>
           </a>
           {website.map((website) => {
-              return (
-          <a
-            className={styles['website-button']}
-            href={website.href}
-            target="_BLANK">
-            <div>
-              <p>See Website ({website.label})</p>
-            </div>
-          </a>
-                   );
-                  })}
+            return (
+              <a
+                className={styles['website-button']}
+                href={website.href}
+                target="_BLANK">
+                <div>
+                  <p>See Website ({website.label})</p>
+                </div>
+              </a>
+            );
+          })}
         </div>
       </div>
     </div>

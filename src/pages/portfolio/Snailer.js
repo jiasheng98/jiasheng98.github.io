@@ -11,8 +11,7 @@ const Snailer = () => {
     AOS.init();
   });
 
-  const PortfolioList = 
-    {
+  const PortfolioList = {
     title: 'Snailer',
     projectdescription:
       'Snailer is a mobile application and website for food/grocery delivery and vehicle hiring services.',
@@ -30,37 +29,32 @@ const Snailer = () => {
   const Data = [
     {
       label: 'Consumer',
-      href: '/index'
+      href: '/index',
     },
     {
       label: 'Merchant',
-      href: '/index'
+      href: '/index',
     },
     {
       label: 'Rider',
-      href: '/index'
+      href: '/index',
     },
     {
       label: 'Landing Page',
-      href: '/index'
-    }
-  ]
+      href: '/index',
+    },
+  ];
 
   const Website = [
     {
       label: 'Landing Page',
-      href: 'http://thesnailer.com/'
+      href: 'http://thesnailer.com/',
     },
-  ]
-
+  ];
 
   return (
     <MyLayout title="Snailer">
-      <ProjectDetail
-      item={PortfolioList}
-      data={Data}
-      website={Website}
-      />
+      <ProjectDetail item={PortfolioList} data={Data} website={Website} />
     </MyLayout>
   );
 };

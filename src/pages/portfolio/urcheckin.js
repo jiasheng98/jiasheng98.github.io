@@ -11,8 +11,7 @@ const Urcheckin = () => {
     AOS.init();
   });
 
-  const PortfolioList = 
-  {
+  const PortfolioList = {
     title: 'Urcheckin',
     projectdescription:
       'Urcheckin is a lodging app which offers arrangement for vacation rental, primarily homestays, or tourism experiences.',
@@ -25,27 +24,24 @@ const Urcheckin = () => {
       'UI developing, UI testing, Fixing Bug, Implement Responsive Design',
     projectdate: 'June - August 2020',
     appstorelink: 'https://apps.apple.com/us/app/urcheckin/id1507771058',
-    playstorelink: 'https://play.google.com/store/apps/details?id=com.urcheckin.beta'
+    playstorelink:
+      'https://play.google.com/store/apps/details?id=com.urcheckin.beta',
   };
 
   const Website = [
     {
       label: 'Consumer',
-      href: 'https://urcheckin.com/'
+      href: 'https://urcheckin.com/',
     },
     {
       label: 'Merchant',
-      href: 'https://host.urcheckin.com/signIn'
+      href: 'https://host.urcheckin.com/signIn',
     },
-  ]
-
+  ];
 
   return (
     <MyLayout title="Urcheckin">
-   <ProjectDetail 
-   item={PortfolioList}
-   website={Website}
-   />
+      <ProjectDetail item={PortfolioList} website={Website} />
     </MyLayout>
   );
 };

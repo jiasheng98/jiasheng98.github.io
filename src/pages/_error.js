@@ -19,13 +19,13 @@ import Error from 'next/error';
 import fetch from 'isomorphic-unfetch';
 
 const Page = ({errorCode, stars}) => {
-  console.log("Page -> errorCode", errorCode)
+  console.log('Page -> errorCode', errorCode);
   if (errorCode) {
     return <Error statusCode={errorCode} />;
   }
 
   if (errorCode == 404) return <div>404 Error page</div>;
-  return <div>{errorCode}</div>
+  return <div>{errorCode}</div>;
 };
 
 Page.getInitialProps = async () => {

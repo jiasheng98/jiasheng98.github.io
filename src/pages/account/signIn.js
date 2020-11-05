@@ -1,8 +1,7 @@
 import Layout from '../../components/layout';
-import { handleSignIn } from '../../services/auth';
+import {handleSignIn} from '../../services/auth';
 
 const SignIn = ({message}) => {
-
   return (
     <Layout>
       <p>Sign In Page</p>
@@ -11,5 +10,4 @@ const SignIn = ({message}) => {
   );
 };
 
-export default SignIn
-
+export default SignIn;

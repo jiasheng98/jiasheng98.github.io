@@ -1,9 +1,9 @@
-import Layout from "../../components/layout";
+import Layout from '../../components/layout';
 
-import { redirectOnAuthError, checkAuthReturnData } from "../../services/auth";
-import { isomorphicUnfetchData } from "../../services/api";
+import {redirectOnAuthError, checkAuthReturnData} from '../../services/auth';
+import {isomorphicUnfetchData} from '../../services/api';
 
-const Index = props => {
+const Index = (props) => {
   return (
     <Layout>
       <p>This is restricted page for signed in user</p>
@@ -12,10 +12,10 @@ const Index = props => {
   );
 };
 
-Index.getInitialProps = async ({ req, res }) => {
+Index.getInitialProps = async ({req, res}) => {
   try {
-    const api_res = await isomorphicUnfetchData({ req, route: 'api' });
-    return await checkAuthReturnData({ api_res, res });
+    const api_res = await isomorphicUnfetchData({req, route: 'api'});
+    return await checkAuthReturnData({api_res, res});
   } catch (error) {
     // Implementation or Network error
     return redirectOnAuthError(res);

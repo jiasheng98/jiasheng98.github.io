@@ -1,22 +1,21 @@
-import LazyImage from "../lazy-image";
+import LazyImage from '../lazy-image';
 
-import styles from "../styles/Contact.module.css";
+import styles from '../styles/Contact.module.css';
 
 //Assets
-import side1 from "../../../public/images/side1.png";
+import side1 from '../../../public/images/side1.png';
 
 const Contact = () => {
   return (
-    <section className={styles["contact-container"]} id={styles["contact"]}>
-      <LazyImage src={side1} className={styles["contact-side-top-right"]} />
-      <LazyImage src={side1} className={styles["contact-side-bottom-left"]} />
+    <section className={styles['contact-container']} id={styles['contact']}>
+      <LazyImage src={side1} className={styles['contact-side-top-right']} />
+      <LazyImage src={side1} className={styles['contact-side-bottom-left']} />
       <div
-        className={styles["contact-wrap"]}
+        className={styles['contact-wrap']}
         data-aos="fade-up"
-        data-aos-delay="200"
-      >
+        data-aos-delay="200">
         <div>
-          <p className={styles["contact-header"]}>Let's Connect!</p>
+          <p className={styles['contact-header']}>Let's Connect!</p>
           {/* <p className={styles["contact-header"]}>Want Me?</p> */}
         </div>
       </div>

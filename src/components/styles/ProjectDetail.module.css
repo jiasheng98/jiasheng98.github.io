@@ -1,138 +1,138 @@
 .landing-section-container {
-    height: 750px;
-    display: flex;
-    padding: 3rem;
-    justify-content: center;
+  height: 750px;
+  display: flex;
+  padding: 3rem;
+  justify-content: center;
 }
 
 .image-container {
-    height: 100%;
-    object-fit: contain;
+  height: 100%;
+  object-fit: contain;
 }
 
 .description-section-container {
-    background-color: var(--white);
-    padding: 0;
+  background-color: var(--white);
+  padding: 0;
 }
 
 .description-wrapper {
-    padding: 7rem 5rem 9rem 5rem;
-    margin: auto;
-    max-width: 1400px;
+  padding: 7rem 5rem 9rem 5rem;
+  margin: auto;
+  max-width: 1400px;
 }
 
 .title-text {
-    font-family: GothamBold;
+  font-family: GothamBold;
 }
 
 .description-subtitle {
-    display: grid;
-    grid-template-columns: 1fr 0.8fr;
-    grid-column-gap: 5rem;
-    margin-top: 4rem;
-    line-height: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  grid-column-gap: 5rem;
+  margin-top: 4rem;
+  line-height: 2rem;
 }
 
 .role-title {
-    font-family: GothamBold;
+  font-family: GothamBold;
 }
 
 .button-container {
-    display: flex;
-    margin-top: 4rem;
+  display: flex;
+  margin-top: 4rem;
 }
 
 .prototype-button {
-    text-decoration: none;
-    border-radius: 5px;
-    color: var(--white);
-    text-align: center;
-    padding: 1rem;
-    padding-bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 1rem;
-    transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  border-radius: 5px;
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+  transition: all 0.2s ease-in-out;
 }
 
 .prototype-button:focus,
 .prototype-button:hover {
-    text-decoration: none;
-    color: var(--white);
-    transform: scale(1.05);
+  text-decoration: none;
+  color: var(--white);
+  transform: scale(1.05);
 }
 
 .prototype-button:active {
-    transform: scale(1);
+  transform: scale(1);
 }
 
 .app-button-container {
-    height: 78px;
-    width: 256px;
+  height: 78px;
+  width: 256px;
 }
 
 .app-button {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-    transition: all 0.2s ease-in-out;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  transition: all 0.2s ease-in-out;
 }
 
 .app-button:focus,
 .app-button:hover {
-    text-decoration: none;
-    color: var(--white);
-    transform: scale(1.05);
+  text-decoration: none;
+  color: var(--white);
+  transform: scale(1.05);
 }
 
 .app-button:active {
-    transform: scale(1);
+  transform: scale(1);
 }
 
 .app-button-container {
-    display: flex;
-    margin-top: 0rem;
+  display: flex;
+  margin-top: 0rem;
 }
 
 .button-container-app {
-    display: flex;
-    margin-top: 2rem;
+  display: flex;
+  margin-top: 2rem;
 }
 
 .website-button {
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    color: var(--white);
-    background-color: var(--black);
-    padding: 1rem;
-    padding-bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 1.9rem;
-    margin-top: 1.2rem;
-    transition: all 0.2s ease-in-out;
-    margin-left: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--black);
+  padding: 1rem;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.9rem;
+  margin-top: 1.2rem;
+  transition: all 0.2s ease-in-out;
+  margin-left: 1rem;
 }
 
 .website-button:focus,
 .website-button:hover {
-    text-decoration: none;
-    color: var(--white);
-    transform: scale(1.05);
+  text-decoration: none;
+  color: var(--white);
+  transform: scale(1.05);
 }
 
 @media (max-width: 1200px) {
-    .app-button-container {
-        height: 50px;
-        width: 150px;
-    }
-    .website-button {
-        font-size: 0.8rem;
-    }
-    .prototype-button {
-        font-size: 0.8rem;
-    }    
+  .app-button-container {
+    height: 50px;
+    width: 150px;
+  }
+  .website-button {
+    font-size: 0.8rem;
+  }
+  .prototype-button {
+    font-size: 0.8rem;
+  }
 }

@@ -1,23 +1,16 @@
-import "aos/dist/aos.css"; //index.js
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/fonts/slick.ttf";
-import "slick-carousel/slick/fonts/slick.woff";
-import stylesheet from "../../public/styles.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import {store, persistor} from '../state/redux/store';
-import {Provider} from 'react-redux';
-import {PersistGate} from 'redux-persist/integration/react';
+import 'aos/dist/aos.css'; //index.js
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/fonts/slick.ttf';
+import 'slick-carousel/slick/fonts/slick.woff';
+import stylesheet from '../../public/styles.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function MyApp({ Component, pageProps }) {
-  return (
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <Component {...pageProps} />
-      </PersistGate>
-    </Provider>
-  );
+const JiaSheng = ({Component, pageProps}) => {
+  return <Component {...pageProps} />;
 };
+
+export default JiaSheng;
 
 // Only uncomment this method if you have blocking data requirements for
 // every single page in your application. This disables the ability to

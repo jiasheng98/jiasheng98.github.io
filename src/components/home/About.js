@@ -42,7 +42,8 @@ const AboutRightSection = () => {
       <h2 className={styles['about-header']}>Hey There!</h2>
       <h2 className={styles['about-subhead']}>I'm Yeap Jia Sheng</h2>
       <p className={styles['about-right-content']}>
-        I am a UI/UX Designer and Developer focused on creating user-centric
+        I am currently a Creative Lead in TTRacing.
+        I am also a UI/UX Designer and Developer focused on creating user-centric
         experiences and aesthetic visuals. I have a strong passion for Web
         Design, UI/UX Design, Illustration, Motion Graphics, and Animation. I
         pay attention to details and put priority on overall UI design

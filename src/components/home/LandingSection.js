@@ -11,7 +11,7 @@ import imac from '../../../public/images/imacmock.png';
 const LandingSection = () => {
   useEffect(() => {
     const options = {
-      strings: ['Jia Sheng', 'UI Designer', 'UI Developer'],
+      strings: ['Jia Sheng', 'UI Designer', 'UI Developer', 'Creative Lead'],
       typeSpeed: 100,
       backSpeed: 100,
       loop: true,

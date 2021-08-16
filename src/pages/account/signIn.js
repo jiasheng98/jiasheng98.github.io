@@ -1,4 +1,4 @@
-import Layout from '../../components/layout';
+import Layout from '../../components/MyLayout';
 import {handleSignIn} from '../../services/auth';
 
 const SignIn = ({message}) => {

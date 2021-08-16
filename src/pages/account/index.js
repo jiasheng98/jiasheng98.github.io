@@ -1,4 +1,4 @@
-import Layout from '../../components/layout';
+import Layout from '../../components/MyLayout';
 
 import {redirectOnAuthError, checkAuthReturnData} from '../../services/auth';
 import {isomorphicUnfetchData} from '../../services/api';

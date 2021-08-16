@@ -6,7 +6,7 @@ import Link from 'next/link';
 import AOS from 'aos';
 
 // work logo
-import snailer from '../../../public/gif/snailer.gif';
+import snailer from '../../../public/gif/Snailer.gif';
 import urcheckin from '../../../public/images/urcheckin-logo.png';
 
 // work images

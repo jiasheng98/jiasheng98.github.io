@@ -8,7 +8,7 @@ import About from '../components/home/About';
 import WorkSection from '../components/home/WorkSection';
 import Contact from '../components/home/Contact';
 
-const prefix = '/index';
+const prefix = '/jiasheng98.github.io';
 
 const Home = () => {
   useEffect(() => {

@@ -8,8 +8,6 @@ import About from '../components/home/About';
 import WorkSection from '../components/home/WorkSection';
 import Contact from '../components/home/Contact';
 
-const prefix = '/jiasheng98.github.io';
-
 const Home = () => {
   useEffect(() => {
     AOS.init({});

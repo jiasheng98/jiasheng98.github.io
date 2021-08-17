@@ -13,14 +13,12 @@ const ProjectDetail = ({item, data, website}) => {
   );
 };
 
-const prefix = '/jiasheng98.github.io';
-
 const LandingSection = ({item}) => {
   return (
     <div
       className={styles['landing-section-container']}
       style={{backgroundColor: item.backgroundColor}}>
-      <img src={prefix + item.landingimage} className={styles['image-container']} />
+      <img src={item.landingimage} className={styles['image-container']} />
     </div>
   );
 };
@@ -66,7 +64,7 @@ const DescriptionSection = ({item, data, website}) => {
             target="_BLANK"
             className={styles['prototype-button']}>
             <div className={styles['app-button-container']}>
-              <img className={styles['app-button']} src={prefix + appstore} />
+              <img className={styles['app-button']} src={appstore} />
             </div>
           </a>
           <a
@@ -74,7 +72,7 @@ const DescriptionSection = ({item, data, website}) => {
             target="_BLANK"
             className={styles['prototype-button']}>
             <div className={styles['app-button-container']}>
-              <img className={styles['app-button']} src={prefix + playstore} />
+              <img className={styles['app-button']} src={playstore} />
             </div>
           </a>
           {website.map((website) => {

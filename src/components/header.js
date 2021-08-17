@@ -4,8 +4,6 @@ import Logo from '../../public/Logo.png';
 import HamburgerMenu from 'react-hamburger-menu';
 import styles from './styles/Header.module.css';
 
-const prefix = '/jiasheng98.github.io';
-
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
@@ -33,7 +31,7 @@ const Navbar = () => {
             <a className={styles['logo-container']}>
               <div className={styles['logo-image-wrapper']}>
                 <img
-                  src={prefix + Logo}
+                  src={Logo}
                   className={styles['logo-image']}
                   alt="Jia Sheng Yeap"
                 />

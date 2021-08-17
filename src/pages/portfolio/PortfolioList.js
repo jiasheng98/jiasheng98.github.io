@@ -18,6 +18,8 @@ import urcheckintower from '../../../public/images/UrcheckinTwinTower.png';
 import urcheckinsign from '../../../public/images/UrcheckinRoadSign.png';
 import phone from '../../../public/images/iphonexmock.png';
 
+const prefix = '/jiasheng98.github.io';
+
 const PortfolioList = () => {
   useEffect(() => {
     AOS.init({});
@@ -74,7 +76,7 @@ const Portfolio = ({item}) => {
               <div className={styles['work-title-row']}>
                 <div data-aos="fade-right" data-aos-delay="700">
                   <LazyImage
-                    src={item.logo}
+                    src={prefix + item.logo}
                     className={styles['work-gif-logo']}
                   />
                 </div>
@@ -88,7 +90,7 @@ const Portfolio = ({item}) => {
                 data-aos="fade-up"
                 data-aos-delay="700">
                 <LazyImage
-                  src={item.image1}
+                  src={prefix + item.image1}
                   className={styles['work-card-image-1']}
                 />
               </div>
@@ -97,7 +99,7 @@ const Portfolio = ({item}) => {
                 data-aos="fade-up"
                 data-aos-delay="700">
                 <LazyImage
-                  src={item.image2}
+                  src={prefix + item.image2}
                   className={styles['work-card-image-1']}
                 />
               </div>
@@ -106,7 +108,7 @@ const Portfolio = ({item}) => {
                 data-aos="fade-up"
                 data-aos-delay="700">
                 <LazyImage
-                  src={item.image3}
+                  src={prefix + item.image3}
                   className={styles['work-card-image-1']}
                 />
               </div>
@@ -126,7 +128,7 @@ const Portfolio = ({item}) => {
             data-aos-delay="700"
             className={styles['work-card-phone']}>
             <LazyImage
-              src={item.phone}
+              src={prefix + item.phone}
               className={styles['work-card-phone-image']}
             />
           </div>

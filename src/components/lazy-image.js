@@ -9,6 +9,8 @@ if (typeof window !== 'undefined') {
   }
 }
 
+const prefix = '/jiasheng98.github.io';
+
 const LazyImage = ({alt, src, srcset, sizes, width, height, className}) => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -20,7 +22,7 @@ const LazyImage = ({alt, src, srcset, sizes, width, height, className}) => {
     <img
       alt={alt}
       className={`lazy ${className}`}
-      data-src={src}
+      data-src={prefix + src}
       data-srcset={srcset}
       data-sizes={sizes}
       width={width}

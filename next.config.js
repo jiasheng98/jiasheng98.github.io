@@ -6,3 +6,8 @@ module.exports = withImages(
     poweredByHeader: false,
   }),
 );
+
+module.exports = {
+  basePath: '/',
+  assetPrefix: '/'
+}

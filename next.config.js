@@ -8,6 +8,6 @@ module.exports = withImages(
 );
 
 module.exports = {
-  basePath: '/',
-  assetPrefix: '/'
+  basePath: '/index',
+  assetPrefix: '/index'
 }

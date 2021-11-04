@@ -55,7 +55,7 @@ const WorkSection = () => {
     <section className={styles['work-container']} id="work">
       <div className={styles['work-wrap']}>
         <div>
-          <h1 className={styles['my-work-header']}>Check Out My Work!</h1>
+          <h1 className={styles['my-work-header']}>Chek Out My Work!</h1>
         </div>
         <div className={styles['carousel-container']}>
           <Carousel

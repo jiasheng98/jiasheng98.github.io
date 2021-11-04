@@ -42,7 +42,7 @@ const WorkSection = () => {
       image1: urcheckinsign,
       image2: urcheckinwalau,
       image3: urcheckintower,
-      href: '/portfolio/Urcheckin',
+      href: '/portfolio/urcheckin',
     },
   ];
 

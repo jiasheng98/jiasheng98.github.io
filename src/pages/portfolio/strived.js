@@ -5,31 +5,28 @@ import ProjectDetail from '../../components/ProjectDetail';
 
 // Assets
 import phone from '../../../public/images/iphonexmock.png';
-import snaileruihome from '../../../public/images/snailer_ui_home.png';
+import striveduihome from '../../../public/images/strived_ui_home.png';
 
-const Snailer = () => {
+const Strived = () => {
   useEffect(() => {
     AOS.init();
   });
 
   const PortfolioList = {
-    title: 'Snailer',
+    title: 'Strived',
     projectdescription:
       'Snailer is a mobile application and website for food/grocery delivery and vehicle hiring services.',
     projectdescription1:
       'There are total 3 apps and 1 website, mainly Consumer App, Rider App, Merchant App and Snailer Landing Page. The apps and website are designed using playful, clean and modern approach.',
-    backgroundColor: '#468d65',
-    landingimage: snaileruihome,
+    backgroundColor: '#000000',
+    landingimage: striveduihome,
     role: 'UI/UX Designer, UI Developer',
     roledescription:
-      'Interaction, Visual design, Prototyping, Wireframe, Testing and Copywriting',
-    projectdate: 'July - December 2020',
-    appstorelink: 'https://apps.apple.com/us/app/snailer/id1540536548',
-    playstorelink:
-      'https://play.google.com/store/apps/details?id=com.snailer_consumer&hl=en&gl=US',
+      'Website design and Copywriting',
+    projectdate: 'June 2021 - July 2021',
+    appstore: false,
+    playstore: false,
     prototype: false,
-    appstore: true,
-    playstore: true,
   };
 
   const Data = [
@@ -54,15 +51,15 @@ const Snailer = () => {
   const Website = [
     {
       label: 'Landing Page',
-      href: 'http://thesnailer.com/',
+      href: 'http://ttracing.my/',
     },
   ];
 
   return (
-    <MyLayout title="Snailer">
+    <MyLayout title="TTRacing">
       <ProjectDetail item={PortfolioList} data={Data} website={Website} />
     </MyLayout>
   );
 };
 
-export default Snailer;
+export default Strived;

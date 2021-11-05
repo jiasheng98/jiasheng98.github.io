@@ -11,6 +11,11 @@ export default class MyDocument extends Document {
             content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"
           /> */}
           <meta name="author" content="JiaSheng" />
+          <meta property="og:title" content="Jia Sheng Yeap" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://jiasheng98.github.io/" />
+          <meta property="og:image:url" content="/favicon-32x32.png" />
+          <meta property="og:description" content="Site description" />
           <link
             rel="shortcut icon"
             href="/images/favicon.ico"

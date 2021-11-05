@@ -24,6 +24,8 @@ const Urcheckin = () => {
     roledescription:
       'UI developing, UI testing, Fixing Bug, Implement Responsive Design',
     projectdate: 'June - August 2020',
+    appstore: true,
+    playstore: true,
     appstorelink: 'https://apps.apple.com/us/app/urcheckin/id1507771058',
     playstorelink:
       'https://play.google.com/store/apps/details?id=com.urcheckin_host.beta&hl=en_US&gl=US',

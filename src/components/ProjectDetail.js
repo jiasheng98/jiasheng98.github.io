@@ -30,17 +30,18 @@ const DescriptionSection = ({item, data, website}) => {
         <h1 className={styles['title-text']}>{item.title}</h1>
         <div className={styles['description-subtitle']}>
           <div>
-            <p>Overview</p>
+            <p className={styles['role-title']}>Overview</p>
             <p>{item.projectdescription}</p>
             <p>{item.projectdescription1}</p>
           </div>
           <div>
-            <p>Role</p>
+            <p className={styles['role-title']}>Role</p>
             <p className={styles['role-title']}>{item.role}</p>
             <p>{item.roledescription}</p>
             <p>{item.projectdate}</p>
           </div>
         </div>
+        <hr className={styles['hr--medium']}/>
         {item.prototype === true ? (
           <div className={styles['button-container']}>
             {data.map((data) => {
@@ -59,6 +60,7 @@ const DescriptionSection = ({item, data, website}) => {
           </div>
         ) : null}
         <div className={styles['button-container-app']}>
+        {item.appstore === true ? (
           <a
             href={item.appstorelink}
             target="_BLANK"
@@ -67,6 +69,8 @@ const DescriptionSection = ({item, data, website}) => {
               <img className={styles['app-button']} src={appstore} />
             </div>
           </a>
+           ) : null}
+            {item.playstore === true ? (
           <a
             href={item.playstorelink}
             target="_BLANK"
@@ -75,6 +79,7 @@ const DescriptionSection = ({item, data, website}) => {
               <img className={styles['app-button']} src={playstore} />
             </div>
           </a>
+          ) : null}
           {website.map((website) => {
             return (
               <a

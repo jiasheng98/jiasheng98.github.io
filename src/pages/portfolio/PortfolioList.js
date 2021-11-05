@@ -48,7 +48,7 @@ const PortfolioList = () => {
       logo: urcheckin,
       title: 'Urcheckin',
       subtitle:
-        'Took part in UI development for Urcheckin - A lodging app which offers arrangement for vacation rental, primarily homestays, or tourism experiences. ',
+        'Took part in UI development for Urcheckin - A lodging app which offers arrangement for vacation rental, primarily homestays, or tourism experiences.',
       backgroundColor: '#E9493C',
       fontColor: '#FFFFFF',
       description_image: true,
@@ -62,21 +62,21 @@ const PortfolioList = () => {
       logo: ttracing,
       title: 'TTRacing',
       subtitle:
-        'Took part in UI development for Urcheckin - A lodging app which offers arrangement for vacation rental, primarily homestays, or tourism experiences. ',
+        'Constantly take part and improving in the entire Shopify UI/UX design and development for TTRacing - a gaming chair company that strives to give everyone the best comfort experience for when they’re working or playing for long hours.',
       backgroundColor: '#FFFFFF',
       fontColor: '#000000',
       phone: ttracinguihome,
-      href: '/portfolio/Urcheckin',
+      href: '/portfolio/ttracing',
     },
     {
       logo: strived,
       title: 'Strived',
       subtitle:
-        'Took part in UI development for Urcheckin - A lodging app which offers arrangement for vacation rental, primarily homestays, or tourism experiences. ',
+        'Took part in the entire Shopify UI/UX design and development for Strived - a fully customised gift shop that focuses on providing unique and high-quality products.',
       backgroundColor: '#000000',
       fontColor: '#FFFFFF',
       phone: striveduihome,
-      href: '/portfolio/Urcheckin',
+      href: '/portfolio/strived',
     },
   ];
 

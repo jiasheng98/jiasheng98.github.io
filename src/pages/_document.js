@@ -54,7 +54,7 @@ export default class MyDocument extends Document {
           <meta
             key="og:image"
             property="og:image"
-            content="https://i.ibb.co/P47pNsS/logo-website.png"
+            content="https://i.ibb.co/t4Cxh8n/logo-website.png"
           />
           <meta key="og:image:width" property="og:image:width" content={1229} />
           <meta

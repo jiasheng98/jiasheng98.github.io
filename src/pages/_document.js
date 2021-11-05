@@ -34,6 +34,36 @@ export default class MyDocument extends Document {
             sizes="16x16"
             href="/favicon-16x16.png"
           />
+
+          <meta
+            key="og:url"
+            property="og:url"
+            content="https://jiasheng98.github.io/"
+          />
+          <meta key="og:type" property="og:type" content="website" />
+          <meta
+            key="og:title"
+            property="og:title"
+            content="Jia Sheng Yeap"
+          />
+          <meta
+            key="og:description"
+            property="og:description"
+            content="Creative Lead, UI Designer and Developer"
+          />
+          <meta
+            key="og:image"
+            property="og:image"
+            content="https://firebasestorage.googleapis.com/v0/b/fehux-257400.appspot.com/o/fehux-logo.png?alt=media&token=5b4ecd6c-4400-4b9d-a455-3beea1473f1d"
+          />
+          <meta key="og:image:width" property="og:image:width" content={1229} />
+          <meta
+            key="og:image:height"
+            property="og:image:height"
+            content={1229}
+          />
+          <meta key="og:locale" property="og:locale" content="en_IE" />
+
           <link rel="manifest" href="/site.webmanifest" />
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
           <meta name="msapplication-TileColor" content="#da532c" />

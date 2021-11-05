@@ -9,6 +9,10 @@
   margin: auto;
 }
 
+.logo-z-index {
+  z-index: 2;
+}
+
 .logo-container {
   display: flex;
   align-items: center;
@@ -57,7 +61,7 @@
 
 .resume-style {
   border: 1px solid var(--primarytext);
-  margin-left: 2rem;
+  margin-top: 1rem;
 }
 
 .resume-text {
@@ -106,7 +110,29 @@
   position: absolute !important;
   left: 0;
   margin-left: 2rem;
-  display: none;
+  display: flex;
+  z-index: 2;
+}
+
+.mobile-sidebar {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--black);
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  transition: opacity 0.2s ease-in-out;
+  animation: background-fade 0.2s;
+}
+
+.header-navigation-mobile {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -126,7 +152,26 @@
   .logo-name {
     font-size: 0.8rem;
   }
+}
+
+@media (min-width: 769px) {
+  .header-navigation-mobile {
+    display: none;
+  }
   .hamburger-menu {
-    display: flex;
+    display: none;
+  }
+  .resume-style {
+    margin-left: 2rem;
+    margin-top: 0;
+  }  
+}
+
+@keyframes background-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

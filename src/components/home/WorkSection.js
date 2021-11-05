@@ -8,6 +8,8 @@ import styles from '../styles/WorkSection.module.css';
 // work logo
 import snailer from '../../../public/gif/Snailer.gif';
 import urcheckin from '../../../public/images/urcheckin-logo.png';
+import ttracing from '../../../public/images/ttracing-logo.png';
+import strived from '../../../public/images/strived-logo.png';
 
 // work images
 import snailerfood from '../../../public/images/SnailerFood.png';
@@ -17,6 +19,10 @@ import urcheckinwalau from '../../../public/images/UrcheckinWalao.png';
 import urcheckintower from '../../../public/images/UrcheckinTwinTower.png';
 import urcheckinsign from '../../../public/images/UrcheckinRoadSign.png';
 import phone from '../../../public/images/iphonexmock.png';
+import snaileruihome from '../../../public/images/snailer_ui_home.png';
+import urcheckinuihome from '../../../public/images/urcheckin_ui_home.png';
+import ttracinguihome from '../../../public/images/ttracing_ui_home.png';
+import striveduihome from '../../../public/images/strived_ui_home.png';
 
 const WorkSection = () => {
   const PortfolioList = [
@@ -25,8 +31,10 @@ const WorkSection = () => {
       title: 'Snailer',
       subtitle:
         'Took part in UI design and development for Snailer - a white-labeled food/grocery delivery and vehicle hiring app based in Johor, Malaysia. The app and website is designed using playful, clean and modern approach.',
-      backgroundColor: '#22c639',
-      phone: phone,
+      backgroundColor: '#468d65',
+      fontColor: '#FFFFFF',
+      description_image: true,
+      phone: snaileruihome,
       image1: snailerfood,
       image2: snailergrocery,
       image3: snailercar,
@@ -38,10 +46,32 @@ const WorkSection = () => {
       subtitle:
         'Took part in UI development for Urcheckin - A lodging app which offers arrangement for vacation rental, primarily homestays, or tourism experiences. ',
       backgroundColor: '#E9493C',
-      phone: phone,
+      fontColor: '#FFFFFF',
+      description_image: true,
+      phone: urcheckinuihome,
       image1: urcheckinsign,
       image2: urcheckinwalau,
       image3: urcheckintower,
+      href: '/portfolio/Urcheckin',
+    },
+    {
+      logo: ttracing,
+      title: 'TTRacing',
+      subtitle:
+        'Took part in UI development for Urcheckin - A lodging app which offers arrangement for vacation rental, primarily homestays, or tourism experiences. ',
+      backgroundColor: '#FFFFFF',
+      fontColor: '#000000',
+      phone: ttracinguihome,
+      href: '/portfolio/Urcheckin',
+    },
+    {
+      logo: strived,
+      title: 'Strived',
+      subtitle:
+        'Took part in UI development for Urcheckin - A lodging app which offers arrangement for vacation rental, primarily homestays, or tourism experiences. ',
+      backgroundColor: '#000000',
+      fontColor: '#FFFFFF',
+      phone: striveduihome,
       href: '/portfolio/Urcheckin',
     },
   ];
@@ -68,6 +98,12 @@ const WorkSection = () => {
             <Carousel.Item>
               <CarouselCard item={PortfolioList[1]} />
             </Carousel.Item>
+            <Carousel.Item>
+              <CarouselCard item={PortfolioList[2]} />
+            </Carousel.Item>
+            <Carousel.Item>
+              <CarouselCard item={PortfolioList[3]} />
+            </Carousel.Item>
           </Carousel>
         </div>
       </div>
@@ -80,7 +116,7 @@ const CarouselCard = ({item}) => {
     <div>
       <div
         className={styles['work-card-container']}
-        style={{backgroundColor: item.backgroundColor}}
+        style={{backgroundColor: item.backgroundColor, color: item.fontColor}}
         data-aos="fade-up"
         data-aos-delay="200">
         <div className={styles['work-card-body']}>
@@ -96,6 +132,7 @@ const CarouselCard = ({item}) => {
             </div>
             <p className={styles['work-card-subtitle']}>{item.subtitle}</p>
           </div>
+          {item.description_image === true ?
           <div className={styles['work-card-image-container']}>
             <div
               className={styles['work-card-image-wrapper']}
@@ -125,11 +162,12 @@ const CarouselCard = ({item}) => {
               />
             </div>
           </div>
+          : null}
           <Link href={item.href}>
             <button className={styles['work-button']}>
               <p
                 className={styles['work-button-text']}
-                style={{color: item.backgroundColor}}>
+                style={{color: item.backgroundColor, backgroundColor: item.fontColor}}>
                 Check it Out
               </p>
             </button>

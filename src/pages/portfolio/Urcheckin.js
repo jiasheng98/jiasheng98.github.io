@@ -5,6 +5,7 @@ import ProjectDetail from '../../components/ProjectDetail';
 
 // Assets
 import phone from '../../../public/images/iphonexmock.png';
+import urcheckinuihome from '../../../public/images/urcheckin_ui_home.png';
 
 const Urcheckin = () => {
   useEffect(() => {
@@ -18,14 +19,14 @@ const Urcheckin = () => {
     projectdescription1:
       'There are total 2 apps and 2 website, mainly Consumer App, Merchant App, Consumer Website and Merchant Website. Apps are developed using React-native while websites are developed using React',
     backgroundColor: '#E9493C',
-    landingimage: phone,
+    landingimage: urcheckinuihome,
     role: 'UI Developer, UI Designer',
     roledescription:
       'UI developing, UI testing, Fixing Bug, Implement Responsive Design',
     projectdate: 'June - August 2020',
     appstorelink: 'https://apps.apple.com/us/app/urcheckin/id1507771058',
     playstorelink:
-      'https://play.google.com/store/apps/details?id=com.urcheckin.beta',
+      'https://play.google.com/store/apps/details?id=com.urcheckin_host.beta&hl=en_US&gl=US',
   };
 
   const Website = [

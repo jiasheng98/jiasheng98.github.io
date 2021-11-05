@@ -1,12 +1,12 @@
 .landing-section-container {
-  height: 750px;
+  height: 500px;
   display: flex;
-  padding: 3rem;
   justify-content: center;
 }
 
 .image-container {
-  height: 100%;
+  width: 100%;
+  height: auto;
   object-fit: contain;
 }
 
@@ -97,6 +97,7 @@
 
 .button-container-app {
   display: flex;
+  flex-direction: column;
   margin-top: 2rem;
 }
 
@@ -134,5 +135,17 @@
   }
   .prototype-button {
     font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .button-container-app {
+    flex-direction: row;
+  }
+  .landing-section-container {
+    padding: 3rem;
+  }
+  .landing-section-container {
+    height: 750px;
   }
 }

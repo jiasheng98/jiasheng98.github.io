@@ -26,8 +26,30 @@ const Navbar = () => {
           animationDuration={0.5}
           className={styles['hamburger-menu']}
         />
+        {open ? 
+
+      <div
+      className={styles['mobile-sidebar']}
+      >
+              <div className={styles['header-navigation-mobile']}>
+          <li>
+            <Link href="/portfolio/PortfolioList">
+              <a className={styles['portfolio-text']}>Portfolio</a>
+            </Link>
+          </li>
+          <li className={styles['resume-style']}>
+            <Link href="/Resume(Jia Sheng).pdf">
+              <a target="_BLANK" className={styles['resume-text']}>
+                Resume
+              </a>
+            </Link>
+          </li>
+        </div>
+      </div>
+        
+        : null}
         <Link href="/">
-          <div data-aos="zoom-in" data-aos-delay="100">
+          <div className={styles['logo-z-index']} data-aos="zoom-in" data-aos-delay="100">
             <a className={styles['logo-container']}>
               <div className={styles['logo-image-wrapper']}>
                 <img

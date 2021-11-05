@@ -36,14 +36,12 @@
   font-size: 3rem;
   font-weight: bold;
   font-family: GothamBold;
-  color: var(--white);
   margin-bottom: 0;
 }
 
 .work-card-subtitle {
   font-weight: bold;
   font-family: Gotham;
-  color: var(--white);
   line-height: 2rem;
   width: 73%;
 }

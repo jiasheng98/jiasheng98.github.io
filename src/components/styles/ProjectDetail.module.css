@@ -24,6 +24,8 @@
 
 .title-text {
   font-family: GothamBold;
+  text-align: center;
+  font-size: 25px;
 }
 
 .description-subtitle {
@@ -178,6 +180,10 @@
   }
   .description-wrapper {
     padding: 3rem;
+  }
+  .title-text {
+    text-align: left;
+    font-size: 40px;
   }
 }
 

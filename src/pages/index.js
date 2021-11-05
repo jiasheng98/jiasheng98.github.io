@@ -16,8 +16,8 @@ const Home = () => {
   return (
     <MyLayout
       title="Jia Sheng Yeap"
-      keywords="UI Designer and Developer"
-      description="UI Designer and Developer">
+      keywords="Creative Lead, UI Designer and Developer"
+      description="Creative Lead, UI Designer and Developer">
       <LandingSection />
       <About />
       <WorkSection />

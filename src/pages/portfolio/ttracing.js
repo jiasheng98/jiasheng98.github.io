@@ -15,9 +15,9 @@ const TTRacing = () => {
   const PortfolioList = {
     title: 'TTRacing',
     projectdescription:
-      'Snailer is a mobile application and website for food/grocery delivery and vehicle hiring services.',
+      'TTRacing is a gaming chair company that strives to give everyone the best comfort experience for when they’re working or playing for long hours.',
     projectdescription1:
-      'There are total 3 apps and 1 website, mainly Consumer App, Rider App, Merchant App and Snailer Landing Page. The apps and website are designed using playful, clean and modern approach.',
+      'The Shopify website was designed using sleek, clean and modern approach.',
     backgroundColor: '#000000',
     landingimage: ttracinguihome,
     role: 'Creative Lead, UI/UX Designer, UI Developer',
@@ -27,6 +27,8 @@ const TTRacing = () => {
     appstore: false,
     playstore: false,
     prototype: false,
+    designsoftware: 'Adobe XD, Figma, Adobe Photoshop, Adobe Illustrator',
+    developmentsoftware: 'Liquid Template Language (Liquid), HTML, CSS, Jquery, Javascript',
   };
 
   const Data = [

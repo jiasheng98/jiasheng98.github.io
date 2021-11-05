@@ -33,6 +33,8 @@ const DescriptionSection = ({item, data, website}) => {
             <p className={styles['role-title']}>Overview</p>
             <p>{item.projectdescription}</p>
             <p>{item.projectdescription1}</p>
+            <p><span className={styles['role-title']} >Design:</span> {item.designsoftware}</p>
+            <p><span className={styles['role-title']}>Development:</span> {item.developmentsoftware}</p>
           </div>
           <div>
             <p className={styles['role-title']}>Role</p>

@@ -15,9 +15,9 @@ const Strived = () => {
   const PortfolioList = {
     title: 'Strived',
     projectdescription:
-      'Snailer is a mobile application and website for food/grocery delivery and vehicle hiring services.',
+      'Strived is a fully customised gift shop that focuses on providing unique and high-quality products.',
     projectdescription1:
-      'There are total 3 apps and 1 website, mainly Consumer App, Rider App, Merchant App and Snailer Landing Page. The apps and website are designed using playful, clean and modern approach.',
+      'The Shopify website was designed using sleek, clean and modern approach.',
     backgroundColor: '#000000',
     landingimage: striveduihome,
     role: 'UI/UX Designer, UI Developer',
@@ -27,6 +27,8 @@ const Strived = () => {
     appstore: false,
     playstore: false,
     prototype: false,
+    designsoftware: 'Adobe XD, Figma, Adobe Photoshop, Adobe Illustrator',
+    developmentsoftware: 'Liquid Template Language (Liquid), HTML, CSS, Jquery, Javascript',
   };
 
   const Data = [

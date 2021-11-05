@@ -54,7 +54,7 @@ export default class MyDocument extends Document {
           <meta
             key="og:image"
             property="og:image"
-            content="https://firebasestorage.googleapis.com/v0/b/fehux-257400.appspot.com/o/fehux-logo.png?alt=media&token=5b4ecd6c-4400-4b9d-a455-3beea1473f1d"
+            content="https://ibb.co/d6d9rsh"
           />
           <meta key="og:image:width" property="og:image:width" content={1229} />
           <meta

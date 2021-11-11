@@ -27,7 +27,7 @@ const TTRacing = () => {
     appstore: false,
     playstore: false,
     prototype: false,
-    designsoftware: 'Adobe XD, Figma, Adobe Photoshop, Adobe Illustrator',
+    designsoftware: 'Adobe XD, Shopify, Adobe Photoshop, Adobe Illustrator',
     developmentsoftware: 'Liquid Template Language (Liquid), HTML, CSS, Jquery, Javascript',
   };
 

@@ -29,7 +29,7 @@ const Urcheckin = () => {
     appstorelink: 'https://apps.apple.com/us/app/urcheckin/id1507771058',
     playstorelink:
       'https://play.google.com/store/apps/details?id=com.urcheckin_host.beta&hl=en_US&gl=US',
-    designsoftware: 'Adobe XD, Figma, Adobe Photoshop, Adobe Illustrator',
+    designsoftware: 'Adobe XD, Adobe Photoshop, Adobe Illustrator',
     developmentsoftware: 'React, HTML, CSS, Javascript',
   };
 

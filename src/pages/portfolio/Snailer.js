@@ -30,7 +30,7 @@ const Snailer = () => {
     prototype: false,
     appstore: true,
     playstore: true,
-    designsoftware: 'Adobe XD, Figma, Adobe Photoshop, Adobe Illustrator, Adobe After Effects',
+    designsoftware: 'Adobe XD, Adobe Photoshop, Adobe Illustrator, Adobe After Effects',
     developmentsoftware: 'React, HTML, CSS, Javascript',
   };
 

@@ -1,5 +1,4 @@
 import * as React from "react";
-import ReactDOM from "react-dom";
 
 import VariablesForm from "../../components/seyebot/variables-form";
 import CompoundInterestChart from "../../components/seyebot/ci-chart";

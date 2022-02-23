@@ -42,7 +42,7 @@ const PortfolioList = () => {
       image1: snailerfood,
       image2: snailergrocery,
       image3: snailercar,
-      href: '/seyebot/index',
+      href: '/portfolio/Snailer',
     },
     {
       logo: urcheckin,

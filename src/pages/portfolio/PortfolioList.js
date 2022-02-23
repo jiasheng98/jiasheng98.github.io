@@ -4,6 +4,7 @@ import styles from '../styles/PortfolioList.module.css';
 import LazyImage from '../../components/lazy-image';
 import Link from 'next/link';
 import AOS from 'aos';
+import Contact from '../../components/home/Contact';
 
 // work logo
 import snailer from '../../../public/gif/Snailer.gif';
@@ -86,6 +87,7 @@ const PortfolioList = () => {
       <Portfolio item={PortfolioList[1]} />
       <Portfolio item={PortfolioList[2]} />
       <Portfolio item={PortfolioList[3]} />
+      <Contact />
     </MyLayout>
   );
 };

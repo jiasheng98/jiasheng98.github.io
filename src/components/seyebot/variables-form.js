@@ -61,7 +61,7 @@ function VariablesForm({ onUpdate }) {
             type="number"
             id="monthlyContribution"
             name="monthlyContribution"
-            value={monthlyContribution}
+            value={Number(monthlyContribution).toString()}
             onChange={({ target }) =>
               setState({ ...state, monthlyContribution: Number(target.value) })
             }

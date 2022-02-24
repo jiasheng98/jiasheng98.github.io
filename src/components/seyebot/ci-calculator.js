@@ -13,7 +13,7 @@ const CICalculator = () => {
     <div
     className={styles['ci-container']}
     id="annualCompoundCalculator">
-      <h1 className={styles['text-center']}>Calculate How Much You Can Earn!</h1>
+      <h1 data-aos="fade-up" className={styles['text-center']}>Calculate How Much You Can Earn!</h1>
       <hr className={styles['hr']}/>
       <VariablesForm onUpdate={variables => setState(variables)} />
       <hr className={styles['hr']}/>

@@ -32,7 +32,7 @@ function Summary({ period, data }) {
           {data.map(({ label, value }) => (
             <tr key={label}>
               <td>{label}</td>
-              <td  style={{fontFamily: 'GothamBold'}}>{value.toLocaleString(2)} USD</td>
+              <td>{value.toLocaleString(2)} USD</td>
             </tr>
           ))}
         </tbody>

@@ -56,8 +56,8 @@ function CompoundInterestChart({
             data={data}
             margin={{
               top: 5,
-              right: 30,
-              left: 30,
+              right: 0,
+              left: 0,
               bottom: 5,
             }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#f4d2d3" />
@@ -69,7 +69,7 @@ function CompoundInterestChart({
                 style={{fill: 'white'}}
               />
             </XAxis>
-            <YAxis style={{fill: 'white'}} />
+            <YAxis style={{fill: 'white'}}/>
             <Tooltip
               content={renderTooltip}
               wrapperStyle={{
@@ -77,7 +77,9 @@ function CompoundInterestChart({
                 backgroundColor: 'var(--primary)',
                 padding: '.5rem 1rem',
                 borderRadius: '15px',
+                fontSize: '85%'
               }}
+              className={styles['chart-tooltip']}
             />
             <Line type="monotone" dataKey="value" />
           </LineChart>

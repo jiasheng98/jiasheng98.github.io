@@ -109,12 +109,14 @@
   padding: 0.75rem;
   border-top: 1px solid #dee2e6;
   vertical-align: top;
+  font-size: .8rem;
 }
 
 .summary-table>thead>tr>th {
   background-color: var(--secondary);
   vertical-align: bottom;
   padding: 0.75rem;
+  font-size: .8rem;
 }
 
 .summary-title {
@@ -123,6 +125,7 @@
   color: var(--primarytext);
   font-family: GothamBold;
   text-shadow: 4px 3px 3px rgba(206, 89, 55, 0.5);
+  margin-bottom: 1rem;
 }
 
 .breakdown-title {
@@ -138,6 +141,7 @@
 .summary-content {
   color: var(--white);
   text-align: center;
+  font-size: .8rem;
 }
 
 @media (min-width: 1024px) {
@@ -190,7 +194,7 @@
 
 .summary-content {
   text-align: left;
+  font-size: 1rem;
 }
-
 
 }

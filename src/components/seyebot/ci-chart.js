@@ -14,11 +14,29 @@ import Summary from './summary';
 import styles from '../styles/ci-calculator.module.css';
 
 function renderTooltip({ payload }) {
+
   if (!payload[0]) {
     return null;
   }
 
-  return <span  style={{fontFamily: 'GothamBold'}}>{`${payload[0].value.toLocaleString(2)} USD`}</span>;
+  return <span  style={{fontFamily: 'GothamBold'}}>{abbreviateNumber(payload[0].value.toFixed(0))} USD</span>;
+}
+
+function abbreviateNumber(value) {
+  var newValue = value;
+  if (value >= 1000) {
+      var suffixes = ["", "k", "m", "b","t"];
+      var suffixNum = Math.floor( (""+value).length/3 );
+      var shortValue = '';
+      for (var precision = 2; precision >= 1; precision--) {
+          shortValue = parseFloat( (suffixNum != 0 ? (value / Math.pow(1000,suffixNum) ) : value).toPrecision(precision));
+          var dotLessShortValue = (shortValue + '').replace(/[^a-zA-Z 0-9]+/g,'');
+          if (dotLessShortValue.length <= 2) { break; }
+      }
+      if (shortValue % 1 != 0)  shortValue = shortValue.toFixed(1);
+      newValue = shortValue+suffixes[suffixNum];
+  }
+  return newValue;
 }
 
 function CompoundInterestChart({
@@ -48,7 +66,7 @@ function CompoundInterestChart({
   return (
     <>
       <h2 className={styles['chart-title']}>Projected Growth</h2>
-      <div style={{width: '100%', marginTop: '2rem', height: '300px'}}>
+      <div style={{width: '100%', marginTop: '2rem', height: '300px', overflow: 'hidden'}}>
         <ResponsiveContainer>
           <LineChart
             width={500}
@@ -61,7 +79,7 @@ function CompoundInterestChart({
               bottom: 5,
             }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#f4d2d3" />
-            <XAxis dataKey="label" style={{fill: 'white'}}>
+            <XAxis dataKey="label" style={{fill: 'white', fontSize: '12px'}}>
               <Label
                 value="Years"
                 offset={-5}
@@ -69,7 +87,7 @@ function CompoundInterestChart({
                 style={{fill: 'white'}}
               />
             </XAxis>
-            <YAxis style={{fill: 'white'}}/>
+            <YAxis style={{fill: 'white', fontSize: '12px'}}/>
             <Tooltip
               content={renderTooltip}
               wrapperStyle={{

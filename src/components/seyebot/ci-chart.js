@@ -18,7 +18,7 @@ function renderTooltip({ payload }) {
     return null;
   }
 
-  return <span>{`${payload[0].value.toFixed(2)}USD`}</span>;
+  return <span  style={{fontFamily: 'GothamBold'}}>{`${payload[0].value.toLocaleString(2)} USD`}</span>;
 }
 
 function CompoundInterestChart({
@@ -74,7 +74,7 @@ function CompoundInterestChart({
               content={renderTooltip}
               wrapperStyle={{
                 color: 'white',
-                backgroundColor: 'black',
+                backgroundColor: 'var(--primary)',
                 padding: '.5rem 1rem',
                 borderRadius: '15px',
               }}
@@ -83,8 +83,9 @@ function CompoundInterestChart({
           </LineChart>
         </ResponsiveContainer>
       </div>
-      <hr />
-      {/* <Summary period={period} data={data} /> */}
+      <hr  className={styles['hr']}/>
+      <Summary period={period} data={data} />
+      <hr  className={styles['hr']}/>
     </>
   );
 }

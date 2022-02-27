@@ -1,5 +1,5 @@
 .seye-bot-graph-container {
-    background-color: var(--primary);
+    background-color: var(--black);
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -20,4 +20,30 @@
 .seye-bot-graph {
     height: 450px;
     width: 640px;
+}
+
+.seye-bot-container {
+    height: calc( 100vh - 100px );
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 0;
+    min-height: 600px;
+}
+
+.seye-bot-container>h1 {
+    color: var(--primarytext);
+    font-family: GothamBold;
+    text-shadow: 4px 3px 3px rgba(206, 89, 55, 0.5);
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.seye-bot-container>p {
+    color: var(--white);
+    margin-bottom: 2rem;
 }

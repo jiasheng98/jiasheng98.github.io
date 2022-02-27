@@ -68,11 +68,15 @@ function VariablesForm({ onUpdate }) {
           />
         </label>
       </div>
+      <div
+       className={styles['button-container']}
+      >
       <button 
       className={styles['button']}
       type="button" onClick={() => onUpdate(state)}>
         Update Chart
       </button>
+      </div>
     </section>
   );
 }

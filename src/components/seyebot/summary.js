@@ -2,18 +2,26 @@ import * as React from "react";
 import styles from '../styles/ci-calculator.module.css';
 
 function toNumber(value) {
-  return value.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return value.toLocaleString(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 function Summary({ period, data }) {
   return (
     <>
-      <h2>Summary</h2>
-      <p>
-        In {period} years, you will have £{toNumber(data[data.length - 1].value)}
+      <h2
+      className={styles['summary-title']}
+      >Summary</h2>
+      <p
+      className={styles['summary-content']}
+      >
+        In <span style={{fontFamily: 'GothamBold'}}>{period}</span> years, you will have <span style={{fontFamily: 'GothamBold'}}>{toNumber(data[data.length - 1].value)} USD</span>
       </p>
-      <h3>Breakdown</h3>
-      <table>
+      <h3
+       className={styles['breakdown-title']}
+      >Breakdown</h3>
+      <table
+      className={styles['summary-table']}
+      >
         <thead>
           <tr>
             <th scope="col">End of Year</th>
@@ -24,7 +32,7 @@ function Summary({ period, data }) {
           {data.map(({ label, value }) => (
             <tr key={label}>
               <td>{label}</td>
-              <td>£{value.toFixed(2)}</td>
+              <td  style={{fontFamily: 'GothamBold'}}>{value.toLocaleString(2)} USD</td>
             </tr>
           ))}
         </tbody>

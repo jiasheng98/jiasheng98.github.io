@@ -5,6 +5,7 @@
     margin: 0 auto;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
     padding: 2rem 0;
 }
 
@@ -22,28 +23,107 @@
     width: 640px;
 }
 
-.seye-bot-container {
-    height: calc( 100vh - 100px );
-    background-color: var(--primary);
+.seye-bot-wrapper {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.seye-bot-container {
+    height: 650px;
+    position: relative;
+    background-color: var(--primary);
+    display: grid;
+    grid-template-rows: 1fr 0.2fr;
     justify-content: center;
     margin: 0 auto;
     align-items: center;
     flex-direction: column;
     padding: 2rem 0;
-    min-height: 600px;
+    overflow: hidden;
 }
 
-.seye-bot-container>h1 {
+.seye-bot-wrapper>h1 {
     color: var(--primarytext);
     font-family: GothamBold;
     text-shadow: 4px 3px 3px rgba(206, 89, 55, 0.5);
     font-size: 3rem;
     text-align: center;
-    margin-bottom: 2rem;
+    z-index: 1;
+    margin-bottom: 1rem;
 }
 
-.seye-bot-container>p {
+.seye-bot-wrapper>p {
     color: var(--white);
-    margin-bottom: 2rem;
+    max-width: 800px;
+    padding: 0 2rem;
+    z-index: 1;
+    text-align: center;
+    font-size: .8rem;
 }
+
+
+.seye-logo {
+    width: 100px;
+    margin-bottom: .5rem;
+    z-index: 1;
+}
+
+.progress-bar {
+    width: 150px;
+    margin-bottom: 1rem;
+}
+
+.progress-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.progress-bar-container>h1 {
+    font-family: GothamBold;
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.pulsar{
+    stroke-dasharray:281;
+    animation: dash 5s infinite linear forwards;
+  }
+
+  .pulse-svg {
+      position: absolute;
+      z-index: 0;
+      opacity: .5;
+      bottom: 80px;
+  }
+
+  @keyframes dash{
+    from{
+      
+      stroke-dashoffset: 800;
+    }
+    to {
+      stroke-dashoffset:-800;
+      
+    }
+    
+  }
+
+  @media (min-width: 768px) {
+    .seye-bot-wrapper>h1 {
+        font-size: 5rem;
+    }
+    .seye-logo {
+        width: 150px;
+    }
+    .seye-bot-wrapper>p {
+        font-size: 1rem;
+    }
+    .pulse-svg {
+        bottom: 100px;
+    }
+  }

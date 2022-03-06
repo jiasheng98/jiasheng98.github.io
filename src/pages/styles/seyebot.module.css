@@ -282,7 +282,7 @@
     .seye-nfa-container {
         overflow: hidden;
       background-color: var(--primary);
-      padding: 2rem;
+      padding: 2rem 2rem 0 2rem;
     }
     
     .seye-nfa-wrapper {
@@ -296,21 +296,20 @@
     .nfa-text-container {
       display: flex;
       flex-direction: column;
-      margin-bottom: 1rem;
     }
     
     .nfa-text-container > h1 {
-      color: #909090;
+      color: var(--primarytext);
       font-family: GothamBold;
-      font-size: 1rem;
-      text-align: center;
+      font-size: .8rem;
+      text-decoration: underline;
       margin-bottom: 1rem;
     }
     
     .nfa-text-container > p {
-        color: #909090;
-        line-height: 30px;
-        font-size: .6rem;
+        color: var(--primarytext);
+        line-height: 20px;
+        font-size: .5rem;
         text-align: justify;
         margin-bottom: 0;
       }
@@ -334,7 +333,7 @@
     margin-bottom: 2rem;
   }
   .nfa-text-container > h1 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
   }
   .guide-text-container > h1 {
@@ -382,7 +381,7 @@
     height: 40px;
 }
 .nfa-text-container > p {
-    font-size: .8rem;
+    font-size: .7rem;
     line-height: 30px;
   }
 }

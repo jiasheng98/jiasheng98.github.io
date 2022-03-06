@@ -26,8 +26,8 @@ const SeyeBot = () => {
       <DescriptionSection />
       <CompundCalculator />
       <GuideSection />
-      <NFASection />
       <Contact seyefactory />
+      <NFASection />
     </MyLayout>
   );
 };

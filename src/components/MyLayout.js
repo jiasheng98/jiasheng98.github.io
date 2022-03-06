@@ -1,6 +1,7 @@
 import Header from './header';
 import Footer from './footer';
 import Head from 'next/head';
+import {BrowserRouter, withRouter} from 'react-router-dom'
 
 export default function Layout({
   children,
@@ -20,7 +21,7 @@ export default function Layout({
           dangerouslySetInnerHTML={{__html: JSON.stringify(ld_json)}}
         />
       </Head>
-      <Header />
+      {/* <Header /> */}
       {children}
       <Footer />
     </>

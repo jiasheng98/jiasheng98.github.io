@@ -313,7 +313,7 @@ const NFASection = () => {
             all investors; in particular, past developments do not necessarily
             indicate future results. Please note that the risk of loss in
             trading can be substantial. Please also note that there is no agreement
-            nor collaboration between broker and Seye-Bot and hence will not
+            or collaboration between broker and Seye-Bot and hence will not
             take any responsibilities regarding the outcome of the broker.
             Please use at your own risk. You should therefore find out the
             details of your financial situation and, if necessary, consult

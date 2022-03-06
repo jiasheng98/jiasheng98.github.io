@@ -60,9 +60,7 @@ const LandingSection = () => {
         </h1>
         <p>Automate Your Trading Experience Like No Other</p>
         <a href="#guide" className={styles['get-started']}>
-      
-            Get Started
-        
+          Get Started
         </a>
         <svg
           className={styles['pulse-svg']}
@@ -314,7 +312,10 @@ const NFASection = () => {
             Trading involves a significant risk of loss and is not suitable for
             all investors; in particular, past developments do not necessarily
             indicate future results. Please note that the risk of loss in
-            trading can be substantial. You should therefore find out the
+            trading can be substantial. Please also note that there is no agreement
+            nor collaboration between broker and Seye-Bot and hence will not
+            take any responsibilities regarding the outcome of the broker.
+            Please use at your own risk. You should therefore find out the
             details of your financial situation and, if necessary, consult
             professional help to assess whether your personal and financial
             situation allows trading and whether you are in a position to take

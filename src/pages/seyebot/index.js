@@ -121,7 +121,7 @@ const DescriptionSection = () => {
             Besides, Seye-Bot uses various combined trading strategies such as{' '}
             <span>SMA Crossover, RSI, MACD, and Grid Trading</span>. Seye-Bot
             works based on compound interest and projected annual earnings of{' '}
-            <span>70% - 150%</span>
+            <span>70% - 150%</span>.
           </p>
         </div>
         <div className={styles['progress-bar-container']}>

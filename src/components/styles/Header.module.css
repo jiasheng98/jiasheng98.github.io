@@ -120,7 +120,7 @@
   background-color: var(--black);
   position: absolute;
   top: 0;
-  z-index: 1;
+  z-index: 3;
   transition: opacity 0.2s ease-in-out;
   animation: background-fade 0.2s;
 }

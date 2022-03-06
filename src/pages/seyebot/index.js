@@ -60,9 +60,9 @@ const LandingSection = () => {
         </h1>
         <p>Automate Your Trading Experience Like No Other</p>
         <a href="#guide" className={styles['get-started']}>
-          <Link href="#guide" scroll={true}>
+      
             Get Started
-          </Link>
+        
         </a>
         <svg
           className={styles['pulse-svg']}

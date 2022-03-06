@@ -270,13 +270,15 @@
         border-radius: 30px;
         margin-top: 10px;
         font-size: .8rem;
+        font-family: GothamBold;
+        text-decoration: none;
     }
 
-    .get-started>a {
-     color: white ;
-     font-family: GothamBold;
-     width: 100%;
+    .get-started:hover {
+        color: var(--white);
+        text-decoration: none;
     }
+
 
 
     .seye-nfa-container {

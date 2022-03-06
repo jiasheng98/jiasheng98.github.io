@@ -1,0 +1,1 @@
+_N_E=(window.webpackJsonp_N_E=window.webpackJsonp_N_E||[]).push([[9],{"97Is":function(n,r,o){(window.__NEXT_P=window.__NEXT_P||[]).push(["/404",function(){return o("w2l6")}])},w2l6:function(n,r,o){"use strict";o.r(r),o.d(r,"default",(function(){return u}));var t=o("nKUr");function u(){return Object(t.jsx)("h1",{children:"404 Error"})}}},[["97Is",0,2,1]]]);

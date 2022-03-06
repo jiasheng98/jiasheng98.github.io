@@ -48,6 +48,7 @@ function VariablesForm({ onUpdate }) {
             type="number"
             id="growthRate"
             name="growthRate"
+            min={70}
             value={Number(growthRate).toString()}
             onChange={({ target }) => setState({ ...state, growthRate: Number(target.value) })}
           />

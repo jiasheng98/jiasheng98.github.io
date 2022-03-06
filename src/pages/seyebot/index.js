@@ -144,7 +144,7 @@ const DescriptionSection = () => {
 
           <div>
             <div className={styles['progress-bar']}>
-              <ChangingProgressProvider values={[20, 30]}>
+              <ChangingProgressProvider values={[20, 35]}>
                 {percentage => (
                   <CircularProgressbar
                     styles={buildStyles({

@@ -26,7 +26,8 @@ const SeyeBot = () => {
       <DescriptionSection />
       <CompundCalculator />
       <GuideSection />
-      <Contact />
+      <NFASection />
+      <Contact seyefactory />
     </MyLayout>
   );
 };
@@ -58,15 +59,11 @@ const LandingSection = () => {
           <span ref={e => (el = e)} />
         </h1>
         <p>Automate Your Trading Experience Like No Other</p>
-        <a
-        href="#guide" 
-                className={styles['get-started']}
-        >
-          <Link href="#guide" scroll={true}
-          >
-           Get Started
+        <a href="#guide" className={styles['get-started']}>
+          <Link href="#guide" scroll={true}>
+            Get Started
           </Link>
-      </a>
+        </a>
         <svg
           className={styles['pulse-svg']}
           version="1.2"
@@ -95,9 +92,7 @@ const LandingSection = () => {
         </svg>
       </div>
       <div>
-        <a
-        href="#description"
-        >
+        <a href="#description">
           <Link href="#description" scroll={true}>
             <FiChevronsDown color="var(--secondary)" size={40} />
           </Link>
@@ -212,14 +207,13 @@ const GuideSection = () => {
               </div>
             </Button>
             <Collapse in={open}>
-              <div id="example-fade-text"
-              className={styles['guide-collapse']}
-              >
-                - Open an account <a target='_blank' href='https://my.roboforex.com/en/?a=lklj'>here</a>
-                <br />
-                - Choose <span>'MT4 Pro'</span> for account type
-                <br />
-                - Choose <span>'1:1000'</span> for leverage
+              <div id="example-fade-text" className={styles['guide-collapse']}>
+                - Open an account{' '}
+                <a target="_blank" href="https://my.roboforex.com/en/?a=lklj">
+                  here
+                </a>
+                <br />- Choose <span>'MT4 Pro'</span> for account type
+                <br />- Choose <span>'1:1000'</span> for leverage
                 <br />- Fill in all the respective details
               </div>
             </Collapse>
@@ -240,12 +234,11 @@ const GuideSection = () => {
               </div>
             </Button>
             <Collapse in={openone}>
-              <div id="example-fade-text"
-                    className={styles['guide-collapse']}
-              >
-                - Click <span>'Pass the verification'</span> and proceed with the verification
-                <br />
-                - You would need to verify your <span>email</span>, <span>ID</span> as well as <span>address</span>
+              <div id="example-fade-text" className={styles['guide-collapse']}>
+                - Click <span>'Pass the verification'</span> and proceed with
+                the verification
+                <br />- You would need to verify your <span>email</span>,{' '}
+                <span>ID</span> as well as <span>address</span>
                 <br />- An email will be sent once your verification is
                 successful
               </div>
@@ -267,13 +260,14 @@ const GuideSection = () => {
               </div>
             </Button>
             <Collapse in={opentwo}>
-              <div id="example-fade-text"
-                    className={styles['guide-collapse']}
-              >
-               - Proceed to deposit a minumum of <span>500 USD</span> to your trading account
-                <br />
-                - Recommended to use <span>Paytrust (Local Bank Transfer Option 2)</span> to deposit your fund
-                <br />- Please don't hesitate to contact us here if you face any issues!
+              <div id="example-fade-text" className={styles['guide-collapse']}>
+                - Proceed to deposit a minumum of <span>500 USD</span> to your
+                trading account
+                <br />- Recommended to use{' '}
+                <span>Paytrust (Local Bank Transfer Option 2)</span> to deposit
+                your fund
+                <br />- Please don't hesitate to contact us here if you face any
+                issues!
               </div>
             </Collapse>
           </div>
@@ -293,15 +287,39 @@ const GuideSection = () => {
               </div>
             </Button>
             <Collapse in={openthree}>
-              <div id="example-fade-text"
-                    className={styles['guide-collapse']}
-              >
-               - Subscribe to the bot <a target='_blank' href='https://my.roboforex.com/register-copyfx/?trader=113089'>here</a>
-                <br />
-              - Now, sit back, relax and enjoy your profits!
+              <div id="example-fade-text" className={styles['guide-collapse']}>
+                - Subscribe to the bot{' '}
+                <a
+                  target="_blank"
+                  href="https://my.roboforex.com/register-copyfx/?trader=113089">
+                  here
+                </a>
+                <br />- Now, sit back, relax and enjoy your profits!
               </div>
             </Collapse>
           </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const NFASection = () => {
+  return (
+    <div className={styles['seye-nfa-container']}>
+      <div className={styles['seye-nfa-wrapper']}>
+        <div className={styles['nfa-text-container']}>
+          <h1>Risk Warnings and Investment Disclaimers</h1>
+          <p>
+            Trading involves a significant risk of loss and is not suitable for
+            all investors; in particular, past developments do not necessarily
+            indicate future results. Please note that the risk of loss in
+            trading can be substantial. You should therefore find out the
+            details of your financial situation and, if necessary, consult
+            professional help to assess whether your personal and financial
+            situation allows trading and whether you are in a position to take
+            the high risk of loss.
+          </p>
         </div>
       </div>
     </div>

@@ -57,7 +57,7 @@
 
 .button[type="button"] {
   cursor: pointer;
-  background-color: var(--secondary);
+  background-color: #DF678C;
   border: none;
   border-radius: 4px;
   color: var(--white);

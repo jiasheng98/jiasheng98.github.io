@@ -131,8 +131,8 @@ const DescriptionSection = () => {
                 {percentage => (
                   <CircularProgressbar
                     styles={buildStyles({
-                      textColor: 'var(--secondary)',
-                      pathColor: 'var(--secondary)',
+                      textColor: '#DF678C',
+                      pathColor: '#DF678C',
                       backgroundColor: 'white',
                       rotation: 1 / 2 + 1 / 8,
                       strokeLinecap: 'butt',
@@ -155,8 +155,8 @@ const DescriptionSection = () => {
                 {percentage => (
                   <CircularProgressbar
                     styles={buildStyles({
-                      textColor: 'var(--secondary)',
-                      pathColor: 'var(--secondary)',
+                      textColor: '#DF678C',
+                      pathColor: '#DF678C',
                       backgroundColor: 'white',
                       rotation: 1 / 2 + 1 / 8,
                       strokeLinecap: 'butt',

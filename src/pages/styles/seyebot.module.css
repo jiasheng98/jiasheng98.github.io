@@ -81,6 +81,7 @@
 .progress-bar {
   width: 150px;
   margin-bottom: 1rem;
+  font-family: GothamBold;
 }
 
 .progress-bar-container {
@@ -117,6 +118,7 @@
 }
 
 .seye-description-container {
+    overflow: hidden;
   background-color: var(--black);
   padding: 2rem;
 }
@@ -237,8 +239,8 @@
     .guide-numbering>div {
         background-color: var(--primary);
         border-radius: 100%;
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -330,5 +332,9 @@
   }
   .guide-collapse {
       font-size: 1rem;
+}
+.guide-numbering>div {
+    width: 40px;
+    height: 40px;
 }
 }

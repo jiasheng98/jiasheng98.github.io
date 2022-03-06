@@ -4,7 +4,7 @@ import Logo from '../../public/Logo.png';
 import HamburgerMenu from 'react-hamburger-menu';
 import styles from './styles/Header.module.css';
 
-const Navbar = () => {
+const Navbar = ({seyebot}) => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = (params) => {
@@ -14,6 +14,7 @@ const Navbar = () => {
   return (
     <nav>
       <div className={styles['header-container']}>
+      {!seyebot ? 
         <HamburgerMenu
           isOpen={open}
           menuClicked={handleOpen}
@@ -26,6 +27,7 @@ const Navbar = () => {
           animationDuration={0.5}
           className={styles['hamburger-menu']}
         />
+        : null }
         {open ? 
 
       <div
@@ -48,6 +50,8 @@ const Navbar = () => {
       </div>
         
         : null}
+         {!seyebot ? 
+         <>
         <Link href="/">
           <div className={styles['logo-z-index']} data-aos="zoom-in" data-aos-delay="100">
             <a className={styles['logo-container']}>
@@ -62,6 +66,7 @@ const Navbar = () => {
             </a>
           </div>
         </Link>
+        
 
         <div className={styles['header-navigation']}>
           <li>
@@ -77,6 +82,8 @@ const Navbar = () => {
             </Link>
           </li>
         </div>
+        </>
+         : null }
       </div>
     </nav>
   );

@@ -21,7 +21,7 @@ const SeyeBot = () => {
   });
 
   return (
-    <MyLayout title="SeyeBot">
+    <MyLayout title="SeyeBot" seyebot>
       <LandingSection />
       <DescriptionSection />
       <CompundCalculator />

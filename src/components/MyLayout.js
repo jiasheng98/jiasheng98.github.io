@@ -9,7 +9,9 @@ export default function Layout({
   description,
   keywords,
   ld_json,
+  seyebot
 }) {
+  
   return (
     <>
       <Head>
@@ -21,7 +23,7 @@ export default function Layout({
           dangerouslySetInnerHTML={{__html: JSON.stringify(ld_json)}}
         />
       </Head>
-      {/* <Header /> */}
+      <Header seyebot={seyebot}/>
       {children}
       <Footer />
     </>

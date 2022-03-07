@@ -88,6 +88,21 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 4rem;
+}
+
+.hr {
+  margin: 0 0 24px 0;
+  width: 100%;
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+.iframe-graph {
+  width: 350px;
+  height: 420px;
 }
 
 .progress-bar-container > div {
@@ -385,5 +400,8 @@
 .nfa-text-container > p {
     font-size: .7rem;
     line-height: 30px;
+  }
+  .iframe-graph {
+    width: 635px;
   }
 }

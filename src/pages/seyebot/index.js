@@ -106,6 +106,7 @@ const DescriptionSection = () => {
       <div className={styles['seye-description-wrapper']}>
         <div className={styles['description-text-container']}>
           <h1>How Does Seye-Bot Works?</h1>
+          <hr className={styles['hr']} />
           <p>
             Seye-Bot is an expert advisor developed by <span>Seyefactory</span>.
             Seye-Bot trades only <span>GBP/USD</span> and uses{' '}
@@ -165,6 +166,13 @@ const DescriptionSection = () => {
             </div>
             <h1>Maximum Drawdown (Projected)</h1>
           </div>
+        </div>
+        <div className={styles['description-text-container']}>
+          <h1>Seye-Bot's Realtime Updates</h1>
+          <hr className={styles['hr']} />
+          <iframe 
+          className={styles['iframe-graph']}
+          src="https://staticmy.roboforex.com/en/informers/providers/frame/performance/113089/" frameborder="0"></iframe>
         </div>
       </div>
     </div>

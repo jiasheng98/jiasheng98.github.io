@@ -1,5 +1,5 @@
 .seye-bot-graph-container {
-  background-color: var(--black);
+  background-color: var(--primary);
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -150,6 +150,13 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
+  align-items: center;
+}
+
+.description-text-container>img {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
 }
 
 .description-text-container > h1 {
@@ -298,8 +305,8 @@
 
     .seye-nfa-container {
         overflow: hidden;
-      background-color: var(--primary);
-      padding: 2rem 2rem 0 2rem;
+      background-color: var(--black);
+      padding: 2rem 2rem 2rem 2rem;
     }
     
     .seye-nfa-wrapper {
@@ -402,6 +409,6 @@
     line-height: 30px;
   }
   .iframe-graph {
-    width: 635px;
+    width: 400px;
   }
 }

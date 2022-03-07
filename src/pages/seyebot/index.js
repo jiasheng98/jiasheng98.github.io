@@ -7,6 +7,7 @@ import CICalculator from '../../components/seyebot/ci-calculator';
 import {CircularProgressbar, buildStyles} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import Seye from '../../../public/images/seye-logo.png';
+import backtest from '../../../public/images/backtest.gif';
 import Typed from 'typed.js';
 import {FiChevronsDown} from 'react-icons/fi';
 import Link from 'next/link';
@@ -168,11 +169,28 @@ const DescriptionSection = () => {
           </div>
         </div>
         <div className={styles['description-text-container']}>
-          <h1>Seye-Bot's Realtime Updates</h1>
+          <h1>Real-time Updates</h1>
           <hr className={styles['hr']} />
-          <iframe 
-          className={styles['iframe-graph']}
-          src="https://staticmy.roboforex.com/en/informers/providers/frame/performance/113089/" frameborder="0"></iframe>
+          <iframe
+            className={styles['iframe-graph']}
+            src="https://staticmy.roboforex.com/en/informers/providers/frame/large/113089/"
+            height="508"
+            width="405"
+            frameborder="0"></iframe>
+        </div>
+        <div
+          className={styles['description-text-container']}
+          style={{marginTop: '2rem'}}>
+          <h1>12 Years Backtest Results</h1>
+          <hr className={styles['hr']} />
+          <img src={backtest} />
+          <p style={{marginTop: '1rem'}}>
+            <span>Period</span>: 1st Jan 2010 - 1st June 2021
+            <br />
+            <span>Starting Capital</span>: 2000 USD
+            <br />
+            <span>Final Amount</span>: 2,638,871 USD
+          </p>
         </div>
       </div>
     </div>
@@ -320,11 +338,11 @@ const NFASection = () => {
             Trading involves a significant risk of loss and is not suitable for
             all investors; in particular, past developments do not necessarily
             indicate future results. Please note that the risk of loss in
-            trading can be substantial. Please also note that there is no agreement
-            or collaboration between broker and Seye-Bot and hence will not
-            take any responsibilities regarding the outcome of the broker.
-            Please use at your own risk. You should therefore find out the
-            details of your financial situation and, if necessary, consult
+            trading can be substantial. Please also note that there is no
+            agreement or collaboration between broker and Seye-Bot and hence
+            will not take any responsibilities regarding the outcome of the
+            broker. Please use at your own risk. You should therefore find out
+            the details of your financial situation and, if necessary, consult
             professional help to assess whether your personal and financial
             situation allows trading and whether you are in a position to take
             the high risk of loss.

@@ -11,7 +11,7 @@ const CICalculator = () => {
 
   return (
     <div className={styles['ci-container']} id="annualCompoundCalculator">
-        <hr className={styles['hr']} />
+        {/* <hr className={styles['hr']} /> */}
       <h1 className={styles['text-center']}>
         Calculate How Much You Can Earn!
       </h1>

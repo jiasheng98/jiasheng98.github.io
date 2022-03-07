@@ -92,7 +92,7 @@ function CompoundInterestChart({
               content={renderTooltip}
               wrapperStyle={{
                 color: 'white',
-                backgroundColor: 'var(--primary)',
+                backgroundColor: '#DF678C',
                 padding: '.5rem 1rem',
                 borderRadius: '15px',
                 fontSize: '85%'
@@ -105,7 +105,7 @@ function CompoundInterestChart({
       </div>
       <hr  className={styles['hr']}/>
       <Summary period={period} data={data} />
-      <hr  className={styles['hr']}/>
+      {/* <hr  className={styles['hr']}/> */}
     </>
   );
 }

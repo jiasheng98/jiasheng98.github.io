@@ -171,9 +171,15 @@ const DescriptionSection = () => {
         <div className={styles['description-text-container']}>
           <h1>Real-time Updates</h1>
           <hr className={styles['hr']} />
-          <iframe
+          {/* <iframe
             className={styles['iframe-graph']}
             src="https://staticmy.roboforex.com/en/informers/providers/frame/large/113089/"
+            height="508"
+            width="405"
+            frameborder="0"></iframe> */}
+          <iframe
+            className={styles['iframe-graph']}
+            src="https://staticmy.roboforex.com/en/informers/providers/frame/performance/113089/"
             height="508"
             width="405"
             frameborder="0"></iframe>

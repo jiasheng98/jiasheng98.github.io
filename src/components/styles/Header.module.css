@@ -7,10 +7,24 @@
   justify-content: space-between;
   align-items: center;
   margin: auto;
+  z-index: 17;
+}
+
+.header-container-fixed {
+  background-color: var(--primary);
+  height: 100px;
+  display: flex;
+  padding: 0 3rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  z-index: 17;
+  position: fixed;
 }
 
 .logo-z-index {
-  z-index: 3;
+  z-index: 17;
 }
 
 .logo-container {
@@ -111,16 +125,16 @@
   left: 0;
   margin-left: 2rem;
   display: flex;
-  z-index: 2;
+  z-index: 17;
 }
 
 .mobile-sidebar {
   height: 100vh;
   width: 100vw;
   background-color: var(--black);
-  position: absolute;
+  position: fixed;
   top: 0;
-  z-index: 3;
+  z-index: 16;
   transition: opacity 0.2s ease-in-out;
   animation: background-fade 0.2s;
 }
@@ -140,6 +154,9 @@
     display: none;
   }
   .header-container {
+    justify-content: center;
+  }
+  .header-container-fixed {
     justify-content: center;
   }
 }

@@ -13,7 +13,7 @@ const Navbar = ({seyebot}) => {
 
   return (
     <nav>
-      <div className={styles['header-container']}>
+      <div className={open ? styles['header-container-fixed']  : styles['header-container'] }>
       {!seyebot ? 
         <HamburgerMenu
           isOpen={open}
@@ -39,6 +39,11 @@ const Navbar = ({seyebot}) => {
               <a className={styles['portfolio-text']}>Portfolio</a>
             </Link>
           </li>
+          <li>
+            <Link href="/seyebot">
+              <a className={styles['portfolio-text']}>Seye-Bot</a>
+            </Link>
+          </li>
           <li className={styles['resume-style']}>
             <Link href="/Resume(Jia Sheng).pdf">
               <a target="_BLANK" className={styles['resume-text']}>
@@ -46,6 +51,7 @@ const Navbar = ({seyebot}) => {
               </a>
             </Link>
           </li>
+
         </div>
       </div>
         
@@ -72,6 +78,11 @@ const Navbar = ({seyebot}) => {
           <li>
             <Link href="/portfolio/PortfolioList">
               <a className={styles['portfolio-text']}>Portfolio</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/seyebot">
+              <a className={styles['portfolio-text']}>Seye-Bot</a>
             </Link>
           </li>
           <li className={styles['resume-style']}>

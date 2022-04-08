@@ -36,7 +36,7 @@ const SeyeBot = () => {
 const LandingSection = () => {
   useEffect(() => {
     const options = {
-      strings: ['Bot', 'AI'],
+      strings: ['Bot'],
       typeSpeed: 100,
       backSpeed: 100,
       loop: true,

@@ -39,11 +39,11 @@ const Navbar = ({seyebot}) => {
               <a className={styles['portfolio-text']}>Portfolio</a>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/seyebot">
               <a className={styles['portfolio-text']}>Seye-Bot</a>
             </Link>
-          </li>
+          </li> */}
           <li className={styles['resume-style']}>
             <Link href="/Resume(Jia Sheng).pdf">
               <a target="_BLANK" className={styles['resume-text']}>
@@ -80,11 +80,11 @@ const Navbar = ({seyebot}) => {
               <a className={styles['portfolio-text']}>Portfolio</a>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/seyebot">
               <a className={styles['portfolio-text']}>Seye-Bot</a>
             </Link>
-          </li>
+          </li> */}
           <li className={styles['resume-style']}>
             <Link href="/Resume(Jia Sheng).pdf">
               <a target="_BLANK" className={styles['resume-text']}>

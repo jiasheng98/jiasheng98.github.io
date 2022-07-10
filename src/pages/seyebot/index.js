@@ -168,22 +168,22 @@ const DescriptionSection = () => {
             <h1>Maximum Drawdown (Projected)</h1>
           </div>
         </div>
-        <div className={styles['description-text-container']}>
+        {/* <div className={styles['description-text-container']}>
           <h1>Real-time Updates</h1>
           <hr className={styles['hr']} />
-          {/* <iframe
+          <iframe
             className={styles['iframe-graph']}
             src="https://staticmy.roboforex.com/en/informers/providers/frame/large/113089/"
             height="508"
             width="405"
-            frameborder="0"></iframe> */}
+            frameborder="0"></iframe>
           <iframe
             className={styles['iframe-graph']}
             src="https://staticmy.roboforex.com/en/informers/providers/frame/performance/113089/"
             height="508"
             width="405"
             frameborder="0"></iframe>
-        </div>
+        </div> */}
         <div
           className={styles['description-text-container']}
           style={{marginTop: '2rem'}}>

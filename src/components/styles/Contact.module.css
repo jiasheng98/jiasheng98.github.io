@@ -19,7 +19,7 @@
 .contact-header {
   color: var(--primary);
   font-family: GothamBold;
-  text-shadow: 4px 3px 3px rgba(206, 89, 55, 0.5);
+  /* text-shadow: 4px 3px 3px rgba(206, 89, 55, 0.5); */
   font-size: 7rem;
   line-height: 1;
   text-align: center;

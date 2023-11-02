@@ -6,27 +6,30 @@
   justify-content: center;
   align-items: center;
   display: flex;
+  /* background-image: url('../../../public/images/bg-white-transparent.png'); */
+  /* background-size: cover; */
+  /* background-position: bottom center; */
 }
 
 .about-iphone {
   width: 550px;
   height: 550px;
-  -webkit-filter: drop-shadow(4px 4px 20px rgba(206, 89, 55, 0.4));
-  filter: drop-shadow(4px 4px 20px rgba(206, 89, 55, 0.4));
+  /* -webkit-filter: drop-shadow(4px 4px 20px rgba(206, 89, 55, 0.4)); */
+  /* filter: drop-shadow(4px 4px 20px rgba(206, 89, 55, 0.4)); */
   cursor: pointer;
 }
 
 .about-header {
   color: var(--primary);
   font-family: GothamBold;
-  text-shadow: 4px 3px 3px rgba(206, 89, 55, 0.5);
+  /* text-shadow: 4px 3px 3px rgba(206, 89, 55, 0.5); */
   font-size: 5rem;
 }
 
 .about-subhead {
   color: var(--primarytext);
   font-family: GothamBold;
-  text-shadow: 4px 3px 3px rgba(206, 89, 55, 0.5);
+  /* text-shadow: 4px 3px 3px rgba(206, 89, 55, 0.5); */
   font-size: 2rem;
   margin-bottom: 2rem;
 }
@@ -34,8 +37,9 @@
 .about-right-content {
   font-size: 1rem;
   line-height: 2;
+  margin-top: 1rem;
   max-width: 600px;
-  color: var(--primarytext);
+  color: var(--primary);
 }
 
 #about {

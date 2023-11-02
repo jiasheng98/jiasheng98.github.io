@@ -1,10 +1,10 @@
 :root {
-  --primary: #040446 !important;
-  --secondary: #c17577 !important;
-  --primarytext: #f4d2d3 !important;
-  --secondarytext: #f4d2d3 !important;
+  --primary: #FFFFFF !important;
+  --secondary: #c17577!important;
+  --primarytext: #373737 !important;
+  --secondarytext: #FFFFFF!important;
   --white: #fff !important;
-  --black: #000 !important;
+  --black: #373737 !important;
 }
 
 @font-face {

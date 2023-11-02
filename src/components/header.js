@@ -12,7 +12,7 @@ const Navbar = ({seyebot}) => {
   };
 
   return (
-    <nav>
+    <nav  className={styles['overlay']}>
       <div className={open ? styles['header-container-fixed']  : styles['header-container'] }>
       {!seyebot ? 
         <HamburgerMenu
@@ -34,11 +34,11 @@ const Navbar = ({seyebot}) => {
       className={styles['mobile-sidebar']}
       >
               <div className={styles['header-navigation-mobile']}>
-          <li>
+          {/* <li>
             <Link href="/portfolio/PortfolioList">
               <a className={styles['portfolio-text']}>Portfolio</a>
             </Link>
-          </li>
+          </li> */}
           {/* <li>
             <Link href="/seyebot">
               <a className={styles['portfolio-text']}>Seye-Bot</a>
@@ -75,11 +75,11 @@ const Navbar = ({seyebot}) => {
         
 
         <div className={styles['header-navigation']}>
-          <li>
+          {/* <li>
             <Link href="/portfolio/PortfolioList">
               <a className={styles['portfolio-text']}>Portfolio</a>
             </Link>
-          </li>
+          </li> */}
           {/* <li>
             <Link href="/seyebot">
               <a className={styles['portfolio-text']}>Seye-Bot</a>

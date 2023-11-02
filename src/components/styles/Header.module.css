@@ -1,5 +1,5 @@
 .header-container {
-  background-color: var(--primary);
+  background-color: transparent;
   height: 100px;
   display: flex;
   padding: 0 3rem;
@@ -9,6 +9,13 @@
   margin: auto;
   z-index: 17;
 }
+
+.overlay {
+  transform: translatey(calc((1 - 1) * 100%));
+  margin-bottom: -145px;
+  z-index: 1000;
+}
+
 
 .header-container-fixed {
   background-color: var(--primary);
@@ -37,7 +44,7 @@
 .logo-container:focus,
 .logo-container:hover {
   text-decoration: none;
-  transform: scale(1.1);
+  transform: scale(1.02);
   cursor: pointer;
 }
 
@@ -58,13 +65,13 @@
 
 .logo-name {
   margin-left: 10px;
-  color: var(--white);
+  color: var(--black);
   text-decoration: none;
 }
 
 .logo-name:focus,
 .logo-name:hover {
-  color: var(--white);
+  color: var(--secondary);
   text-decoration: none;
 }
 
@@ -85,15 +92,20 @@
   color: var(--primarytext);
   text-align: center;
   align-self: center;
-  font-family: Gotham;
+  font-family: GothamBold;
   letter-spacing: 1px;
   transition: all 0.2s ease-in-out;
+}
+
+.resume-style:focus, 
+.resume-style:hover {
+  border: 1px solid var(--secondary);
 }
 
 .resume-text:focus,
 .resume-text:hover {
   color: var(--primary);
-  background-color: var(--primarytext);
+  background-color: var(--secondary);
   text-decoration: none;
   transform: scale(1);
 }
@@ -109,7 +121,7 @@
   color: var(--primarytext);
   text-align: center;
   align-self: center;
-  font-family: Gotham;
+  font-family: GothamBold;
   letter-spacing: 1px;
   transition: all 0.2s ease-in-out;
 }
@@ -117,7 +129,7 @@
 .portfolio-text:focus,
 .portfolio-text:hover {
   text-decoration: none;
-  color: var(--white);
+  color: var(--secondary);
 }
 
 .hamburger-menu {

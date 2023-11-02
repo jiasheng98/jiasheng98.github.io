@@ -6,12 +6,13 @@ import Typed from 'typed.js';
 import styles from '../styles/LandingSection.module.css';
 
 // Assets
-import imac from '../../../public/images/imacmock.png';
+import imac from '../../../public/images/macbook.png';
+import bg from '../../../public/images/bg.png';
 
 const LandingSection = () => {
   useEffect(() => {
     const options = {
-      strings: ['Jia Sheng', 'UI Designer', 'UI Developer', 'Creative Lead'],
+      strings: ['UI/UX Designer', 'UI/UX Developer', 'Frontend Developer'],
       typeSpeed: 100,
       backSpeed: 100,
       loop: true,
@@ -29,7 +30,7 @@ const LandingSection = () => {
   return (
     <>
       <section className={styles['welcome-container']} id={styles['welcome']}>
-        <Tilt tiltReverse={true} tiltMaxAngleY={15} tiltMaxAngleX={0}>
+        {/* <Tilt tiltReverse={true} tiltMaxAngleY={15} tiltMaxAngleX={0}> */}
           <div className={styles['welcome-title-text-container']}>
             <div
               className={styles['welcome-phone-container']}
@@ -43,16 +44,18 @@ const LandingSection = () => {
               data-aos-delay="800"
               className={styles['text-wrapper']}>
               <h1 className={styles['i-am-text']}>
-                I am
+              Hello, I'm Jia Sheng, a
                 <br />
                 <span
                   className={styles['i-am-text-title']}
                   ref={(e) => (el = e)}
                 />
+                <br/>
+                based in Malaysia.
               </h1>
             </div>
           </div>
-        </Tilt>
+        {/* </Tilt> */}
       </section>
     </>
   );

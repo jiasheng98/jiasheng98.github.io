@@ -10,10 +10,6 @@ import side from '../../../public/images/side.png';
 const About = () => {
   return (
     <section className={styles['about-container']} id={styles['about']}>
-      {/* <LazyImage src={side} className={styles['about-side-top-right']} />
-      <LazyImage src={side} className={styles['about-side-top-left']} />
-      <LazyImage src={side} className={styles['about-side-bottom-right']} />
-      <LazyImage src={side} className={styles['about-side-bottom-left']} /> */}
       <div className={styles['about-wrap']}>
         <AboutLeftSection />
         <AboutRightSection />

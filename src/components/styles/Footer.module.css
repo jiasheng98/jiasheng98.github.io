@@ -1,5 +1,5 @@
 .footer-container {
-  background-color: var(--secondary);
+  background-color: var(--primarytext);
   height: 80px;
   display: flex;
   justify-content: center;

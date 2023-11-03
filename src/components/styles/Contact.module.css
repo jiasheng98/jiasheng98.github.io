@@ -13,14 +13,13 @@
 }
 
 .contact-container {
-  background-color: var(--primarytext);
+  background-color: var(--primary);
 }
 
 .contact-header {
-  color: var(--primary);
+  color: var(--primarytext);
   font-family: GothamBold;
-  /* text-shadow: 4px 3px 3px rgba(206, 89, 55, 0.5); */
-  font-size: 7rem;
+  font-size: 4rem;
   line-height: 1;
   text-align: center;
 }
@@ -66,7 +65,7 @@
     padding-bottom: 2rem;
   }
   .contact-header {
-    font-size: 5rem;
+    font-size: 3rem;
   }
   .contact-side-top-right {
     width: 50%;
@@ -81,8 +80,8 @@
 
 @media (max-width: 576px) {
   .contact-container {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
   }
   .contact-header {
     font-size: 2rem;

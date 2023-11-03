@@ -4,7 +4,7 @@ import Logo from '../../public/Logo.png';
 import HamburgerMenu from 'react-hamburger-menu';
 import styles from './styles/Header.module.css';
 
-const Navbar = ({seyebot}) => {
+const Navbar = ({seyebot, overlay}) => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = (params) => {
@@ -12,7 +12,7 @@ const Navbar = ({seyebot}) => {
   };
 
   return (
-    <nav  className={open ? styles['']  : styles['overlay'] }>
+    <nav  className={!overlay ? styles['']  : styles['overlay'] }>
       <div className={open ? styles['header-container-fixed']  : styles['header-container'] }>
       {!seyebot ? 
         <HamburgerMenu

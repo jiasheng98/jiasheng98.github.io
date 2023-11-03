@@ -62,7 +62,7 @@ const Snailer = () => {
 
   return (
     <MyLayout title="Snailer">
-      <ProjectDetail item={PortfolioList} data={Data} website={Website} />
+      <ProjectDetail item={PortfolioList} data={Data} website={Website}/>
     </MyLayout>
   );
 };

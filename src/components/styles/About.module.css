@@ -1,14 +1,15 @@
 .about-container {
   background-color: var(--secondary);
   width: 100%;
-  padding: 3rem;
+  padding: 3rem 1rem;
   margin: auto;
   justify-content: center;
   align-items: center;
   display: flex;
-  /* background-image: url('../../../public/images/bg-white-transparent.png'); */
-  /* background-size: cover; */
-  /* background-position: bottom center; */
+  background-image: url('../../../public/images/bg-white-transparent.png');
+  background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeat;
 }
 
 .about-iphone {
@@ -97,8 +98,8 @@
 
 @media (max-width: 1200px) {
   .about-iphone {
-    width: 350px;
-    height: 350px;
+    width: 450px;
+    height: 450px;
   }
   .about-header {
     font-size: 4rem;
@@ -108,15 +109,19 @@
     margin-bottom: 1.8rem;
   }
   .about-right-content {
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: 2;
+  }
+  .about-container {
+    background-position: left;
+    background-size: 120%;
   }
 }
 
 @media (max-width: 900px) {
   .about-iphone {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
   }
   .about-header {
     font-size: 3.8rem;
@@ -126,7 +131,7 @@
     margin-bottom: 1.6rem;
   }
   .about-right-content {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     line-height: 2;
   }
   .about-side-top-right,
@@ -140,19 +145,38 @@
 
 @media (max-width: 768px) {
   .about-iphone {
-    width: 250px;
-    height: 250px;
+    width: 400px;
+    height: 400px;
   }
   .about-header {
-    font-size: 2.6rem;
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 2rem;
   }
   .about-subhead {
-    font-size: 1.2rem;
-    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
   }
   .about-right-content {
-    font-size: 0.5rem;
+    font-size: 1rem;
     line-height: 2;
+    text-align: center;
+  }
+  .about-wrap {
+    flex-direction: column;
+  }
+  .about-container {
+    background-position: center;
+    background-size: cover;
+    background-image: url('../../../public/images/bg-white-transparent-vertical.png');
+  }
+  .about-side-top-right,
+  .about-side-top-left,
+  .about-side-bottom-right,
+  .about-side-bottom-left {
+    width: 80px;
+    height: 80px;
   }
 }
 

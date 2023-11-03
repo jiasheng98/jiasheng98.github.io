@@ -12,7 +12,7 @@ const Navbar = ({seyebot}) => {
   };
 
   return (
-    <nav  className={styles['overlay']}>
+    <nav  className={open ? styles['']  : styles['overlay'] }>
       <div className={open ? styles['header-container-fixed']  : styles['header-container'] }>
       {!seyebot ? 
         <HamburgerMenu

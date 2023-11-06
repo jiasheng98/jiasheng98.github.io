@@ -10,6 +10,7 @@ const Navbar = ({seyebot, overlay}) => {
   const handleOpen = (params) => {
     setOpen((prev) => !prev);
   };
+  
 
   return (
     <nav  className={!overlay || open ? styles['']  : styles['overlay'] }>

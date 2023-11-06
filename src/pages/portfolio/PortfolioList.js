@@ -83,10 +83,10 @@ const PortfolioList = () => {
 
   return (
     <MyLayout title="Portfolio" description="Portfolio">
-      <Portfolio item={PortfolioList[0]} />
-      <Portfolio item={PortfolioList[1]} />
       <Portfolio item={PortfolioList[2]} />
       <Portfolio item={PortfolioList[3]} />
+      <Portfolio item={PortfolioList[0]} />
+      <Portfolio item={PortfolioList[1]} />
       <Contact />
     </MyLayout>
   );

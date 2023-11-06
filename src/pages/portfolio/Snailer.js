@@ -32,6 +32,7 @@ const Snailer = () => {
     playstore: true,
     designsoftware: 'Adobe XD, Adobe Photoshop, Adobe Illustrator, Adobe After Effects',
     developmentsoftware: 'React, HTML, CSS, Javascript',
+    website: false,
   };
 
   const Data = [

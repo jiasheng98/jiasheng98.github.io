@@ -29,6 +29,9 @@ const TTRacing = () => {
     prototype: false,
     designsoftware: 'Adobe XD, Shopify, Adobe Photoshop, Adobe Illustrator',
     developmentsoftware: 'Liquid Template Language (Liquid), HTML, CSS, Jquery, Javascript',
+    website: true,
+    websitelink: 'http://ttracing.my/',
+    websitelabel: 'Landing Page'
   };
 
   const Data = [

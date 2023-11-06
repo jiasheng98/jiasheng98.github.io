@@ -82,7 +82,7 @@ const DescriptionSection = ({item, data, website}) => {
             </div>
           </a>
           ) : null}
-          {website.map((website) => {
+          {/* {website.map((website) => {
             return (
               <a
                 className={styles['website-button']}
@@ -93,7 +93,17 @@ const DescriptionSection = ({item, data, website}) => {
                 </div>
               </a>
             );
-          })}
+          })} */}
+      {item.website === true ? (
+              <a
+                className={styles['website-button']}
+                href={item.websitelink}
+                target="_BLANK">
+                <div>
+                  <p>See Website ({item.websitelabel})</p>
+                </div>
+              </a>
+     ) : null}
         </div>
       </div>
     </div>

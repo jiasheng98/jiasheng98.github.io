@@ -93,16 +93,16 @@ const WorkSection = () => {
             onSelect={handleSelect}
             interval={10000}>
             <Carousel.Item>
-              <CarouselCard item={PortfolioList[0]} />
-            </Carousel.Item>
-            <Carousel.Item>
-              <CarouselCard item={PortfolioList[1]} />
-            </Carousel.Item>
-            <Carousel.Item>
               <CarouselCard item={PortfolioList[2]} />
             </Carousel.Item>
             <Carousel.Item>
               <CarouselCard item={PortfolioList[3]} />
+            </Carousel.Item>
+            <Carousel.Item>
+              <CarouselCard item={PortfolioList[0]} />
+            </Carousel.Item>
+            <Carousel.Item>
+              <CarouselCard item={PortfolioList[1]} />
             </Carousel.Item>
           </Carousel>
         </div>

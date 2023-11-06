@@ -29,6 +29,9 @@ const Strived = () => {
     prototype: false,
     designsoftware: 'Shopify, Adobe Photoshop, Adobe Illustrator',
     developmentsoftware: 'Liquid Template Language (Liquid), HTML, CSS, Jquery, Javascript',
+    website: true,
+    websitelink: 'https://strivedmy.com/',
+    websitelabel: 'Landing Page'
   };
 
   const Data = [
@@ -50,18 +53,19 @@ const Strived = () => {
     },
   ];
 
-  const Website = [
-    {
-      label: 'Landing Page',
-      href: 'http://ttracing.my/',
-    },
-  ];
+  // const Website = [
+  //   {
+  //     label: 'Landing Page',
+  //     href: 'http://ttracing.my/',
+  //   },
+  // ];
 
   return (
-    <MyLayout title="TTRacing">
+    <MyLayout title="Strived Malaysia">
       <ProjectDetail item={PortfolioList} data={Data} website={Website} />
     </MyLayout>
   );
 };
 
 export default Strived;
+

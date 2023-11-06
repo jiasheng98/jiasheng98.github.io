@@ -12,7 +12,7 @@ const Navbar = ({seyebot, overlay}) => {
   };
 
   return (
-    <nav  className={!overlay ? styles['']  : styles['overlay'] }>
+    <nav  className={!overlay || open ? styles['']  : styles['overlay'] }>
       <div className={open ? styles['header-container-fixed']  : styles['header-container'] }>
       {!seyebot ? 
         <HamburgerMenu
@@ -34,16 +34,11 @@ const Navbar = ({seyebot, overlay}) => {
       className={styles['mobile-sidebar']}
       >
               <div className={styles['header-navigation-mobile']}>
-          {/* <li>
+          <li>
             <Link href="/portfolio/PortfolioList">
               <a className={styles['portfolio-text']}>Portfolio</a>
             </Link>
-          </li> */}
-          {/* <li>
-            <Link href="/seyebot">
-              <a className={styles['portfolio-text']}>Seye-Bot</a>
-            </Link>
-          </li> */}
+          </li>
           <li className={styles['resume-style']}>
             <Link href="/Resume(Jia Sheng).pdf">
               <a target="_BLANK" className={styles['resume-text']}>
@@ -75,16 +70,11 @@ const Navbar = ({seyebot, overlay}) => {
         
 
         <div className={styles['header-navigation']}>
-          {/* <li>
+          <li>
             <Link href="/portfolio/PortfolioList">
               <a className={styles['portfolio-text']}>Portfolio</a>
             </Link>
-          </li> */}
-          {/* <li>
-            <Link href="/seyebot">
-              <a className={styles['portfolio-text']}>Seye-Bot</a>
-            </Link>
-          </li> */}
+          </li>
           <li className={styles['resume-style']}>
             <Link href="/Resume(Jia Sheng).pdf">
               <a target="_BLANK" className={styles['resume-text']}>

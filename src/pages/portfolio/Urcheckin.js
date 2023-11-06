@@ -31,18 +31,19 @@ const Urcheckin = () => {
       'https://play.google.com/store/apps/details?id=com.urcheckin_host.beta&hl=en_US&gl=US',
     designsoftware: 'Adobe XD, Adobe Photoshop, Adobe Illustrator',
     developmentsoftware: 'React, HTML, CSS, Javascript',
+    website: false,
   };
 
-  const Website = [
-    {
-      label: 'Consumer',
-      href: 'https://urcheckin.com/',
-    },
-    {
-      label: 'Merchant',
-      href: 'https://host.urcheckin.com/signIn',
-    },
-  ];
+  // const Website = [
+  //   {
+  //     label: 'Consumer',
+  //     href: 'https://urcheckin.com/',
+  //   },
+  //   {
+  //     label: 'Merchant',
+  //     href: 'https://host.urcheckin.com/signIn',
+  //   },
+  // ];
 
   return (
     <MyLayout title="Urcheckin">

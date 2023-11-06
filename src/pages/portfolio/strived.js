@@ -62,7 +62,7 @@ const Strived = () => {
 
   return (
     <MyLayout title="Strived Malaysia">
-      <ProjectDetail item={PortfolioList} data={Data} website={Website} />
+      <ProjectDetail item={PortfolioList} data={Data} />
     </MyLayout>
   );
 };

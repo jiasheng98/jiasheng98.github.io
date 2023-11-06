@@ -62,7 +62,7 @@ const TTRacing = () => {
 
   return (
     <MyLayout title="TTRacing">
-      <ProjectDetail item={PortfolioList} data={Data} website={Website} />
+      <ProjectDetail item={PortfolioList} data={Data}  />
     </MyLayout>
   );
 };

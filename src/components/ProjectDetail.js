@@ -4,11 +4,11 @@ import styles from './styles/ProjectDetail.module.css';
 import appstore from '../../public/images/appstore.png';
 import playstore from '../../public/images/playstore.png';
 
-const ProjectDetail = ({item, data, website}) => {
+const ProjectDetail = ({item, data}) => {
   return (
     <>
       <LandingSection item={item} />
-      <DescriptionSection item={item} data={data} website={website} />
+      <DescriptionSection item={item} data={data}  />
     </>
   );
 };

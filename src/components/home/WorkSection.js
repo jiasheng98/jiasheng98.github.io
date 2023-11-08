@@ -24,11 +24,11 @@ import urcheckinuihome from '../../../public/images/urcheckin_ui_home.png';
 import ttracinguihome from '../../../public/images/ttracing_ui_home.png';
 import striveduihome from '../../../public/images/strived_ui_home.png';
 
-const WorkSection = () => {
+const WorkSection = ({jp}) => {
   const PortfolioList = [
     {
       logo: snailer,
-      title: 'Snailer',
+      title: jp ? 'シェーン': 'Snailer',
       subtitle:
         'Took part in UI design and development for Snailer - a white-labeled food/grocery delivery and vehicle hiring app based in Johor, Malaysia. The app and website is designed using playful, clean and modern approach.',
       backgroundColor: '#468d65',
@@ -85,7 +85,7 @@ const WorkSection = () => {
     <section className={styles['work-container']} id="work">
       <div className={styles['work-wrap']}>
         <div>
-          <h1 className={styles['my-work-header']}>Check Out My Work!</h1>
+          <h1 className={styles['my-work-header']}>{jp ? 'シェーン': 'Check Out My Work!'}</h1>
         </div>
         <div className={styles['carousel-container']}>
           <Carousel

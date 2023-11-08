@@ -5,12 +5,12 @@ import {BrowserRouter, withRouter} from 'react-router-dom'
 
 export default function Layout({
   children,
-  title = 'Jia Sheng Yeap',
+  title = 'Jia Sheng Yeap | シェーン',
   description,
   keywords,
   ld_json,
-  seyebot,
-  overlay
+  overlay,
+  jp
 }) {
   
   return (
@@ -24,7 +24,7 @@ export default function Layout({
           dangerouslySetInnerHTML={{__html: JSON.stringify(ld_json)}}
         />
       </Head>
-      <Header seyebot={seyebot} overlay={overlay}/>
+      <Header overlay={overlay} jp={jp}/>
       {children}
       <Footer />
     </>

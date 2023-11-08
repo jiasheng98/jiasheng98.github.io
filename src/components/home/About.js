@@ -7,12 +7,12 @@ import styles from '../styles/About.module.css';
 import iphone from '../../../public/gif/PhoneGIF.gif';
 import side from '../../../public/images/side.png';
 
-const About = () => {
+const About = ({jp}) => {
   return (
     <section className={styles['about-container']} id={styles['about']}>
       <div className={styles['about-wrap']}>
         <AboutLeftSection />
-        <AboutRightSection />
+        <AboutRightSection jp={jp}/>
       </div>
     </section>
   );
@@ -32,10 +32,10 @@ const AboutLeftSection = () => {
   );
 };
 
-const AboutRightSection = () => {
+const AboutRightSection = ({jp}) => {
   return (
     <div className={styles['about-right-container']} data-aos="fade-up">
-      <h2 className={styles['about-header']}>Hey There!</h2>
+      <h2 className={styles['about-header']}>{jp ? 'シェーン': 'Hey There!'}</h2>
       {/* <h2 className={styles['about-subhead']}>I'm Yeap Jia Sheng</h2> */}
       <p className={styles['about-right-content']}>
         I am currently a UI/UX Designer in Steelcase.

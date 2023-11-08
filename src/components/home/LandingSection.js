@@ -9,7 +9,7 @@ import styles from '../styles/LandingSection.module.css';
 import imac from '../../../public/images/macbook.png';
 import bg from '../../../public/images/bg.png';
 
-const LandingSection = () => {
+const LandingSection = ({jp}) => {
   useEffect(() => {
     const options = {
       strings: ['UI/UX Designer', 'UI/UX Developer', 'Frontend Developer'],
@@ -44,7 +44,7 @@ const LandingSection = () => {
               data-aos-delay="800"
               className={styles['text-wrapper']}>
               <h1 className={styles['i-am-text']}>
-              Hello, I'm Jia Sheng, a
+              {jp ? 'シェーン': 'Hello, I am Jia Sheng, a'}
                 <br />
                 <span
                   className={styles['i-am-text-title']}

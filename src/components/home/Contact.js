@@ -2,12 +2,12 @@ import LazyImage from '../lazy-image';
 import Link from 'next/link';
 
 import styles from '../styles/Contact.module.css';
-import {BsDiscord, BsInstagram} from 'react-icons/bs';
+import {BsLinkedin, BsInstagram} from 'react-icons/bs';
 
 //Assets
 import side1 from '../../../public/images/side1.png';
 
-const Contact = ({seyefactory}) => {
+const Contact = ({icons, jp}) => {
   return (
     <section className={styles['contact-container']} id={styles['contact']}>
       <LazyImage src={side1} className={styles['contact-side-top-right']} />
@@ -17,24 +17,24 @@ const Contact = ({seyefactory}) => {
         data-aos="fade-up"
         data-aos-delay="200">
         <div>
-          <p className={styles['contact-header']}>Let's Connect!</p>
+          <p className={styles['contact-header']}>{jp ? 'シェーン': 'Let\'s Connect!'}</p>
           {/* <p className={styles["contact-header"]}>Want Me?</p> */}
         </div>
-        {seyefactory ? (
+        {icons ? (
           <div
           className={styles['seye-social-icon']}
           >
             <a
-              href="https://discord.com/invite/xr8kMjpmV6"
+              href="https://www.linkedin.com/in/jia-sheng-yeap-224277143/"
               target="_blank">
-              <BsDiscord 
-              color='#7289DA' size={50}/>
+              <BsLinkedin
+              color='' size={50}/>
             </a>
-            <a
+            {/* <a
               href="https://www.instagram.com/seyefactory/?hl=en"
               target="_blank">
               <BsInstagram color='#833AB4' size={50}/>
-            </a>
+            </a> */}
           </div>
         ) : null}
       </div>

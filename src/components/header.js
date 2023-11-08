@@ -4,7 +4,7 @@ import Logo from '../../public/Logo.png';
 import HamburgerMenu from 'react-hamburger-menu';
 import styles from './styles/Header.module.css';
 
-const Navbar = ({seyebot, overlay}) => {
+const Navbar = ({jp, overlay}) => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = (params) => {
@@ -15,7 +15,7 @@ const Navbar = ({seyebot, overlay}) => {
   return (
     <nav  className={!overlay || open ? styles['']  : styles['overlay'] }>
       <div className={open ? styles['header-container-fixed']  : styles['header-container'] }>
-      {!seyebot ? 
+  
         <HamburgerMenu
           isOpen={open}
           menuClicked={handleOpen}
@@ -28,7 +28,7 @@ const Navbar = ({seyebot, overlay}) => {
           animationDuration={0.5}
           className={styles['hamburger-menu']}
         />
-        : null }
+  
         {open ? 
 
       <div
@@ -37,13 +37,13 @@ const Navbar = ({seyebot, overlay}) => {
               <div className={styles['header-navigation-mobile']}>
           <li>
             <Link href="/portfolio/PortfolioList">
-              <a className={styles['portfolio-text']}>Portfolio</a>
+              <a className={styles['portfolio-text']}>{jp ? 'シェーン': 'Portfolio'}</a>
             </Link>
           </li>
           <li className={styles['resume-style']}>
             <Link href="/Resume(Jia Sheng).pdf">
               <a target="_BLANK" className={styles['resume-text']}>
-                Resume
+              {jp ? 'シェーン': 'Resume'}
               </a>
             </Link>
           </li>
@@ -52,8 +52,6 @@ const Navbar = ({seyebot, overlay}) => {
       </div>
         
         : null}
-         {!seyebot ? 
-         <>
         <Link href="/">
           <div className={styles['logo-z-index']} data-aos="zoom-in" data-aos-delay="100">
             <a className={styles['logo-container']}>
@@ -64,7 +62,7 @@ const Navbar = ({seyebot, overlay}) => {
                   alt="Jia Sheng Yeap"
                 />
               </div>
-              <a className={styles['logo-name']}>Jia Sheng Yeap</a>
+              <a className={styles['logo-name']}>Jia Sheng Yeap | シェーン</a>
             </a>
           </div>
         </Link>
@@ -73,19 +71,17 @@ const Navbar = ({seyebot, overlay}) => {
         <div className={styles['header-navigation']}>
           <li>
             <Link href="/portfolio/PortfolioList">
-              <a className={styles['portfolio-text']}>Portfolio</a>
+              <a className={styles['portfolio-text']}>{jp ? 'シェーン': 'Portfolio'}</a>
             </Link>
           </li>
           <li className={styles['resume-style']}>
-            <Link href="/Resume(Jia Sheng).pdf">
+            <Link href={jp ? '/Resume(JiaSheng)Japanese.pdf' : '/Resume(Jia Sheng).pdf'}>
               <a target="_BLANK" className={styles['resume-text']}>
-                Resume
+              {jp ? 'シェーン': 'Resume'}
               </a>
             </Link>
           </li>
         </div>
-        </>
-         : null }
       </div>
     </nav>
   );

@@ -28,8 +28,8 @@ const WorkSection = ({jp}) => {
   const PortfolioList = [
     {
       logo: snailer,
-      title: jp ? 'シェーン': 'Snailer',
-      subtitle:
+      title: 'Snailer',
+      subtitle: jp ? 'マレーシアのジョホール州に拠点を置くホワイトラベルの食品/食料品配達および車両レンタルアプリである Snailer の UI デザインと開発に参加しました。遊び心のある、クリーンでモダンなアプローチのアプリ・ウェブサイトのデザインです。' :
         'Took part in UI design and development for Snailer - a white-labeled food/grocery delivery and vehicle hiring app based in Johor, Malaysia. The app and website is designed using playful, clean and modern approach.',
       backgroundColor: '#468d65',
       fontColor: '#FFFFFF',
@@ -38,12 +38,12 @@ const WorkSection = ({jp}) => {
       image1: snailerfood,
       image2: snailergrocery,
       image3: snailercar,
-      href: '/portfolio/Snailer',
+      href: jp ? 'jp/portfolio/Snailer': '/portfolio/Snailer' ,
     },
     {
       logo: urcheckin,
       title: 'Urcheckin',
-      subtitle:
+      subtitle: jp ? 'ホームステイを中心とした民泊や観光体験の手配を行う宿泊アプリ「Urcheckin」のUI開発に携わりました。' :
         'Took part in UI development for Urcheckin - A lodging app which offers arrangement for vacation rental, primarily homestays, or tourism experiences.',
       backgroundColor: '#E9493C',
       fontColor: '#FFFFFF',
@@ -52,27 +52,27 @@ const WorkSection = ({jp}) => {
       image1: urcheckinsign,
       image2: urcheckinwalau,
       image3: urcheckintower,
-      href: '/portfolio/Urcheckin',
+      href: jp ? 'jp/portfolio/Urcheckin' : '/portfolio/Urcheckin',
     },
     {
       logo: ttracing,
       title: 'TTRacing',
-      subtitle:
+      subtitle: jp ? '長時間の仕事やゲームをする際にすべての人に最高の快適さを提供することに努めている「TTRAcing」ゲーミングチェアの会社 の Shopify UI/UX のデザインと開発全体に継続的に参加し、改善を行っていました。' :
         'Constantly take part and improving in the entire Shopify UI/UX design and development for TTRacing - a gaming chair company that strives to give everyone the best comfort experience for when they’re working or playing for long hours.',
       backgroundColor: '#FFFFFF',
       fontColor: '#000000',
       phone: ttracinguihome,
-      href: '/portfolio/ttracing',
+      href: jp ? 'jp/portfolio/ttracing' : '/portfolio/ttracing',
     },
     {
       logo: strived,
       title: 'Strived',
-      subtitle:
+      subtitle: jp ? 'ユニークで高品質な製品の提供に重点を置いた完全にカスタマイズされたギフト ショップである Strived の Shopify UI/UX のデザインと開発全体に参加しました。' :
         'Took part in the entire Shopify UI/UX design and development for Strived - a fully customised gift shop that focuses on providing unique and high-quality products.',
       backgroundColor: '#000000',
       fontColor: '#FFFFFF',
       phone: striveduihome,
-      href: '/portfolio/strived',
+      href: jp ? 'jp/portfolio/strived' : '/portfolio/strived',
     },
   ];
 
@@ -85,7 +85,7 @@ const WorkSection = ({jp}) => {
     <section className={styles['work-container']} id="work">
       <div className={styles['work-wrap']}>
         <div>
-          <h1 className={styles['my-work-header']}>{jp ? 'シェーン': 'Check Out My Work!'}</h1>
+          <h1 className={styles['my-work-header']}>{jp ? '制作事例': 'Check Out My Work!'}</h1>
         </div>
         <div className={styles['carousel-container']}>
           <Carousel
@@ -93,16 +93,16 @@ const WorkSection = ({jp}) => {
             onSelect={handleSelect}
             interval={10000}>
             <Carousel.Item>
-              <CarouselCard item={PortfolioList[2]} />
+              <CarouselCard item={PortfolioList[2]}/>
             </Carousel.Item>
             <Carousel.Item>
-              <CarouselCard item={PortfolioList[3]} />
+              <CarouselCard item={PortfolioList[3]}/>
             </Carousel.Item>
             <Carousel.Item>
-              <CarouselCard item={PortfolioList[0]} />
+              <CarouselCard item={PortfolioList[0]}/>
             </Carousel.Item>
             <Carousel.Item>
-              <CarouselCard item={PortfolioList[1]} />
+              <CarouselCard item={PortfolioList[1]}/>
             </Carousel.Item>
           </Carousel>
         </div>
@@ -111,7 +111,7 @@ const WorkSection = ({jp}) => {
   );
 };
 
-const CarouselCard = ({item}) => {
+const CarouselCard = ({item,jp}) => {
   return (
     <div>
       <div
@@ -168,7 +168,7 @@ const CarouselCard = ({item}) => {
               <p
                 className={styles['work-button-text']}
                 style={{color: item.backgroundColor, backgroundColor: item.fontColor}}>
-                Check it Out
+                {jp ? '詳しくはこちら' : 'Check it Out'}
               </p>
             </button>
           </Link>

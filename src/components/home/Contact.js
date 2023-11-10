@@ -17,7 +17,7 @@ const Contact = ({icons, jp}) => {
         data-aos="fade-up"
         data-aos-delay="200">
         <div>
-          <p className={styles['contact-header']}>{jp ? 'シェーン': 'Let\'s Connect!'}</p>
+          <p className={styles['contact-header']}>{jp ? '連絡しましょう！': 'Let\'s Connect!'}</p>
           {/* <p className={styles["contact-header"]}>Want Me?</p> */}
         </div>
         {icons ? (

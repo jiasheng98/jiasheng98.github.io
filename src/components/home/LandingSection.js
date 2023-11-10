@@ -12,7 +12,7 @@ import bg from '../../../public/images/bg.png';
 const LandingSection = ({jp}) => {
   useEffect(() => {
     const options = {
-      strings: ['UI/UX Designer', 'UI/UX Developer', 'Frontend Developer'],
+      strings: [jp?'UX/UIデザイナー':'UI/UX Designer', jp?'UX/UIデベロッパー':'UI/UX Developer', jp?'フロントエンドエンジニア':'Frontend Developer'],
       typeSpeed: 100,
       backSpeed: 100,
       loop: true,
@@ -44,14 +44,14 @@ const LandingSection = ({jp}) => {
               data-aos-delay="800"
               className={styles['text-wrapper']}>
               <h1 className={styles['i-am-text']}>
-              {jp ? 'シェーン': 'Hello, I am Jia Sheng, a'}
+              {jp ? 'シェーンです,私は': 'Hello, I am Jia Sheng, a'}
                 <br />
                 <span
                   className={styles['i-am-text-title']}
                   ref={(e) => (el = e)}
                 />
                 <br/>
-                based in Malaysia.
+                {jp ? 'です。': 'based in Malaysia.'}
               </h1>
             </div>
           </div>

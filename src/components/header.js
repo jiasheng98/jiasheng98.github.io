@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Logo from '../../public/Logo.png';
 import HamburgerMenu from 'react-hamburger-menu';
 import styles from './styles/Header.module.css';
+import {BsGlobe2} from 'react-icons/bs';
 
 const Navbar = ({jp, overlay}) => {
   const [open, setOpen] = useState(false);
@@ -36,14 +37,22 @@ const Navbar = ({jp, overlay}) => {
       >
               <div className={styles['header-navigation-mobile']}>
           <li>
-            <Link href="/portfolio/PortfolioList">
-              <a className={styles['portfolio-text']}>{jp ? 'シェーン': 'Portfolio'}</a>
+            <Link href={jp ? '/jp/portfolio/PortfolioList' : '/portfolio/PortfolioList'}>
+              <a className={styles['portfolio-text']}>{jp ? 'ポートフォリオ': 'Portfolio'}</a>
             </Link>
           </li>
           <li className={styles['resume-style']}>
             <Link href="/Resume(Jia Sheng).pdf">
               <a target="_BLANK" className={styles['resume-text']}>
-              {jp ? 'シェーン': 'Resume'}
+              {jp ? '履歴書': 'Resume'}
+              </a>
+            </Link>
+          </li>
+          <li className={styles['language-style']}>
+            <Link href={jp ? '/' : '/jp'}>
+              <a className={styles['language-text']}>
+                <BsGlobe2 className={styles['language-icon']}/>
+              {jp ? '日本語': 'English'}
               </a>
             </Link>
           </li>
@@ -52,7 +61,7 @@ const Navbar = ({jp, overlay}) => {
       </div>
         
         : null}
-        <Link href="/">
+        <Link href={jp ? '/jp' : '/'}>
           <div className={styles['logo-z-index']} data-aos="zoom-in" data-aos-delay="100">
             <a className={styles['logo-container']}>
               <div className={styles['logo-image-wrapper']}>
@@ -70,14 +79,22 @@ const Navbar = ({jp, overlay}) => {
 
         <div className={styles['header-navigation']}>
           <li>
-            <Link href="/portfolio/PortfolioList">
-              <a className={styles['portfolio-text']}>{jp ? 'シェーン': 'Portfolio'}</a>
+            <Link href={jp ? '/jp/portfolio/PortfolioList' : '/portfolio/PortfolioList'}>
+              <a className={styles['portfolio-text']}>{jp ? 'ポートフォリオ': 'Portfolio'}</a>
             </Link>
           </li>
           <li className={styles['resume-style']}>
             <Link href={jp ? '/Resume(JiaSheng)Japanese.pdf' : '/Resume(Jia Sheng).pdf'}>
               <a target="_BLANK" className={styles['resume-text']}>
-              {jp ? 'シェーン': 'Resume'}
+              {jp ? '履歴書': 'Resume'}
+              </a>
+            </Link>
+          </li>
+          <li className={styles['language-style']}>
+            <Link href={jp ? '/' : '/jp'}>
+              <a className={styles['language-text']}>
+                <BsGlobe2 className={styles['language-icon']}/>
+              {jp ? '日本語': 'English'}
               </a>
             </Link>
           </li>

@@ -26,7 +26,7 @@ export default function Layout({
       </Head>
       <Header overlay={overlay} jp={jp}/>
       {children}
-      <Footer />
+      <Footer jp={jp}/>
     </>
   );
 }

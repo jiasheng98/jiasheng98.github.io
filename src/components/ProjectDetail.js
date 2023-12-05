@@ -4,11 +4,11 @@ import styles from './styles/ProjectDetail.module.css';
 import appstore from '../../public/images/appstore.png';
 import playstore from '../../public/images/playstore.png';
 
-const ProjectDetail = ({item, data}) => {
+const ProjectDetail = ({item, data, jp}) => {
   return (
     <>
       <LandingSection item={item} />
-      <DescriptionSection item={item} data={data}  />
+      <DescriptionSection item={item} data={data} jp={jp}  />
     </>
   );
 };
@@ -23,21 +23,21 @@ const LandingSection = ({item}) => {
   );
 };
 
-const DescriptionSection = ({item, data, website}) => {
+const DescriptionSection = ({item, data, website, jp}) => {
   return (
     <div className={styles['description-section-container']}>
       <div className={styles['description-wrapper']}>
         <h1 className={styles['title-text']}>{item.title}</h1>
         <div className={styles['description-subtitle']}>
           <div>
-            <p className={styles['role-title']}>Overview</p>
+            <p className={styles['role-title']}>{jp ? '概要': 'Overview'}</p>
             <p>{item.projectdescription}</p>
             <p>{item.projectdescription1}</p>
-            <p><span className={styles['role-title']} >Design:</span> {item.designsoftware}</p>
-            <p><span className={styles['role-title']}>Development:</span> {item.developmentsoftware}</p>
+            <p><span className={styles['role-title']} >{jp ? 'デザイン:': 'Design:'}</span> {item.designsoftware}</p>
+            <p><span className={styles['role-title']}>{jp ? '開発:': 'Development:'}</span> {item.developmentsoftware}</p>
           </div>
           <div>
-            <p className={styles['role-title']}>Role</p>
+            <p className={styles['role-title']}>{jp ? '役割': 'Role'}</p>
             <p className={styles['role-title']}>{item.role}</p>
             <p>{item.roledescription}</p>
             <p>{item.projectdate}</p>
@@ -54,7 +54,7 @@ const DescriptionSection = ({item, data, website}) => {
                   target="_BLANK"
                   href={data.href}>
                   <div>
-                    <p>See Prototype ({data.label})</p>
+                    <p>{jp ? 'プロトタイプを見る': 'See Prototype'} ({data.label})</p>
                   </div>
                 </a>
               );
@@ -100,7 +100,7 @@ const DescriptionSection = ({item, data, website}) => {
                 href={item.websitelink}
                 target="_BLANK">
                 <div>
-                  <p>See Website ({item.websitelabel})</p>
+                  <p>{jp ? 'ウェブサイトを見る': 'See Website'} ({item.websitelabel})</p>
                 </div>
               </a>
      ) : null}

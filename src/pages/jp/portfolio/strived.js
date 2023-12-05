@@ -61,8 +61,8 @@ const Strived = () => {
   // ];
 
   return (
-    <MyLayout title="Strived Malaysia">
-      <ProjectDetail item={PortfolioList} data={Data} />
+    <MyLayout title="Strived Malaysia"  jp>
+      <ProjectDetail item={PortfolioList} data={Data} jp/>
     </MyLayout>
   );
 };

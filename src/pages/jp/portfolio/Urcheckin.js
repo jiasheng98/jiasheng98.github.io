@@ -46,8 +46,8 @@ const Urcheckin = () => {
   // ];
 
   return (
-    <MyLayout title="Urcheckin">
-      <ProjectDetail item={PortfolioList}  />
+    <MyLayout title="Urcheckin"  jp>
+      <ProjectDetail item={PortfolioList} jp />
     </MyLayout>
   );
 };

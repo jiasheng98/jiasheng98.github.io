@@ -15,12 +15,12 @@ const Snailer = () => {
   const PortfolioList = {
     title: 'Snailer',
     projectdescription:
-      'Snailer is a mobile application and website for food/grocery delivery and vehicle hiring services.',
+      'Snailer（スネイラー）は、食品・食料品のデリバリーや車両のレンタルサービスのためのモバイルアプリケーションおよびウェブサイトです。',
     projectdescription1:
-      'There are total 3 apps and 1 website, mainly Consumer App, Rider App, Merchant App and Snailer Landing Page. The apps and website are designed using playful, clean and modern approach.',
+      '合計3つのアプリと1つのウェブサイトがあります。主に、Consumer App（消費者向けアプリ）、Rider App（ライダー向けアプリ）、Merchant App（店舗向けアプリ）、そしてSnailer Landing Page（スネイラーランディングページ）です。これらのアプリとウェブサイトは、遊び心のある、清潔でモダンなアプローチを用いてデザインされています。',
     backgroundColor: '#468d65',
     landingimage: snaileruihome,
-    role: 'UI/UX Designer, UI Developer',
+    role: 'UI/UX デザイナー, UI 開発者',
     roledescription:
       'Interaction, Visual design, Prototyping, Wireframe, Testing and Copywriting',
     projectdate: 'July - December 2020',
@@ -62,8 +62,8 @@ const Snailer = () => {
   ];
 
   return (
-    <MyLayout title="Snailer">
-      <ProjectDetail item={PortfolioList} data={Data}/>
+    <MyLayout title="Snailer"  jp>
+      <ProjectDetail item={PortfolioList} data={Data} jp/>
     </MyLayout>
   );
 };

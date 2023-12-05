@@ -42,7 +42,7 @@ const PortfolioList = ({jp}) => {
         image1: snailerfood,
         image2: snailergrocery,
         image3: snailercar,
-        href: '/portfolio/Snailer',
+        href: '/jp/portfolio/Snailer',
       },
       {
         logo: urcheckin,
@@ -55,7 +55,7 @@ const PortfolioList = ({jp}) => {
         image1: urcheckinsign,
         image2: urcheckinwalau,
         image3: urcheckintower,
-        href: '/portfolio/Urcheckin',
+        href: '/jp/portfolio/Urcheckin',
       },
       {
         logo: ttracing,
@@ -64,7 +64,7 @@ const PortfolioList = ({jp}) => {
         backgroundColor: '#FFFFFF',
         fontColor: '#000000',
         phone: ttracinguihome,
-        href: '/portfolio/ttracing',
+        href: '/jp/portfolio/ttracing',
       },
       {
         logo: strived,
@@ -73,7 +73,7 @@ const PortfolioList = ({jp}) => {
         backgroundColor: '#000000',
         fontColor: '#FFFFFF',
         phone: striveduihome,
-        href: '/portfolio/strived',
+        href: '/jp/portfolio/strived',
       },
   ];
 

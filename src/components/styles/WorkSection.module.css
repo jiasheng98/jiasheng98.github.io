@@ -155,22 +155,23 @@
   .work-card-body {
     padding: 1rem 2rem 1rem;
   }
-  .work-card-phone {
+  /* .work-card-phone {
     height: 400px;
     width: 400px;
     top: 0.5rem;
     right: -4rem;
-  }
+  } */
   .work-card-image-container {
-    width: 60%;
+    width: 90%;
     margin-bottom: 2rem;
     margin-right: 3rem;
+    /* right: 0; */
   }
   .work-button {
     width: 100%;
   }
   .work-card-subtitle {
-    width: 66%;
+    width: 100%;
     font-size: 0.8rem;
   }
   .work-gif-logo {
@@ -180,16 +181,19 @@
   .work-card-title {
     font-size: 2rem;
   }
+  .work-card-phone {
+    display: none;
+  }
 }
 
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .work-card-phone {
     height: 350px;
     width: 350px;
     top: 0.5rem;
     right: -4rem;
   }
-}
+} */
 
 @media (max-width: 768px) {
   .work-card-phone {
@@ -226,7 +230,7 @@
   }
   .work-card-subtitle {
     width: 100%;
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     line-height: 1.3rem;
     text-align: justify;
     margin-top: 0.5rem;
@@ -237,7 +241,7 @@
     margin: auto;
   }
   .work-card-title {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .work-card-container {
     height: 370px;
@@ -251,13 +255,14 @@
   }
   .work-button-text {
     padding: 0.5rem 0.5rem;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
   .work-card-image-container {
-    width: 85%;
+    width: 100%;
     margin-bottom: -0.5rem;
     margin-right: 0rem;
     height: 200px;
+    right: 0;
   }
   .my-work-header {
     font-size: 1.5rem;

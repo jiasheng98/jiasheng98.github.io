@@ -13,17 +13,17 @@ const TTRacing = () => {
   });
 
   const PortfolioList = {
-    title: 'TTRacing',
+    title: 'TTRacing（ティーティーレーシング）',
     projectdescription:
-      'TTRacing is a gaming chair company that strives to give everyone the best comfort experience for when they’re working or playing for long hours.',
+      'TTRacing（ティーティーレーシング）は、ゲーミングチェアの企業であり、誰もが長時間働いたりプレイしたりする際に最高の快適な体験を提供しようと努力しています。',
     projectdescription1:
-      'The Shopify website was designed using sleek, clean and modern approach.',
+      'Shopifyのウェブサイトは、洗練された、清潔でモダンなアプローチを用いてデザインされました。',
     backgroundColor: '#000000',
     landingimage: ttracinguihome,
-    role: 'Creative Lead, UI/UX Designer, UI Developer',
+    role: 'クリエイティブリード, UI/UX デザイナー, UI 開発者',
     roledescription:
-      'Interaction, Visual design, Prototyping, Wireframe, Testing and Copywriting',
-    projectdate: 'January 2021 - Present',
+      'ビジュアルデザイン, インタラクション, プロトタイピング, ワイヤーフレーム',
+    projectdate: '2021年1月 - 2022年3月',
     appstore: false,
     playstore: false,
     prototype: false,
@@ -31,7 +31,7 @@ const TTRacing = () => {
     developmentsoftware: 'Liquid Template Language (Liquid), HTML, CSS, Jquery, Javascript',
     website: true,
     websitelink: 'http://ttracing.my/',
-    websitelabel: 'Landing Page'
+    websitelabel: 'TTRacing'
   };
 
   const Data = [

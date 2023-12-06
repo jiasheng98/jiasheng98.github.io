@@ -13,7 +13,7 @@ const Snailer = () => {
   });
 
   const PortfolioList = {
-    title: 'Snailer',
+    title: 'Snailer（スネイラー）',
     projectdescription:
       'Snailer（スネイラー）は、食品・食料品のデリバリーや車両のレンタルサービスのためのモバイルアプリケーションおよびウェブサイトです。',
     projectdescription1:
@@ -22,8 +22,8 @@ const Snailer = () => {
     landingimage: snaileruihome,
     role: 'UI/UX デザイナー, UI 開発者',
     roledescription:
-      'Interaction, Visual design, Prototyping, Wireframe, Testing and Copywriting',
-    projectdate: 'July - December 2020',
+      'ビジュアルデザイン, インタラクション, プロトタイピング, ワイヤーフレーム',
+    projectdate: '2020年7月 - 2020年12月',
     appstorelink: 'https://apps.apple.com/us/app/snailer/id1540536548',
     playstorelink:
       'https://play.google.com/store/apps/details?id=com.snailer_consumer&hl=en&gl=US',

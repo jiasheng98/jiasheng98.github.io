@@ -13,17 +13,17 @@ const Strived = () => {
   });
 
   const PortfolioList = {
-    title: 'Strived',
+    title: 'Strived（ストライブド）',
     projectdescription:
-      'Strived is a fully customised gift shop that focuses on providing unique and high-quality products.',
+      'Strived（ストライブド）は、ユニークで高品質な製品を提供することに焦点を当てた、完全にカスタマイズされたギフトショップです。',
     projectdescription1:
-      'The Shopify website was designed using sleek, clean and modern approach.',
+      'Shopifyのウェブサイトは、洗練された、清潔でモダンなアプローチを用いてデザインされました。',
     backgroundColor: '#000000',
     landingimage: striveduihome,
-    role: 'UI/UX Designer, UI Developer',
+    role: 'UI/UX デザイナー, UI 開発者',
     roledescription:
-      'Website design and Copywriting',
-    projectdate: 'June 2021 - July 2021',
+      'ウェブサイトデザイン, コピーライティング',
+    projectdate: '2021年6月 - 2021年7月',
     appstore: false,
     playstore: false,
     prototype: false,
@@ -31,7 +31,7 @@ const Strived = () => {
     developmentsoftware: 'Liquid Template Language (Liquid), HTML, CSS, Jquery, Javascript',
     website: true,
     websitelink: 'https://strivedmy.com/',
-    websitelabel: 'Landing Page'
+    websitelabel: 'Strived'
   };
 
   const Data = [

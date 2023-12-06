@@ -13,17 +13,17 @@ const Urcheckin = () => {
   });
 
   const PortfolioList = {
-    title: 'Urcheckin',
+    title: 'Urcheckin（ユアチェキン）',
     projectdescription:
-      'Urcheckin is a lodging app which offers arrangement for vacation rental, primarily homestays, or tourism experiences.',
+      'Urcheckin（ユアチェキン）は、主に民宿や観光体験などのバケーションレンタルの手配を提供する宿泊アプリです。',
     projectdescription1:
-      'There are total 2 apps and 2 website, mainly Consumer App, Merchant App, Consumer Website and Merchant Website. Apps are developed using React-native while websites are developed using React',
+      '合計2つのアプリと2つのウェブサイトがあり、主にConsumer App（消費者向けアプリ）、Merchant App（店舗向けアプリ）、Consumer Website（消費者向けウェブサイト）、Merchant Website（店舗向けウェブサイト）があります。アプリはReact Nativeを使用して開発され、ウェブサイトはReactを使用して開発されています。',
     backgroundColor: '#E9493C',
     landingimage: urcheckinuihome,
-    role: 'UI Developer, UI Designer',
+    role: 'UI/UX デザイナー, UI 開発者',
     roledescription:
-      'UI developing, UI testing, Fixing Bug, Implement Responsive Design',
-    projectdate: 'June - August 2020',
+      'ビジュアルデザイン, インタラクション, プロトタイピング, ワイヤーフレーム',
+    projectdate: '2020年6月 - 2020年8月',
     appstore: true,
     playstore: true,
     appstorelink: 'https://apps.apple.com/us/app/urcheckin/id1507771058',

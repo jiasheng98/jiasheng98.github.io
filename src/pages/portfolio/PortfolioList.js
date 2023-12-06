@@ -11,6 +11,7 @@ import snailer from '../../../public/gif/Snailer.gif';
 import urcheckin from '../../../public/images/urcheckin-logo.png';
 import ttracing from '../../../public/images/ttracing-logo.png';
 import strived from '../../../public/images/strived-logo.png';
+import steelcase from '../../../public/images/steelcase-logo.png';
 
 // work images
 import snailerfood from '../../../public/images/SnailerFood.png';
@@ -24,6 +25,7 @@ import snaileruihome from '../../../public/images/snailer_ui_home.png';
 import urcheckinuihome from '../../../public/images/urcheckin_ui_home.png';
 import ttracinguihome from '../../../public/images/ttracing_ui_home.png';
 import striveduihome from '../../../public/images/strived_ui_home.png';
+import steelcaseuihome from '../../../public/images/steelcase_ui_home.png';
 
 const PortfolioList = () => {
   useEffect(() => {
@@ -79,15 +81,25 @@ const PortfolioList = () => {
       phone: striveduihome,
       href: '/portfolio/strived',
     },
+    {
+      logo: steelcase,
+      title: 'Steelcase',
+      subtitle: 'Took part in the entire Shopify UI/UX design and development for Steelcase - an international manufacturer of furniture, casegoods, seating, and storage and partitioning systems for offices, hospitals, classrooms, and residential interiors.',
+      backgroundColor: '#272725',
+      fontColor: '#FFFFFF',
+      phone: steelcaseuihome,
+      href: '/portfolio/steelcase',
+    },
   ];
 
   return (
     <MyLayout title="Portfolio" description="Portfolio">
+      <Portfolio item={PortfolioList[4]} />
       <Portfolio item={PortfolioList[2]} />
       <Portfolio item={PortfolioList[3]} />
       <Portfolio item={PortfolioList[0]} />
       <Portfolio item={PortfolioList[1]} />
-      <Contact />
+      <Contact icons/>
     </MyLayout>
   );
 };

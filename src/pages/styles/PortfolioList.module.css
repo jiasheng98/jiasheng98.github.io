@@ -40,7 +40,7 @@
 }
 
 .work-card-subtitle {
-  font-weight: bold;
+  /* font-weight: bold; */
   font-family: Gotham;
   line-height: 2rem;
   width: 73%;

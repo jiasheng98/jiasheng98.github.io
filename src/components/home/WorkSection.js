@@ -10,6 +10,7 @@ import snailer from '../../../public/gif/Snailer.gif';
 import urcheckin from '../../../public/images/urcheckin-logo.png';
 import ttracing from '../../../public/images/ttracing-logo.png';
 import strived from '../../../public/images/strived-logo.png';
+import steelcase from '../../../public/images/steelcase-logo.png';
 
 // work images
 import snailerfood from '../../../public/images/SnailerFood.png';
@@ -23,6 +24,7 @@ import snaileruihome from '../../../public/images/snailer_ui_home.png';
 import urcheckinuihome from '../../../public/images/urcheckin_ui_home.png';
 import ttracinguihome from '../../../public/images/ttracing_ui_home.png';
 import striveduihome from '../../../public/images/strived_ui_home.png';
+import steelcaseuihome from '../../../public/images/steelcase_ui_home.png';
 
 const WorkSection = ({jp}) => {
   const PortfolioList = [
@@ -74,6 +76,16 @@ const WorkSection = ({jp}) => {
       phone: striveduihome,
       href: jp ? 'jp/portfolio/strived' : '/portfolio/strived',
     },
+    {
+      logo: steelcase,
+      title: 'Steelcase',
+      subtitle: jp ? 'Steelcase（国際的な家具、ケースグッズ、シーティング、オフィス、病院、教室、住宅インテリア向けの収納および仕切りシステムの製造メーカー）において、ShopifyのUI/UXデザインおよび開発全般に参加しました。' :
+        'Took part in the entire Shopify UI/UX design and development for Steelcase - an international manufacturer of furniture, casegoods, seating, and storage and partitioning systems for offices, hospitals, classrooms, and residential interiors.',
+      backgroundColor: '#272725',
+      fontColor: '#FFFFFF',
+      phone: steelcaseuihome,
+      href: jp ? 'jp/portfolio/steelcase' : '/portfolio/steelcase',
+    },
   ];
 
   const [index, setIndex] = useState(0);
@@ -92,6 +104,9 @@ const WorkSection = ({jp}) => {
             activeIndex={index}
             onSelect={handleSelect}
             interval={10000}>
+               <Carousel.Item>
+              <CarouselCard item={PortfolioList[4]} jp={jp}/>
+            </Carousel.Item>
             <Carousel.Item>
               <CarouselCard item={PortfolioList[2]} jp={jp}/>
             </Carousel.Item>

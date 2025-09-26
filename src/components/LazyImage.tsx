@@ -1,22 +1,11 @@
 import { useEffect } from 'react';
 import type { ImgHTMLAttributes } from 'react';
-import type { StaticImageData } from 'next/image';
 import LazyLoad from 'vanilla-lazyload';
 import lazyloadConfig from './config/lazyload';
 
-type LazyImageSource = string | StaticImageData;
-
 type LazyImageProps = Omit<ImgHTMLAttributes<HTMLImageElement>, 'src' | 'srcSet'> & {
-  src: LazyImageSource;
+  src: string;
   srcSet?: string;
-};
-
-const resolveSource = (value?: LazyImageSource) => {
-  if (!value) {
-    return undefined;
-  }
-
-  return typeof value === 'string' ? value : value.src;
 };
 
 if (typeof window !== 'undefined' && typeof document !== 'undefined') {
@@ -41,13 +30,11 @@ const LazyImage = ({
     }
   }, []);
 
-  const resolvedSrc = resolveSource(src);
-
   return (
     <img
       alt={alt}
       className={`lazy ${className}`.trim()}
-      data-src={resolvedSrc}
+      data-src={src}
       data-srcset={srcSet}
       data-sizes={sizes}
       width={width}

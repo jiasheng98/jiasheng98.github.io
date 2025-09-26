@@ -1,6 +1,6 @@
 .welcome-container {
   background-color: var(--primary);
-  background-image: url('../../../public/images/bg.png');
+  background-image: url('/images/bg.png');
   background-size: cover;
   background-position: center;
   padding-top: 100px;

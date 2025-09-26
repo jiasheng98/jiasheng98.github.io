@@ -6,7 +6,8 @@ type ErrorProps = {
 };
 
 const ErrorPage: NextPage<ErrorProps> = ({ statusCode }) => {
-  return <NextErrorComponent statusCode={statusCode} />;
+  const resolvedStatusCode = statusCode ?? 404;
+  return <NextErrorComponent statusCode={resolvedStatusCode} />;
 };
 
 ErrorPage.getInitialProps = ({ res, err }: NextPageContext) => {

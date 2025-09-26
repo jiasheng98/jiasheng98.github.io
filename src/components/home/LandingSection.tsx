@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 import LazyImage from '../LazyImage';
+import Reveal from '../common/Reveal';
 import styles from '../styles/LandingSection.module.css';
-import imac from '../../../public/images/macbook.png';
 
 type LandingSectionProps = {
   jp?: boolean;
@@ -33,15 +33,10 @@ const LandingSection = ({ jp = false }: LandingSectionProps) => {
   return (
     <section className={styles['welcome-container']} id={styles['welcome']}>
       <div className={styles['welcome-title-text-container']}>
-        <div
-          className={styles['welcome-phone-container']}
-          data-aos="fade-up"
-          data-aos-delay="100"
-          data-aos-duration="500"
-        >
-          <LazyImage src={imac} className={styles['welcome-phone']} alt="Macbook" />
-        </div>
-        <div data-aos="fade-right" data-aos-delay="800" className={styles['text-wrapper']}>
+        <Reveal delay={100} className={styles['welcome-phone-container']}>
+          <LazyImage src="/images/macbook.png" className={styles['welcome-phone']} alt="Macbook" />
+        </Reveal>
+        <Reveal animation="fade-right" delay={800} className={styles['text-wrapper']}>
           <h1 className={styles['i-am-text']}>
             {jp ? 'シェーンです,私は' : 'Hello, I am Jia Sheng, a'}
             <br />
@@ -49,7 +44,7 @@ const LandingSection = ({ jp = false }: LandingSectionProps) => {
             <br />
             {jp ? 'です。' : 'based in Malaysia.'}
           </h1>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

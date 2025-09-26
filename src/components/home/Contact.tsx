@@ -1,7 +1,7 @@
-import LazyImage from '../LazyImage';
-import styles from '../styles/Contact.module.css';
 import { BsLinkedin } from 'react-icons/bs';
-import side1 from '../../../public/images/side1.png';
+import LazyImage from '../LazyImage';
+import Reveal from '../common/Reveal';
+import styles from '../styles/Contact.module.css';
 
 type ContactProps = {
   icons?: boolean;
@@ -11,9 +11,9 @@ type ContactProps = {
 const Contact = ({ icons = false, jp = false }: ContactProps) => {
   return (
     <section className={styles['contact-container']} id={styles['contact']}>
-      <LazyImage src={side1} className={styles['contact-side-top-right']} alt="Decorative corner" />
-      <LazyImage src={side1} className={styles['contact-side-bottom-left']} alt="Decorative corner" />
-      <div className={styles['contact-wrap']} data-aos="fade-up" data-aos-delay="200">
+      <LazyImage src="/images/side1.png" className={styles['contact-side-top-right']} alt="Decorative corner" />
+      <LazyImage src="/images/side1.png" className={styles['contact-side-bottom-left']} alt="Decorative corner" />
+      <Reveal delay={200} className={styles['contact-wrap']}>
         <div>
           <p className={styles['contact-header']}>{jp ? '連絡しましょう！' : "Let's Connect!"}</p>
         </div>
@@ -29,7 +29,7 @@ const Contact = ({ icons = false, jp = false }: ContactProps) => {
             </a>
           </div>
         ) : null}
-      </div>
+      </Reveal>
     </section>
   );
 };

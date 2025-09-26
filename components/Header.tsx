@@ -3,7 +3,6 @@ import { BsGlobe2 } from 'react-icons/bs';
 import HamburgerMenu from 'react-hamburger-menu';
 import AppLink from './common/AppLink';
 import Reveal from './common/Reveal';
-import styles from './styles/Header.module.css';
 
 type HeaderProps = {
   jp?: boolean;
@@ -21,10 +20,8 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
     setOpen(false);
   };
 
-  const navClassName = overlay && !open ? styles['overlay'] : '';
-  const containerClassName = open
-    ? styles['header-container-fixed']
-    : styles['header-container'];
+  const navClassName = overlay && !open ? 'overlay' : '';
+  const containerClassName = open ? 'header-container-fixed' : 'header-container';
 
   const portfolioHref = jp ? '/jp/portfolio' : '/portfolio';
   const resumeHref = jp ? '/Resume(JiaSheng)Japanese.pdf' : '/Resume(Jia Sheng).pdf';
@@ -36,14 +33,14 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
   const NavigationLinks = () => (
     <>
       <li>
-        <AppLink href={portfolioHref} className={styles['portfolio-text']} onClick={closeMenu}>
+        <AppLink href={portfolioHref} className="portfolio-text" onClick={closeMenu}>
           {portfolioLabel}
         </AppLink>
       </li>
-      <li className={styles['resume-style']}>
+      <li className="resume-style">
         <AppLink
           href={resumeHref}
-          className={styles['resume-text']}
+          className="resume-text"
           target="_blank"
           rel="noopener noreferrer"
           onClick={closeMenu}
@@ -51,9 +48,9 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
           {resumeLabel}
         </AppLink>
       </li>
-      <li className={styles['language-style']}>
-        <AppLink href={languageHref} className={styles['language-text']} onClick={closeMenu}>
-          <BsGlobe2 className={styles['language-icon']} />
+      <li className="language-style">
+        <AppLink href={languageHref} className="language-text" onClick={closeMenu}>
+          <BsGlobe2 className="language-icon" />
           {languageLabel}
         </AppLink>
       </li>
@@ -73,27 +70,27 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
           color="var(--primarytext)"
           borderRadius={0}
           animationDuration={0.5}
-          className={styles['hamburger-menu']}
+          className="hamburger-menu"
         />
 
         {open ? (
-          <div className={styles['mobile-sidebar']}>
-            <ul className={styles['header-navigation-mobile']}>
+          <div className="mobile-sidebar">
+            <ul className="header-navigation-mobile">
               <NavigationLinks />
             </ul>
           </div>
         ) : null}
 
-        <Reveal animation="zoom-in" delay={100} className={styles['logo-z-index']}>
-          <AppLink href={jp ? '/jp' : '/'} className={styles['logo-container']} onClick={closeMenu}>
-            <span className={styles['logo-image-wrapper']}>
-              <img src="/Logo.png" className={styles['logo-image']} alt="Jia Sheng Yeap" />
+        <Reveal animation="zoom-in" delay={100} className="logo-z-index">
+          <AppLink href={jp ? '/jp' : '/'} className="logo-container" onClick={closeMenu}>
+            <span className="logo-image-wrapper">
+              <img src="/Logo.png" className="logo-image" alt="Jia Sheng Yeap" />
             </span>
-            <span className={styles['logo-name']}>Jia Sheng Yeap | シェーン</span>
+            <span className="logo-name">Jia Sheng Yeap | シェーン</span>
           </AppLink>
         </Reveal>
 
-        <ul className={styles['header-navigation']}>
+        <ul className="header-navigation">
           <NavigationLinks />
         </ul>
       </div>

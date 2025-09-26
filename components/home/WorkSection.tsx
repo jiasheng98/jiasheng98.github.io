@@ -3,7 +3,6 @@ import Carousel from 'react-bootstrap/Carousel';
 import AppLink from '../common/AppLink';
 import Reveal from '../common/Reveal';
 import LazyImage from '../LazyImage';
-import styles from '../styles/WorkSection.module.css';
 import type { Locale, Project } from '../../data/projects';
 import { featuredProjectSlugs, getProjectsBySlugs } from '../../data/projects';
 
@@ -23,12 +22,12 @@ const WorkSection = ({ jp = false }: WorkSectionProps) => {
   };
 
   return (
-    <section className={styles['work-container']} id="work">
-      <div className={styles['work-wrap']}>
+    <section className="home-work__section" id="work">
+      <div className="home-work__wrap">
         <div>
-          <h1 className={styles['my-work-header']}>{jp ? '制作事例' : 'Check Out My Work!'}</h1>
+          <h1 className="home-work__header">{jp ? '制作事例' : 'Check Out My Work!'}</h1>
         </div>
-        <div className={styles['carousel-container']}>
+        <div className="home-work__carousel">
           <Carousel activeIndex={index} onSelect={handleSelect} interval={10000}>
             {projects.map((project) => (
               <Carousel.Item key={`${project.slug}-${locale}`}>
@@ -55,47 +54,47 @@ const CarouselCard = ({ project, locale }: CarouselCardProps) => {
     <div>
       <Reveal
         delay={200}
-        className={styles['work-card-container']}
+        className="home-work__card"
         style={{ backgroundColor: project.cardBackgroundColor, color: project.cardTextColor }}
       >
-        <div className={styles['work-card-body']}>
+        <div className="home-work__card-body">
           <div>
-            <div className={styles['work-title-row']}>
+            <div className="home-work__title-row">
               <Reveal animation="fade-right" delay={400}>
-                <LazyImage src={project.logo} className={styles['work-gif-logo']} alt={`${project.cardTitle} logo`} />
+                <LazyImage src={project.logo} className="home-work__logo" alt={`${project.cardTitle} logo`} />
               </Reveal>
-              <p className={styles['work-card-title']}>{project.cardTitle}</p>
+              <p className="home-work__title">{project.cardTitle}</p>
             </div>
-            <p className={styles['work-card-subtitle']}>{copy.summary}</p>
+            <p className="home-work__subtitle">{copy.summary}</p>
           </div>
           {project.gallery.length ? (
-            <div className={styles['work-card-image-container']}>
+            <div className="home-work__image-container">
               {project.gallery.map((image, imageIndex) => (
                 <Reveal
                   key={`${project.slug}-detail-${imageIndex}`}
                   delay={500 + imageIndex * 100}
-                  className={styles['work-card-image-wrapper']}
+                  className="home-work__image-wrapper"
                 >
                   <LazyImage
                     src={image}
-                    className={styles['work-card-image-1']}
+                    className="home-work__image"
                     alt={`${project.cardTitle} detail ${imageIndex + 1}`}
                   />
                 </Reveal>
               ))}
             </div>
           ) : null}
-          <AppLink href={href} className={styles['work-button']}>
+          <AppLink href={href} className="home-work__button">
             <span
-              className={styles['work-button-text']}
+              className="home-work__button-text"
               style={{ color: project.cardBackgroundColor, backgroundColor: project.cardTextColor }}
             >
               {copy.cta}
             </span>
           </AppLink>
         </div>
-        <Reveal animation="fade-left" delay={400} className={styles['work-card-phone']}>
-          <LazyImage src={project.heroImage} className={styles['work-card-phone-image']} alt={`${project.cardTitle} preview`} />
+        <Reveal animation="fade-left" delay={400} className="home-work__phone">
+          <LazyImage src={project.heroImage} className="home-work__phone-image" alt={`${project.cardTitle} preview`} />
         </Reveal>
       </Reveal>
     </div>

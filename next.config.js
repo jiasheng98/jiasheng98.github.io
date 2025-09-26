@@ -1,7 +1,14 @@
 /** @type {import('next').NextConfig} */
+const repoBasePath = '/jiasheng98.github.io';
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
-  basePath: '/jiasheng98.github.io',
-  assetPrefix: '/jiasheng98.github.io',
+  ...(isProd
+    ? {
+        basePath: repoBasePath,
+        assetPrefix: repoBasePath
+      }
+    : {}),
   poweredByHeader: false,
   images: {
     unoptimized: true

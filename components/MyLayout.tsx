@@ -22,6 +22,13 @@ const Layout = ({
   overlay = false,
   jp = false,
 }: LayoutProps) => {
+  const mainClasses = [
+    'flex flex-1 flex-col',
+    overlay ? 'pt-0' : 'pt-24 md:pt-28',
+  ]
+    .filter(Boolean)
+    .join(' ');
+
   return (
     <>
       <Head>
@@ -32,9 +39,11 @@ const Layout = ({
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ldJson) }} />
         ) : null}
       </Head>
-      <Header overlay={overlay} jp={jp} />
-      {children}
-      <Footer jp={jp} />
+      <div className="relative flex min-h-screen flex-col bg-night text-zinc-100">
+        <Header overlay={overlay} jp={jp} />
+        <main className={mainClasses}>{children}</main>
+        <Footer jp={jp} />
+      </div>
     </>
   );
 };

@@ -1,5 +1,4 @@
-import { useMemo, useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
+import { useMemo } from 'react';
 import AppLink from '../common/AppLink';
 import Reveal from '../common/Reveal';
 import LazyImage from '../LazyImage';
@@ -13,91 +12,105 @@ type WorkSectionProps = {
 const WorkSection = ({ jp = false }: WorkSectionProps) => {
   const locale: Locale = jp ? 'jp' : 'en';
   const projects = useMemo(() => getProjectsBySlugs(featuredProjectSlugs), []);
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex: number | null) => {
-    if (typeof selectedIndex === 'number') {
-      setIndex(selectedIndex);
-    }
-  };
+  const title = jp ? 'シグネチャープロジェクト' : 'Signature Projects';
+  const description = jp
+    ? 'ブランドの世界観を捉えた体験をデザインし、ユーザーインターフェースから実装までを一貫して担当しています。'
+    : 'Designing immersive brand moments and delivering them through thoughtful UI and code craftsmanship.';
 
   return (
-    <section className="home-work__section" id="work">
-      <div className="home-work__wrap">
-        <div>
-          <h1 className="home-work__header">{jp ? '制作事例' : 'Check Out My Work!'}</h1>
-        </div>
-        <div className="home-work__carousel">
-          <Carousel activeIndex={index} onSelect={handleSelect} interval={10000}>
-            {projects.map((project) => (
-              <Carousel.Item key={`${project.slug}-${locale}`}>
-                <CarouselCard project={project} locale={locale} />
-              </Carousel.Item>
-            ))}
-          </Carousel>
+    <section id="work" className="relative overflow-hidden py-24">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-72 bg-gradient-to-b from-indigo-500/20 via-transparent to-transparent blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 left-0 h-72 w-72 rounded-full bg-purple-500/10 blur-3xl" />
+      <div className="mx-auto max-w-6xl px-6 lg:px-12">
+        <Reveal animation="fade-right" className="max-w-3xl">
+          <span className="text-sm uppercase tracking-[0.35em] text-zinc-500">{jp ? '実績' : 'Selected Work'}</span>
+          <h2 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">{title}</h2>
+          <p className="mt-4 text-base leading-relaxed text-zinc-300 sm:text-lg">{description}</p>
+        </Reveal>
+
+        <div className="mt-16 grid gap-12">
+          {projects.map((project, projectIndex) => (
+            <ProjectHighlight key={`${project.slug}-${locale}`} project={project} locale={locale} index={projectIndex} />
+          ))}
         </div>
       </div>
     </section>
   );
 };
 
-type CarouselCardProps = {
+type ProjectHighlightProps = {
   project: Project;
   locale: Locale;
+  index: number;
 };
 
-const CarouselCard = ({ project, locale }: CarouselCardProps) => {
+const ProjectHighlight = ({ project, locale, index }: ProjectHighlightProps) => {
   const copy = project.copy[locale];
   const href = locale === 'jp' ? `/jp/portfolio/${project.slug}` : `/portfolio/${project.slug}`;
+  const gradientStyle = {
+    background: `linear-gradient(135deg, ${project.cardBackgroundColor} 0%, rgba(15,15,15,0.75) 65%)`,
+  };
 
   return (
-    <div>
-      <Reveal
-        delay={200}
-        className="home-work__card"
-        style={{ backgroundColor: project.cardBackgroundColor, color: project.cardTextColor }}
-      >
-        <div className="home-work__card-body">
-          <div>
-            <div className="home-work__title-row">
-              <Reveal animation="fade-right" delay={400}>
-                <LazyImage src={project.logo} className="home-work__logo" alt={`${project.cardTitle} logo`} />
-              </Reveal>
-              <p className="home-work__title">{project.cardTitle}</p>
+    <Reveal delay={150 + index * 100} className="group relative overflow-hidden rounded-[2.75rem] border border-white/10 bg-black/50 p-1 shadow-2xl">
+      <div className="absolute inset-0 rounded-[2.75rem] opacity-0 transition duration-500 group-hover:opacity-100" style={gradientStyle} />
+      <div className="relative grid gap-10 rounded-[2.75rem] border border-white/10 bg-black/60 p-10 backdrop-blur-xl lg:grid-cols-[1.15fr_0.85fr]">
+        <div className="flex flex-col justify-between gap-10">
+          <div className="space-y-6">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex items-center gap-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/10">
+                  <LazyImage src={project.logo} className="h-8 w-8 object-contain" alt={`${project.cardTitle} logo`} />
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-[0.35em] text-zinc-500">{copy.role}</p>
+                  <h3 className="mt-1 text-2xl font-semibold text-white sm:text-3xl">{project.cardTitle}</h3>
+                </div>
+              </div>
+              <span className="rounded-full border border-white/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-zinc-100">
+                {copy.date}
+              </span>
             </div>
-            <p className="home-work__subtitle">{copy.summary}</p>
+            <p className="text-base leading-relaxed text-zinc-300">{copy.summary}</p>
+            {project.gallery.length ? (
+              <div className="flex gap-4 overflow-x-auto pb-2">
+                {project.gallery.map((image, imageIndex) => (
+                  <div
+                    key={`${project.slug}-detail-${imageIndex}`}
+                    className="min-w-[9rem] flex-1 overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-3 transition duration-300 hover:-translate-y-1 hover:bg-white/10"
+                  >
+                    <LazyImage
+                      src={image}
+                      className="h-32 w-full rounded-2xl object-cover"
+                      alt={`${project.cardTitle} detail ${imageIndex + 1}`}
+                    />
+                  </div>
+                ))}
+              </div>
+            ) : null}
           </div>
-          {project.gallery.length ? (
-            <div className="home-work__image-container">
-              {project.gallery.map((image, imageIndex) => (
-                <Reveal
-                  key={`${project.slug}-detail-${imageIndex}`}
-                  delay={500 + imageIndex * 100}
-                  className="home-work__image-wrapper"
-                >
-                  <LazyImage
-                    src={image}
-                    className="home-work__image"
-                    alt={`${project.cardTitle} detail ${imageIndex + 1}`}
-                  />
-                </Reveal>
-              ))}
-            </div>
-          ) : null}
-          <AppLink href={href} className="home-work__button">
-            <span
-              className="home-work__button-text"
-              style={{ color: project.cardBackgroundColor, backgroundColor: project.cardTextColor }}
+          <div className="flex flex-col gap-3 text-sm text-zinc-400 sm:flex-row sm:items-center sm:justify-between">
+            <span>{copy.roleDescription}</span>
+            <AppLink
+              href={href}
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-white"
             >
               {copy.cta}
-            </span>
-          </AppLink>
+            </AppLink>
+          </div>
         </div>
-        <Reveal animation="fade-left" delay={400} className="home-work__phone">
-          <LazyImage src={project.heroImage} className="home-work__phone-image" alt={`${project.cardTitle} preview`} />
-        </Reveal>
-      </Reveal>
-    </div>
+        <div className="relative flex items-center justify-center">
+          <div className="absolute inset-0 rounded-[2.5rem] border border-white/10 bg-white/5 blur-3xl" />
+          <div className="relative w-full rounded-[2.5rem] border border-white/10 bg-black/70 p-8">
+            <LazyImage
+              src={project.heroImage}
+              className="mx-auto w-full max-w-sm object-contain drop-shadow-[0_40px_80px_rgba(15,23,42,0.45)]"
+              alt={`${project.cardTitle} preview`}
+            />
+          </div>
+        </div>
+      </div>
+    </Reveal>
   );
 };
 

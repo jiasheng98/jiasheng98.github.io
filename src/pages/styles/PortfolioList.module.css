@@ -97,6 +97,26 @@
   transform: scale(1);
 }
 
+.work-card-footer {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.work-card-footer-link {
+  font-family: GothamBold;
+  text-decoration: none;
+  color: var(--primarytext);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.25rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.work-card-footer-link:focus,
+.work-card-footer-link:hover {
+  color: var(--secondary);
+}
+
 .work-card-phone {
   height: 550px;
   width: 550px;

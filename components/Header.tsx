@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { TbMoon, TbSun, TbWorld } from 'react-icons/tb';
 import HamburgerMenu from 'react-hamburger-menu';
 import AppLink from './common/AppLink';
 import { useTheme } from './common/ThemeProvider';
+import { useRouter } from 'next/router';
 
 type HeaderProps = {
   jp?: boolean;
@@ -36,9 +37,26 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
     setOpen(false);
   };
 
+  const { asPath } = useRouter();
+
   const portfolioHref = jp ? '/jp/portfolio' : '/portfolio';
   const resumeHref = jp ? '/Resume(JiaSheng)Japanese.pdf' : '/Resume(Jia Sheng).pdf';
-  const languageHref = jp ? '/' : '/jp';
+  const languageHref = useMemo(() => {
+    if (jp) {
+      const englishPath = asPath.replace(/^\/jp(?=\/|$)/, '') || '/';
+      return englishPath.startsWith('/') ? englishPath : `/${englishPath}`;
+    }
+
+    if (asPath === '/' || asPath === '') {
+      return '/jp';
+    }
+
+    if (asPath.startsWith('/jp')) {
+      return asPath;
+    }
+
+    return `/jp${asPath.startsWith('/') ? '' : '/'}${asPath}`;
+  }, [asPath, jp]);
   const languageLabel = jp ? '日本語' : 'English';
   const portfolioLabel = jp ? 'ポートフォリオ' : 'Portfolio';
   const resumeLabel = jp ? '履歴書' : 'Resume';

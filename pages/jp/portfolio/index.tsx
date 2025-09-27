@@ -16,8 +16,8 @@ const PortfolioListPage = () => {
         <div className="pointer-events-none absolute inset-x-0 top-0 h-72 bg-gradient-to-b from-white/10 via-transparent to-transparent blur-3xl" />
         <div className="layout-container">
           <div className="max-w-3xl">
-            <h1 className="text-4xl font-semibold text-white sm:text-5xl">厳選した制作実績</h1>
-            <p className="mt-6 text-lg text-zinc-300">
+            <h1 className="typography-display text-white">厳選した制作実績</h1>
+            <p className="mt-6 typography-body text-zinc-300">
               家具、ゲーミング、ライフスタイル、オンデマンドサービスなど、多彩なブランドのUI/UX体験をデザイン・開発してきました。
             </p>
           </div>
@@ -60,15 +60,15 @@ const ProjectCard = ({ project, locale, index }: ProjectCardProps) => {
                 <LazyImage src={project.logo} className="h-8 w-8 object-contain" alt={`${project.cardTitle} logo`} />
               </div>
               <div>
-                <p className="text-xs uppercase tracking-[0.35em] text-zinc-500">{copy.role}</p>
-                <h2 className="mt-1 text-2xl font-semibold text-white sm:text-3xl">{project.cardTitle}</h2>
+                <p className="typography-meta text-zinc-500">{copy.role}</p>
+                <h2 className="mt-1 typography-subheading text-white">{project.cardTitle}</h2>
               </div>
             </div>
-            <span className="rounded-full border border-white/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-zinc-100">
+            <span className="rounded-full border border-white/20 px-4 py-2 typography-meta text-zinc-100">
               {copy.date}
             </span>
           </div>
-          <p className="text-base leading-relaxed text-zinc-300">{copy.summary}</p>
+          <p className="typography-body text-zinc-300">{copy.summary}</p>
           {project.gallery.length ? (
             <div className="flex gap-4 overflow-x-auto pb-2">
               {project.gallery.map((image, galleryIndex) => (
@@ -87,7 +87,7 @@ const ProjectCard = ({ project, locale, index }: ProjectCardProps) => {
           ) : null}
           <AppLink
             href={href}
-            className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-white"
+            className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 typography-button text-white transition hover:-translate-y-0.5 hover:border-white"
           >
             {`${project.cardTitle} を詳しく見る`}
           </AppLink>

@@ -24,9 +24,9 @@ const Contact = ({ icons = false, jp = false }: ContactProps) => {
         >
           <div className="pointer-events-none absolute inset-0 bg-hero-radial opacity-40 dark:opacity-60" />
           <div className="relative space-y-6">
-            <p className="text-xs uppercase tracking-[0.4em] text-zinc-500">{jp ? 'コンタクト' : 'Connect'}</p>
-            <h2 className="text-3xl font-semibold text-zinc-900 transition-colors duration-300 dark:text-white sm:text-4xl">{heading}</h2>
-            <p className="mx-auto max-w-2xl text-base text-zinc-600 transition-colors duration-300 sm:text-lg dark:text-zinc-300">{subheading}</p>
+            <p className="typography-meta text-zinc-500 transition-colors duration-300 dark:text-zinc-400">{jp ? 'コンタクト' : 'Connect'}</p>
+            <h2 className="typography-heading text-zinc-900 transition-colors duration-300 dark:text-white">{heading}</h2>
+            <p className="typography-body mx-auto max-w-2xl text-zinc-600 transition-colors duration-300 dark:text-zinc-300">{subheading}</p>
             {icons ? (
               <div className="flex items-center justify-center gap-4">
                 <AppLink
@@ -34,7 +34,7 @@ const Contact = ({ icons = false, jp = false }: ContactProps) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
-                  className="inline-flex items-center gap-3 rounded-full border border-zinc-200/70 bg-white/80 px-6 py-3 text-sm font-semibold text-zinc-800 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:bg-white hover:text-zinc-900 dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white dark:hover:text-black"
+                  className="inline-flex items-center gap-3 rounded-full border border-zinc-200/70 bg-white/80 px-6 py-3 typography-button text-zinc-800 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:bg-white hover:text-zinc-900 dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white dark:hover:text-black"
                 >
                   <TbBrandLinkedin className="h-5 w-5" />
                   LinkedIn

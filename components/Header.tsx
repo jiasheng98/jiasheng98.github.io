@@ -134,7 +134,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
           href={resumeHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center rounded-full px-4 py-2 text-sm font-medium text-zinc-700 transition hover:-translate-y-0.5 hover:bg-white hover:text-zinc-900 dark:text-zinc-100 dark:hover:bg-white dark:hover:text-black"
+          className="inline-flex items-center rounded-full px-4 py-2 typography-button text-zinc-700 transition hover:-translate-y-0.5 hover:bg-white hover:text-zinc-900 dark:text-zinc-100 dark:hover:bg-white dark:hover:text-black"
           onClick={closeMenu}
         >
           {resumeLabel}
@@ -151,7 +151,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
             value={jp ? 'jp' : 'en'}
             onChange={handleLanguageChange}
             style={{ borderRight: '16px solid transparent' }}
-            className="rounded-full border border-transparent bg-white/70 px-4 py-2 text-sm font-medium text-zinc-700 transition hover:-translate-y-0.5 hover:bg-white focus:border-zinc-400 focus:outline-none border-none dark:bg-white/10 dark:text-zinc-100 dark:hover:bg-white/20 dark:focus:border-zinc-500"
+            className="rounded-full border border-transparent bg-white/70 px-4 py-2 typography-button text-zinc-700 transition hover:-translate-y-0.5 hover:bg-white focus:border-zinc-400 focus:outline-none border-none dark:bg-white/10 dark:text-zinc-100 dark:hover:bg-white/20 dark:focus:border-zinc-500"
           >
             <option value="en">English</option>
             <option value="jp">日本語</option>
@@ -170,11 +170,11 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
         <div className="flex items-center gap-8">
           <AppLink
             href={jp ? '/jp' : '/'}
-            className="flex items-center gap-3 rounded-full px-2 py-1 text-sm font-semibold tracking-wide transition hover:opacity-80"
+            className="flex items-center gap-3 rounded-full px-2 py-1 typography-button tracking-wide transition hover:opacity-80"
             onClick={closeMenu}
           >
             <img src="/Logo.png" alt="Jia Sheng Yeap" className="h-12 w-auto sm:h-14" />
-            <span className="hidden text-sm font-medium sm:inline-flex">
+            <span className="hidden typography-body-sm font-medium sm:inline-flex">
               {jp ? 'シェン' : 'Jia Sheng Yeap'}
             </span>
           </AppLink>
@@ -210,7 +210,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
         >
           <nav
             aria-label="Mobile"
-            className="flex list-none flex-col gap-6 text-lg text-zinc-800 dark:text-zinc-100"
+            className="flex list-none flex-col gap-6 text-zinc-800 dark:text-zinc-100"
           >
             <NavigationLinks />
           </nav>

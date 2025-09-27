@@ -30,9 +30,9 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
       <section className="relative isolate overflow-hidden border-b border-zinc-200/70 transition-colors duration-300 dark:border-white/10" style={heroStyle}>
         {/* <div className="absolute inset-0 bg-white/80 dark:bg-black/65" /> */}
         <div className="section-spacing layout-container--narrow flex flex-col items-center gap-10 text-center">
-          <span className="text-xs uppercase tracking-[0.4em] text-zinc-500">{copy.date}</span>
-          <h1 className="text-3xl font-semibold text-zinc-900 transition-colors duration-300 dark:text-white sm:text-5xl">{copy.title}</h1>
-          <p className="max-w-3xl text-base text-zinc-700 transition-colors duration-300 sm:text-lg dark:text-zinc-200">{copy.summary}</p>
+          <span className="typography-meta text-zinc-500 transition-colors duration-300 dark:text-zinc-400">{copy.date}</span>
+          <h1 className="typography-display text-zinc-900 transition-colors duration-300 dark:text-white">{copy.title}</h1>
+          <p className="typography-body max-w-3xl text-zinc-700 transition-colors duration-300 dark:text-zinc-200">{copy.summary}</p>
           <div className="relative w-full max-w-3xl">
             <div className="absolute inset-0 rounded-[3rem] bg-white/70 blur-3xl transition-colors duration-300 dark:bg-white/10" />
             {/* <div className="relative overflow-hidden rounded-[3rem] border border-zinc-200/70 bg-white/90 p-12 backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-black/70">
@@ -50,10 +50,12 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
         <div className="layout-container flex flex-col gap-16 lg:flex-row">
           <div className="flex-1 space-y-8">
             <div>
-              <p className="text-xs uppercase tracking-[0.4em] text-zinc-500">{overviewTitle}</p>
-              <div className="mt-4 space-y-4 text-base leading-relaxed text-zinc-700 transition-colors duration-300 dark:text-zinc-300">
+              <p className="typography-meta text-zinc-500 transition-colors duration-300 dark:text-zinc-400">{overviewTitle}</p>
+              <div className="mt-4 space-y-4 text-zinc-700 transition-colors duration-300 dark:text-zinc-300">
                 {copy.overview.map((paragraph, index) => (
-                  <p key={`${project.slug}-overview-${index}`}>{paragraph}</p>
+                  <p key={`${project.slug}-overview-${index}`} className="typography-body">
+                    {paragraph}
+                  </p>
                 ))}
               </div>
             </div>
@@ -75,7 +77,7 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
 
             {project.gallery.length ? (
               <div>
-                <p className="text-xs uppercase tracking-[0.4em] text-zinc-500">{locale === 'jp' ? 'ビジュアル' : 'Gallery'}</p>
+                <p className="typography-meta text-zinc-500 transition-colors duration-300 dark:text-zinc-400">{locale === 'jp' ? 'ビジュアル' : 'Gallery'}</p>
                 <div className="mt-4 grid gap-4 sm:grid-cols-2">
                   {project.gallery.map((image, index) => (
                     <div
@@ -92,19 +94,19 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
 
           <aside className="w-full max-w-xl space-y-8 rounded-[2.5rem] border border-zinc-200/80 bg-white/90 p-8 shadow-2xl backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-black/60">
             <div className="space-y-2">
-              <p className="text-xs uppercase tracking-[0.4em] text-zinc-500">{roleLabel}</p>
-              <p className="text-lg font-semibold text-zinc-900 transition-colors duration-300 dark:text-white">{copy.role}</p>
-              <p className="text-sm leading-relaxed text-zinc-600 transition-colors duration-300 dark:text-zinc-300">{copy.roleDescription}</p>
+              <p className="typography-meta text-zinc-500 transition-colors duration-300 dark:text-zinc-400">{roleLabel}</p>
+              <p className="typography-subheading text-zinc-900 transition-colors duration-300 dark:text-white">{copy.role}</p>
+              <p className="typography-body-sm text-zinc-600 transition-colors duration-300 dark:text-zinc-300">{copy.roleDescription}</p>
             </div>
             <div>
-              <p className="text-xs uppercase tracking-[0.4em] text-zinc-500">{linksLabel}</p>
+              <p className="typography-meta text-zinc-500 transition-colors duration-300 dark:text-zinc-400">{linksLabel}</p>
               <div className="mt-4 flex flex-wrap gap-3">
                 {project.links?.appStore ? (
                   <AppLink
                     href={project.links.appStore}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 rounded-2xl border border-zinc-200/70 bg-white/80 px-5 py-3 text-sm font-semibold text-zinc-800 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:bg-white hover:text-zinc-900 dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white dark:hover:text-black"
+                    className="inline-flex items-center gap-3 rounded-2xl border border-zinc-200/70 bg-white/80 px-5 py-3 typography-button text-zinc-800 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:bg-white hover:text-zinc-900 dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white dark:hover:text-black"
                   >
                     <img src={appStoreIcon} alt="App Store" className="h-5 w-auto" />
                     App Store
@@ -115,7 +117,7 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
                     href={project.links.playStore}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 rounded-2xl border border-zinc-200/70 bg-white/80 px-5 py-3 text-sm font-semibold text-zinc-800 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:bg-white hover:text-zinc-900 dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white dark:hover:text-black"
+                    className="inline-flex items-center gap-3 rounded-2xl border border-zinc-200/70 bg-white/80 px-5 py-3 typography-button text-zinc-800 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:bg-white hover:text-zinc-900 dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white dark:hover:text-black"
                   >
                     <img src={playStoreIcon} alt="Google Play" className="h-5 w-auto" />
                     Google Play
@@ -126,7 +128,7 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
                     href={project.links.website.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 rounded-2xl border border-zinc-200/70 bg-white/80 px-5 py-3 text-sm font-semibold text-zinc-800 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:bg-white hover:text-zinc-900 dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white dark:hover:text-black"
+                    className="inline-flex items-center gap-3 rounded-2xl border border-zinc-200/70 bg-white/80 px-5 py-3 typography-button text-zinc-800 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:bg-white hover:text-zinc-900 dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white dark:hover:text-black"
                   >
                     <span>
                       {locale === 'jp' ? 'ウェブサイト' : 'Visit Website'}

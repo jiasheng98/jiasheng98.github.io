@@ -34,15 +34,15 @@ const LandingSection = ({ jp = false }: LandingSectionProps) => {
           {/* <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200/70 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.4em] text-zinc-700 transition-colors duration-300 dark:border-white/10 dark:bg-white/5 dark:text-zinc-200">
             {badge}
           </span> */}
-          <h1 className="text-4xl font-semibold tracking-tight text-zinc-900 transition-colors duration-300 dark:text-white sm:text-5xl md:text-6xl">
+          <h1 className="typography-display text-zinc-900 transition-colors duration-300 dark:text-white">
             {headline}
           </h1>
-          <p className="mt-6 text-lg leading-relaxed text-zinc-600 transition-colors duration-300 sm:text-xl dark:text-zinc-300">{subheadline}</p>
+          <p className="typography-body-lg mt-6 text-zinc-600 transition-colors duration-300 dark:text-zinc-300">{subheadline}</p>
 
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-start">
             <AppLink
               href="#work"
-              className="inline-flex items-center justify-center rounded-full bg-zinc-900 px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-zinc-900/20 transition hover:-translate-y-0.5 hover:bg-black dark:bg-white dark:text-black dark:shadow-glow"
+              className="inline-flex items-center justify-center rounded-full bg-zinc-900 px-8 py-3 typography-button text-white shadow-lg shadow-zinc-900/20 transition hover:-translate-y-0.5 hover:bg-black dark:bg-white dark:text-black dark:shadow-glow"
             >
               {primaryCta}
             </AppLink>
@@ -50,7 +50,7 @@ const LandingSection = ({ jp = false }: LandingSectionProps) => {
               href={resumeHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full border border-zinc-300/80 px-8 py-3 text-sm font-semibold text-zinc-700 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:text-zinc-900 dark:border-white/20 dark:text-zinc-100 dark:hover:border-white dark:hover:text-white"
+              className="inline-flex items-center justify-center rounded-full border border-zinc-300/80 px-8 py-3 typography-button text-zinc-700 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:text-zinc-900 dark:border-white/20 dark:text-zinc-100 dark:hover:border-white dark:hover:text-white"
             >
               {secondaryCta}
             </AppLink>

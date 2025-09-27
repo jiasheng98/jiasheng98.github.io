@@ -54,21 +54,21 @@ const About = ({ jp = false }: { jp?: boolean }) => {
 
       <div className="layout-container grid gap-16 md:grid-cols-[1.1fr_0.9fr]">
         <Reveal animation="fade-right" className="space-y-8">
-          <span className="text-sm uppercase tracking-[0.35em] text-zinc-500">{jp ? '紹介' : 'About'}</span>
-          <h2 className="text-3xl font-semibold text-zinc-900 transition-colors duration-300 dark:text-white sm:text-4xl">{heading}</h2>
+          <span className="typography-eyebrow text-zinc-500 transition-colors duration-300 dark:text-zinc-400">{jp ? '紹介' : 'About'}</span>
+          <h2 className="typography-heading text-zinc-900 transition-colors duration-300 dark:text-white">{heading}</h2>
           {intro.map((paragraph, index) => (
-            <p key={`intro-${index}`} className="text-base leading-relaxed text-zinc-600 transition-colors duration-300 sm:text-lg dark:text-zinc-300">
+            <p key={`intro-${index}`} className="typography-body text-zinc-600 transition-colors duration-300 dark:text-zinc-300">
               {paragraph}
             </p>
           ))}
 
           <div>
-            <p className="text-xs uppercase tracking-[0.4em] text-zinc-500">{jp ? 'フォーカス' : 'Focus Areas'}</p>
+            <p className="typography-meta text-zinc-500 transition-colors duration-300 dark:text-zinc-400">{jp ? 'フォーカス' : 'Focus Areas'}</p>
             <div className="mt-4 flex flex-wrap gap-3">
               {focusItems.map((item) => (
                 <span
                   key={item}
-                  className="rounded-full border border-zinc-200/70 bg-white/70 px-4 py-2 text-sm font-medium text-zinc-700 shadow-sm transition-colors duration-300 dark:border-white/10 dark:bg-white/5 dark:text-zinc-200"
+                  className="rounded-full border border-zinc-200/70 bg-white/70 px-4 py-2 typography-body-sm font-medium text-zinc-700 shadow-sm transition-colors duration-300 dark:border-white/10 dark:bg-white/5 dark:text-zinc-200"
                 >
                   {item}
                 </span>
@@ -95,8 +95,8 @@ const About = ({ jp = false }: { jp?: boolean }) => {
                   animation="fade-up"
                   className="flex min-h-[12rem] flex-col gap-3 rounded-2xl border border-zinc-200/70 bg-white/70 p-6 transition hover:-translate-y-1 hover:bg-white dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
                 >
-                  <h3 className="text-lg font-semibold text-zinc-900 transition-colors duration-300 dark:text-white">{card.title}</h3>
-                  <p className="mt-auto text-sm leading-relaxed text-zinc-600 transition-colors duration-300 dark:text-zinc-300">{card.description}</p>
+                  <h3 className="typography-subheading text-zinc-900 transition-colors duration-300 dark:text-white">{card.title}</h3>
+                  <p className="typography-body-sm mt-auto text-zinc-600 transition-colors duration-300 dark:text-zinc-300">{card.description}</p>
                 </Reveal>
               ))}
             </div>

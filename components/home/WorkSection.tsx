@@ -23,9 +23,9 @@ const WorkSection = ({ jp = false }: WorkSectionProps) => {
       <div className="pointer-events-none absolute -bottom-32 left-0 h-72 w-72 rounded-full bg-purple-500/10 blur-3xl" />
       <div className="layout-container">
         <Reveal animation="fade-right" className="max-w-3xl">
-          <span className="text-sm uppercase tracking-[0.35em] text-zinc-500">{jp ? '実績' : 'Selected Work'}</span>
-          <h2 className="mt-4 text-3xl font-semibold text-zinc-900 transition-colors duration-300 dark:text-white sm:text-4xl">{title}</h2>
-          <p className="mt-4 text-base leading-relaxed text-zinc-600 transition-colors duration-300 sm:text-lg dark:text-zinc-300">{description}</p>
+          <span className="typography-eyebrow text-zinc-500 transition-colors duration-300 dark:text-zinc-400">{jp ? '実績' : 'Selected Work'}</span>
+          <h2 className="mt-4 typography-heading text-zinc-900 transition-colors duration-300 dark:text-white">{title}</h2>
+          <p className="mt-4 typography-body text-zinc-600 transition-colors duration-300 dark:text-zinc-300">{description}</p>
         </Reveal>
 
         <div className="mt-16 grid gap-12">
@@ -69,14 +69,14 @@ const ProjectHighlight = ({ project, locale, index }: ProjectHighlightProps) => 
               <div className="flex items-center gap-4">
                 <div>
                   {/* <p className="text-xs uppercase tracking-[0.35em] text-zinc-500">{copy.role}</p> */}
-                  <h3 className="mt-1 text-2xl font-semibold text-zinc-900 transition-colors duration-300 dark:text-white sm:text-3xl">{project.cardTitle}</h3>
+                  <h3 className="mt-1 typography-subheading text-zinc-900 transition-colors duration-300 dark:text-white">{project.cardTitle}</h3>
                 </div>
               </div>
               {/* <span className="rounded-full border border-zinc-200/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-zinc-700 transition-colors duration-300 dark:border-white/20 dark:text-zinc-100">
                 {copy.date}
               </span> */}
             </div>
-            <p className="text-base leading-relaxed text-zinc-600 transition-colors duration-300 dark:text-zinc-300">{copy.summary}</p>
+            <p className="typography-body text-zinc-600 transition-colors duration-300 dark:text-zinc-300">{copy.summary}</p>
             {/* {project.gallery.length ? (
               <div className="flex gap-4 overflow-x-auto pb-2">
                 {project.gallery.map((image, imageIndex) => (
@@ -101,11 +101,11 @@ const ProjectHighlight = ({ project, locale, index }: ProjectHighlightProps) => 
             <LazyImage src={project.logo} className="object-contain" alt={`${project.cardTitle} logo`} />
           </div>
         </div> */}
-        <div className="flex flex-col gap-3 text-sm text-zinc-600 transition-colors duration-300 sm:flex-row sm:items-center sm:justify-between dark:text-zinc-400">
+        <div className="flex flex-col gap-3 text-zinc-600 transition-colors duration-300 sm:flex-row sm:items-center sm:justify-between dark:text-zinc-400">
           {/* <span>{copy.roleDescription}</span> */}
           <AppLink
             href={href}
-            className="whitespace-nowrap inline-flex items-center justify-center gap-2 rounded-full border border-zinc-200/70 px-6 py-2 text-lg font-semibold text-zinc-800 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:text-zinc-900 dark:border-white/20 dark:text-white dark:hover:border-white"
+            className="whitespace-nowrap inline-flex items-center justify-center gap-2 rounded-full border border-zinc-200/70 px-6 py-2 typography-button text-zinc-800 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:text-zinc-900 dark:border-white/20 dark:text-white dark:hover:border-white"
           >
             {copy.cta}
           </AppLink>

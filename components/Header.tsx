@@ -48,7 +48,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
     'fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-out',
     isTransparent
       ? 'bg-transparent text-zinc-900 dark:text-white'
-      : 'border-b border-zinc-200/70 bg-white/80 text-zinc-900 shadow-lg shadow-zinc-900/5 backdrop-blur-xl dark:border-white/10 dark:bg-black/80 dark:text-zinc-100 dark:shadow-black/10',
+      : 'bg-white/80 text-zinc-900 shadow-lg shadow-zinc-900/5 backdrop-blur-xl dark:bg-black/80 dark:text-zinc-100 dark:shadow-black/10',
   ]
     .filter(Boolean)
     .join(' ');
@@ -57,7 +57,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
     <button
       type="button"
       onClick={toggleTheme}
-      className="inline-flex items-center gap-2 rounded-full border border-zinc-300/80 bg-white/70 px-4 py-2 text-sm font-medium text-zinc-700 transition hover:-translate-y-0.5 hover:bg-white dark:border-white/20 dark:bg-white/10 dark:text-zinc-100 dark:hover:bg-white/20"
+      className="inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-2 text-sm font-medium text-zinc-700 transition hover:-translate-y-0.5 hover:bg-white dark:bg-white/10 dark:text-zinc-100 dark:hover:bg-white/20"
       aria-label={jp ? 'テーマを切り替える' : 'Toggle theme'}
     >
       {isDark ? <TbSun className="h-4 w-4" /> : <TbMoon className="h-4 w-4" />}
@@ -81,7 +81,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
           href={resumeHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center rounded-full border border-zinc-300/80 px-4 py-2 text-sm font-medium text-zinc-700 transition hover:-translate-y-0.5 hover:bg-white hover:text-zinc-900 dark:border-white/20 dark:text-zinc-100 dark:hover:bg-white dark:hover:text-black"
+          className="inline-flex items-center rounded-full px-4 py-2 text-sm font-medium text-zinc-700 transition hover:-translate-y-0.5 hover:bg-white hover:text-zinc-900 dark:text-zinc-100 dark:hover:bg-white dark:hover:text-black"
           onClick={closeMenu}
         >
           {resumeLabel}
@@ -144,7 +144,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
       {open ? (
         <div className="fixed inset-0 z-40 bg-black/60 backdrop-blur-xl lg:hidden dark:bg-black/80" onClick={closeMenu}>
           <div
-            className="absolute inset-x-6 top-24 rounded-3xl border border-zinc-200/80 bg-white/90 p-8 text-left shadow-2xl dark:border-white/10 dark:bg-black/70"
+            className="absolute inset-x-6 top-24 rounded-3xl bg-white/90 p-8 text-left shadow-2xl dark:bg-black/70"
             onClick={(event) => event.stopPropagation()}
           >
             <nav

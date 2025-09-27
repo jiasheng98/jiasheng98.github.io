@@ -35,13 +35,13 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
           <p className="max-w-3xl text-base text-zinc-700 transition-colors duration-300 sm:text-lg dark:text-zinc-200">{copy.summary}</p>
           <div className="relative w-full max-w-3xl">
             <div className="absolute inset-0 rounded-[3rem] bg-white/70 blur-3xl transition-colors duration-300 dark:bg-white/10" />
-            <div className="relative overflow-hidden rounded-[3rem] border border-zinc-200/70 bg-white/90 p-12 backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-black/70">
+            {/* <div className="relative overflow-hidden rounded-[3rem] border border-zinc-200/70 bg-white/90 p-12 backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-black/70">
               <LazyImage
                 src={project.heroImage}
                 alt={copy.title}
                 className="mx-auto w-full max-w-md object-contain drop-shadow-[0_40px_80px_rgba(15,23,42,0.45)]"
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

@@ -112,7 +112,7 @@ const ProjectHighlight = ({ project, locale, index }: ProjectHighlightProps) => 
           <div className="relative w-full rounded-[2.5rem] border border-zinc-200/80 bg-white/90 p-8 transition-colors duration-300 dark:border-white/10 dark:bg-black/70">
             <LazyImage
               src={project.heroImage}
-              className="mx-auto w-full max-w-sm object-contain drop-shadow-[0_40px_80px_rgba(15,23,42,0.45)]"
+              className="mx-auto w-full max-w-lg object-contain drop-shadow-[0_40px_80px_rgba(15,23,42,0.45)]"
               alt={`${project.cardTitle} preview`}
             />
           </div>

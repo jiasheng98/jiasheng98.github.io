@@ -93,10 +93,10 @@ const About = ({ jp = false }: { jp?: boolean }) => {
                 <Reveal
                   key={card.title}
                   animation="fade-up"
-                  className="rounded-2xl border border-zinc-200/70 bg-white/70 p-6 transition hover:-translate-y-1 hover:bg-white dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
+                  className="flex min-h-[12rem] flex-col gap-3 rounded-2xl border border-zinc-200/70 bg-white/70 p-6 transition hover:-translate-y-1 hover:bg-white dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
                 >
                   <h3 className="text-lg font-semibold text-zinc-900 transition-colors duration-300 dark:text-white">{card.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-zinc-600 transition-colors duration-300 dark:text-zinc-300">{card.description}</p>
+                  <p className="mt-auto text-sm leading-relaxed text-zinc-600 transition-colors duration-300 dark:text-zinc-300">{card.description}</p>
                 </Reveal>
               ))}
             </div>

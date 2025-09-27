@@ -47,7 +47,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
   const wrapperClasses = [
     'fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-out',
     isTransparent
-      ? 'bg-transparent text-white'
+      ? 'bg-transparent text-zinc-900 dark:text-white'
       : 'border-b border-zinc-200/70 bg-white/80 text-zinc-900 shadow-lg shadow-zinc-900/5 backdrop-blur-xl dark:border-white/10 dark:bg-black/80 dark:text-zinc-100 dark:shadow-black/10',
   ]
     .filter(Boolean)
@@ -112,7 +112,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
             className="flex items-center gap-3 rounded-full px-2 py-1 text-sm font-semibold tracking-wide transition hover:opacity-80"
             onClick={closeMenu}
           >
-            <img src="/Logo.png" alt="Jia Sheng Yeap" className="h-10 w-auto" />
+            <img src="/Logo.png" alt="Jia Sheng Yeap" className="h-12 w-auto sm:h-14" />
             <span className="hidden text-sm font-medium sm:inline-flex">
               Jia Sheng Yeap {jp ? '| シェーン' : ''}
             </span>
@@ -135,7 +135,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
             width={22}
             height={18}
             strokeWidth={2}
-            color={isTransparent ? '#f4f4f5' : isDark ? '#f4f4f5' : '#18181b'}
+            color={isTransparent ? (isDark ? '#f4f4f5' : '#18181b') : isDark ? '#f4f4f5' : '#18181b'}
             animationDuration={0.5}
           />
         </button>

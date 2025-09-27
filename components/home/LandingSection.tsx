@@ -67,7 +67,7 @@ const LandingSection = ({ jp = false }: LandingSectionProps) => {
               <LazyImage
                 src="/images/macbook.png"
                 alt="Macbook showcasing interface"
-                className="relative z-10 mx-auto w-full max-w-sm object-contain drop-shadow-[0_40px_80px_rgba(15,23,42,0.45)] animate-float"
+                className="relative z-10 mx-auto w-full max-w-lg object-contain drop-shadow-[0_40px_80px_rgba(15,23,42,0.45)] animate-float md:max-w-xl"
               />
             </div>
             <div className="mt-6 flex items-center justify-between rounded-2xl border border-zinc-200/70 bg-white/70 px-6 py-4 text-left transition-colors duration-300 dark:border-white/10 dark:bg-black/40">

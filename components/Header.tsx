@@ -43,7 +43,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
   const portfolioLabel = jp ? 'ポートフォリオ' : 'Portfolio';
   const resumeLabel = jp ? '履歴書' : 'Resume';
 
-  const isTransparent = overlay && !scrolled && !open;
+  const isTransparent = overlay && !scrolled;
   const wrapperClasses = [
     'fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-out',
     isTransparent
@@ -144,7 +144,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
       {open ? (
         <div className="fixed inset-0 z-40 bg-black/60 backdrop-blur-xl lg:hidden dark:bg-black/80" onClick={closeMenu}>
           <div
-            className="absolute inset-x-6 top-24 rounded-3xl bg-white/90 p-8 text-left shadow-2xl dark:bg-black/70"
+            className="absolute inset-x-6 top-24 rounded-3xl bg-white p-8 text-left shadow-2xl dark:bg-zinc-900"
             onClick={(event) => event.stopPropagation()}
           >
             <nav

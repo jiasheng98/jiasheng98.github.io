@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import type { ImgHTMLAttributes } from 'react';
 import LazyLoad from 'vanilla-lazyload';
 import lazyloadConfig from './config/lazyload';
+import { resolveAssetPath, resolveAssetSrcSet } from '../lib/assetPath';
 
 type LazyImageProps = Omit<ImgHTMLAttributes<HTMLImageElement>, 'src' | 'srcSet'> & {
   src: string;
@@ -30,12 +31,15 @@ const LazyImage = ({
     }
   }, []);
 
+  const resolvedSrc = resolveAssetPath(src);
+  const resolvedSrcSet = resolveAssetSrcSet(srcSet);
+
   return (
     <img
       alt={alt}
       className={`lazy ${className}`.trim()}
-      data-src={src}
-      data-srcset={srcSet}
+      data-src={resolvedSrc}
+      data-srcset={resolvedSrcSet}
       data-sizes={sizes}
       width={width}
       height={height}

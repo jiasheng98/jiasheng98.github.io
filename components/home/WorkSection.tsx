@@ -48,7 +48,8 @@ const ProjectHighlight = ({ project, locale, index }: ProjectHighlightProps) => 
   const copy = project.copy[locale];
   const href = locale === 'jp' ? `/jp/portfolio/${project.slug}` : `/portfolio/${project.slug}`;
   const gradientStyle = {
-    background: `linear-gradient(135deg, ${project.cardBackgroundColor} 0%, rgba(15,15,15,0.65) 65%)`,
+    background:
+      project.hoverGradient ?? `linear-gradient(135deg, ${project.cardBackgroundColor} 0%, rgba(15,15,15,0.65) 65%)`,
   };
 
   return (

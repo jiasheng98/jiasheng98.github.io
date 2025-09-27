@@ -27,6 +27,7 @@ export type Project = {
   gallery: string[];
   cardBackgroundColor: string;
   cardTextColor: string;
+  hoverGradient?: string;
   heroBackgroundColor?: string;
   designTools?: string;
   developmentTools?: string;
@@ -43,6 +44,7 @@ const projects: Project[] = [
     gallery: [],
     cardBackgroundColor: '#272725',
     cardTextColor: '#FFFFFF',
+    hoverGradient: 'linear-gradient(135deg, rgba(248,248,248,0.95) 0%, rgba(148,163,184,0.45) 65%)',
     heroBackgroundColor: '#000000',
     designTools: 'Adobe XD, Shopify, Adobe Photoshop, Adobe Illustrator',
     developmentTools: 'Liquid Template Language (Liquid), HTML, CSS, jQuery, Javascript',
@@ -92,6 +94,7 @@ const projects: Project[] = [
     gallery: [],
     cardBackgroundColor: '#FFFFFF',
     cardTextColor: '#000000',
+    hoverGradient: 'linear-gradient(135deg, rgba(220,38,38,0.85) 0%, rgba(15,15,15,0.75) 65%)',
     heroBackgroundColor: '#000000',
     designTools: 'Adobe XD, Shopify, Adobe Photoshop, Adobe Illustrator',
     developmentTools: 'Liquid Template Language (Liquid), HTML, CSS, jQuery, Javascript',

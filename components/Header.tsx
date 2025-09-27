@@ -3,6 +3,7 @@ import { TbMoon, TbSun, TbWorld } from 'react-icons/tb';
 import HamburgerMenu from 'react-hamburger-menu';
 import AppLink from './common/AppLink';
 import { useTheme } from './common/ThemeProvider';
+import { resolveAssetPath } from '../lib/assetPath';
 
 type HeaderProps = {
   jp?: boolean;
@@ -112,7 +113,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
             className="flex items-center gap-3 rounded-full px-2 py-1 text-sm font-semibold tracking-wide transition hover:opacity-80"
             onClick={closeMenu}
           >
-            <img src="/Logo.png" alt="Jia Sheng Yeap" className="h-10 w-auto" />
+            <img src={resolveAssetPath('/Logo.png')} alt="Jia Sheng Yeap" className="h-10 w-auto" />
             <span className="hidden text-sm font-medium sm:inline-flex">
               Jia Sheng Yeap {jp ? '| シェーン' : ''}
             </span>

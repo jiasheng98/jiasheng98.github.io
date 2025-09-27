@@ -24,7 +24,7 @@ const Layout = ({
 }: LayoutProps) => {
   const mainClasses = [
     'flex flex-1 flex-col',
-    overlay ? 'pt-0' : 'pt-24 md:pt-28',
+    overlay ? 'pt-0' : 'pt-20 md:pt-24',
   ]
     .filter(Boolean)
     .join(' ');

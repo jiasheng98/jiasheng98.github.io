@@ -7,7 +7,7 @@ import Contact from '../../components/home/Contact';
 const Home = () => {
   return (
     <MyLayout
-      title="Jia Sheng Yeap | シェーン"
+      title="Jia Sheng Yeap | シェン"
       keywords="クリエイティブリード, UIデザイナー, UIデベロッパー"
       description="クリエイティブリード, UIデザイナー, UIデベロッパー"
       overlay

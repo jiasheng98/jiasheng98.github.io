@@ -12,7 +12,7 @@ const LandingSection = ({ jp = false }: LandingSectionProps) => {
     : 'Designing experiences with an obsessive finish.';
   const subheadline = jp
     ? 'SteelcaseでUI/UXデザイナーとして働きながら、プロダクト戦略からコードまで、ブランドの魅力を形にしています。'
-    : 'UI/UX designer and developer at Steelcase, crafting brand stories and interfaces from strategy through polished code.';
+    : 'UI/UX designer at EPAM, crafting brand stories and interfaces from strategy through polished code.';
   const badge = jp ? 'UI/UXデザイナー' : 'Product Designer';
   const primaryCta = jp ? '制作実績を見る' : 'Explore Work';
   const secondaryCta = jp ? '履歴書をダウンロード' : 'Download Resume';

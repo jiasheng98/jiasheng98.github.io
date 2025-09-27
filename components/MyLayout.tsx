@@ -15,7 +15,7 @@ type LayoutProps = {
 
 const Layout = ({
   children,
-  title = 'Jia Sheng Yeap | シェーン',
+  title = 'Jia Sheng Yeap | シェン',
   description,
   keywords,
   ldJson,

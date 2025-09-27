@@ -29,7 +29,7 @@ const LandingSection = ({ jp = false }: LandingSectionProps) => {
       <div className="pointer-events-none absolute -left-1/2 top-1/4 h-[36rem] w-[36rem] rounded-full bg-indigo-500/20 blur-3xl" />
       <div className="pointer-events-none absolute -right-1/3 bottom-0 h-[28rem] w-[28rem] rounded-full bg-pink-400/20 blur-3xl" />
 
-      <div className="mx-auto flex min-h-[calc(100vh-6rem)] max-w-6xl flex-col-reverse items-center gap-16 px-6 pb-24 pt-32 md:flex-row md:items-end md:justify-between lg:px-12">
+      <div className="mx-auto flex max-w-6xl flex-col-reverse items-center gap-16 px-6 pb-24 pt-32 md:flex-row md:items-end md:justify-between lg:px-12">
         <div className="max-w-2xl text-center md:text-left">
           <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200/70 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.4em] text-zinc-700 transition-colors duration-300 dark:border-white/10 dark:bg-white/5 dark:text-zinc-200">
             {badge}

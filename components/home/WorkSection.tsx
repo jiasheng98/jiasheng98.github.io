@@ -67,20 +67,17 @@ const ProjectHighlight = ({ project, locale, index }: ProjectHighlightProps) => 
           <div className="space-y-6">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-zinc-200/70 bg-white/80 transition-colors duration-300 dark:border-white/10 dark:bg-white/10">
-                  <LazyImage src={project.logo} className="h-8 w-8 object-contain" alt={`${project.cardTitle} logo`} />
-                </div>
                 <div>
-                  <p className="text-xs uppercase tracking-[0.35em] text-zinc-500">{copy.role}</p>
+                  {/* <p className="text-xs uppercase tracking-[0.35em] text-zinc-500">{copy.role}</p> */}
                   <h3 className="mt-1 text-2xl font-semibold text-zinc-900 transition-colors duration-300 dark:text-white sm:text-3xl">{project.cardTitle}</h3>
                 </div>
               </div>
-              <span className="rounded-full border border-zinc-200/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-zinc-700 transition-colors duration-300 dark:border-white/20 dark:text-zinc-100">
+              {/* <span className="rounded-full border border-zinc-200/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-zinc-700 transition-colors duration-300 dark:border-white/20 dark:text-zinc-100">
                 {copy.date}
-              </span>
+              </span> */}
             </div>
             <p className="text-base leading-relaxed text-zinc-600 transition-colors duration-300 dark:text-zinc-300">{copy.summary}</p>
-            {project.gallery.length ? (
+            {/* {project.gallery.length ? (
               <div className="flex gap-4 overflow-x-auto pb-2">
                 {project.gallery.map((image, imageIndex) => (
                   <div
@@ -95,28 +92,24 @@ const ProjectHighlight = ({ project, locale, index }: ProjectHighlightProps) => 
                   </div>
                 ))}
               </div>
-            ) : null}
+            ) : null} */}
           </div>
-          <div className="flex flex-col gap-3 text-sm text-zinc-600 transition-colors duration-300 sm:flex-row sm:items-center sm:justify-between dark:text-zinc-400">
+          {/* <div className="flex flex-col gap-3 text-sm text-zinc-600 transition-colors duration-300 sm:flex-row sm:items-center sm:justify-between dark:text-zinc-400">
             <span>{copy.roleDescription}</span>
             <AppLink
               href={href}
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-zinc-200/70 px-6 py-2 text-sm font-semibold text-zinc-800 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:text-zinc-900 dark:border-white/20 dark:text-white dark:hover:border-white"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-zinc-200/70 px-6 py-2 text-lg font-semibold text-zinc-800 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:text-zinc-900 dark:border-white/20 dark:text-white dark:hover:border-white"
             >
               {copy.cta}
             </AppLink>
-          </div>
+          </div> */}
         </div>
-        <div className="relative flex items-center justify-center">
+        {/* <div className="relative flex items-center justify-center">
           <div className="absolute inset-0 rounded-[2.5rem] border border-zinc-200/70 bg-white/70 blur-3xl transition-colors duration-300 dark:border-white/10 dark:bg-white/5" />
-          <div className="relative w-full rounded-[2.5rem] border border-zinc-200/80 bg-white/90 p-8 transition-colors duration-300 dark:border-white/10 dark:bg-black/70">
-            <LazyImage
-              src={project.heroImage}
-              className="mx-auto w-full max-w-lg object-contain drop-shadow-[0_40px_80px_rgba(15,23,42,0.45)]"
-              alt={`${project.cardTitle} preview`}
-            />
+          <div className="p-4 flex h-40 w-60 items-center justify-center rounded-2xl border border-zinc-200/70 bg-white/80 transition-colors duration-300 dark:border-white/10 dark:bg-white/10">
+            <LazyImage src={project.logo} className="object-contain" alt={`${project.cardTitle} logo`} />
           </div>
-        </div>
+        </div> */}
       </div>
     </Reveal>
   );

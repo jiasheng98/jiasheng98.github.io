@@ -14,7 +14,6 @@ const Home = () => {
       jp
     >
       <LandingSection jp />
-      <About jp />
       <WorkSection jp />
       <Contact jp icons />
     </MyLayout>

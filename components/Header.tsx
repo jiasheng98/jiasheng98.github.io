@@ -105,7 +105,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
 
   return (
     <header className={wrapperClasses}>
-      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6 md:h-24 lg:px-12">
+      <div className="list-none mx-auto flex h-20 max-w-6xl items-center justify-between px-6 md:h-24 lg:px-12">
         <div className="flex items-center gap-8">
           <AppLink
             href={jp ? '/jp' : '/'}
@@ -131,7 +131,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
         >
           <HamburgerMenu
             isOpen={open}
-            menuClicked={() => {}}
+            menuClicked={() => { }}
             width={22}
             height={18}
             strokeWidth={2}

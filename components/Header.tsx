@@ -87,16 +87,14 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
       role="switch"
       aria-checked={isDark}
       aria-label={jp ? 'テーマを切り替える' : 'Toggle theme'}
-      className={`group relative inline-flex h-9 w-16 items-center overflow-hidden rounded-full transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-zinc-900 ${
-        isDark ? 'bg-zinc-800 dark:bg-zinc-700' : 'bg-zinc-200 dark:bg-zinc-600'
-      }`}
+      className={`group relative inline-flex h-8 w-16 items-center overflow-hidden rounded-full transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-zinc-900 ${isDark ? 'bg-zinc-800 dark:bg-zinc-700' : 'bg-zinc-200 dark:bg-zinc-600'
+        }`}
     >
       <span
-        className={`inline-flex h-full w-1/2 items-center justify-center rounded-full bg-white text-zinc-700 shadow transition duration-300 ease-out ${
-          isDark
-            ? 'translate-x-full text-indigo-200 group-hover:text-indigo-100'
-            : 'translate-x-0 text-amber-400 group-hover:text-amber-300'
-        }`}
+        className={`inline-flex h-8 w-8 items-center justify-center rounded-full bg-white text-zinc-700 shadow transition duration-300 ease-out ${isDark
+          ? 'translate-x-full text-indigo-200 group-hover:text-indigo-100'
+          : 'translate-x-0 text-amber-400 group-hover:text-amber-300'
+          }`}
       >
         {isDark ? <TbMoon className="h-4 w-4" /> : <TbSun className="h-4 w-4" />}
       </span>

@@ -27,6 +27,7 @@ export type Project = {
   gallery: string[];
   cardBackgroundColor: string;
   cardTextColor: string;
+  cardHoverGradient?: [string, string];
   heroBackgroundColor?: string;
   designTools?: string;
   developmentTools?: string;
@@ -43,6 +44,7 @@ const projects: Project[] = [
     gallery: [],
     cardBackgroundColor: '#272725',
     cardTextColor: '#FFFFFF',
+    cardHoverGradient: ['#444444', '#FFFFFF'],
     heroBackgroundColor: '#000000',
     designTools: 'Adobe XD, Shopify, Adobe Photoshop, Adobe Illustrator',
     developmentTools: 'Liquid Template Language (Liquid), HTML, CSS, jQuery, Javascript',
@@ -92,6 +94,7 @@ const projects: Project[] = [
     gallery: [],
     cardBackgroundColor: '#FFFFFF',
     cardTextColor: '#000000',
+    cardHoverGradient: ['#D12028', '#FFFFFF'],
     heroBackgroundColor: '#000000',
     designTools: 'Adobe XD, Shopify, Adobe Photoshop, Adobe Illustrator',
     developmentTools: 'Liquid Template Language (Liquid), HTML, CSS, jQuery, Javascript',

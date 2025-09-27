@@ -92,12 +92,19 @@
   }
 
   .lazy {
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.5s ease;
     will-change: opacity;
   }
 
-  .lazy.lazy-loaded {
+  .lazy[data-ll-status='loading'],
+  .lazy[data-ll-status='entered'] {
+    opacity: 0;
+  }
+
+  .lazy.lazy-loaded,
+  .lazy[data-ll-status='loaded'],
+  .lazy[data-ll-status='applied'] {
     opacity: 1;
   }
 }

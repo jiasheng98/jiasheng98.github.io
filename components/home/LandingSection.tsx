@@ -30,7 +30,7 @@ const LandingSection = ({ jp = false }: LandingSectionProps) => {
       <div className="pointer-events-none absolute -right-1/3 bottom-0 h-[28rem] w-[28rem] rounded-full bg-pink-400/20 blur-3xl" />
 
       <div className="mx-auto flex max-w-6xl flex-col-reverse items-center gap-16 px-6 pb-24 pt-32 md:flex-row md:items-end md:justify-between lg:px-12">
-        <div className="max-w-2xl text-center md:text-left">
+        <div className="w-full text-center md:text-left">
           <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200/70 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.4em] text-zinc-700 transition-colors duration-300 dark:border-white/10 dark:bg-white/5 dark:text-zinc-200">
             {badge}
           </span>
@@ -56,29 +56,20 @@ const LandingSection = ({ jp = false }: LandingSectionProps) => {
             </AppLink>
           </div>
 
-          <p className="mt-10 text-sm uppercase tracking-[0.3em] text-zinc-500 dark:text-zinc-500">{supportingCopy}</p>
+          {/* <p className="mt-10 text-sm uppercase tracking-[0.3em] text-zinc-500 dark:text-zinc-500">{supportingCopy}</p> */}
         </div>
 
-        <div className="relative flex w-full max-w-xl justify-center">
+        {/* <div className="relative flex w-full max-w-xl justify-center">
           <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-tr from-white via-white/70 to-transparent blur-2xl dark:from-white/10 dark:via-white/5" />
           <div className="relative w-full rounded-[2.5rem] border border-zinc-200/60 bg-white/80 p-6 shadow-2xl backdrop-blur-2xl transition-colors duration-300 dark:border-white/10 dark:bg-white/10">
-            <div className="relative overflow-hidden rounded-[2rem] bg-zinc-100 p-6 transition-colors duration-300 dark:bg-black/70">
-              <div className="pointer-events-none absolute inset-x-10 top-0 h-40 rounded-full bg-white/60 blur-3xl dark:bg-white/20" />
-              <LazyImage
-                src="/images/macbook.png"
-                alt="Macbook showcasing interface"
-                className="relative z-10 mx-auto w-full max-w-lg object-contain drop-shadow-[0_40px_80px_rgba(15,23,42,0.45)] animate-float md:max-w-xl"
-              />
-            </div>
-            <div className="mt-6 flex items-center justify-between rounded-2xl border border-zinc-200/70 bg-white/70 px-6 py-4 text-left transition-colors duration-300 dark:border-white/10 dark:bg-black/40">
-              <div>
-                <p className="text-xs uppercase tracking-[0.35em] text-zinc-500">Currently</p>
-                <p className="mt-1 text-sm font-medium text-zinc-800 transition-colors duration-300 dark:text-zinc-200">UI/UX Designer @ Steelcase</p>
-              </div>
-              <span className="text-sm font-semibold text-zinc-800 transition-colors duration-300 dark:text-zinc-200">2022 — {new Date().getFullYear()}</span>
-            </div>
+            <div className="pointer-events-none absolute inset-x-10 top-0 h-40 rounded-full bg-white/60 blur-3xl dark:bg-white/20" />
+            <LazyImage
+              src="/images/macbook.png"
+              alt="Macbook showcasing interface"
+              className="relative z-10 mx-auto w-full max-w-sm object-contain drop-shadow-[0_40px_80px_rgba(15,23,42,0.45)] animate-float md:max-w-xl"
+            />
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

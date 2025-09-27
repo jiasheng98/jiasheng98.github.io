@@ -5,13 +5,13 @@ const About = ({ jp = false }: { jp?: boolean }) => {
   const heading = jp ? '人を中心にしたデザイン哲学。' : 'A human-first design philosophy.';
   const intro = jp
     ? [
-        'SteelcaseでUI/UXデザイナーとして働き、ユーザー体験とブランドの物語を統合しています。',
-        '細部へのこだわりと大胆なUI選択を組み合わせ、常に学びながら自分のクラフトを磨いています。',
-      ]
+      'SteelcaseでUI/UXデザイナーとして働き、ユーザー体験とブランドの物語を統合しています。',
+      '細部へのこだわりと大胆なUI選択を組み合わせ、常に学びながら自分のクラフトを磨いています。',
+    ]
     : [
-        'UI/UX designer at Steelcase, blending user experience strategy with brand storytelling.',
-        'I obsess over details, embrace bold interface choices, and iterate relentlessly to push my craft forward.',
-      ];
+      'UI/UX designer at Steelcase, blending user experience strategy with brand storytelling.',
+      'I obsess over details, embrace bold interface choices, and iterate relentlessly to push my craft forward.',
+    ];
 
   const focusItems = jp
     ? ['デザインシステム', 'インタラクション設計', 'フロントエンドエンジニアリング']
@@ -19,33 +19,33 @@ const About = ({ jp = false }: { jp?: boolean }) => {
 
   const highlightCards = jp
     ? [
-        {
-          title: 'リサーチから実装まで',
-          description: 'リサーチ、コンセプト、デザイン、プロトタイピング、開発を通じて製品を一貫して導きます。',
-        },
-        {
-          title: '多様なプラットフォーム',
-          description: 'Shopifyやネイティブアプリなど、複数のプラットフォームに合わせて体験を最適化します。',
-        },
-        {
-          title: 'チームとの共同制作',
-          description: 'エンジニア、プロダクト、マーケティングと協力し、ブランド全体の一貫性を保ちます。',
-        },
-      ]
+      {
+        title: 'リサーチから実装まで',
+        description: 'リサーチ、コンセプト、デザイン、プロトタイピング、開発を通じて製品を一貫して導きます。',
+      },
+      {
+        title: '多様なプラットフォーム',
+        description: 'Shopifyやネイティブアプリなど、複数のプラットフォームに合わせて体験を最適化します。',
+      },
+      {
+        title: 'チームとの共同制作',
+        description: 'エンジニア、プロダクト、マーケティングと協力し、ブランド全体の一貫性を保ちます。',
+      },
+    ]
     : [
-        {
-          title: 'From research to launch',
-          description: 'Guiding products end-to-end across discovery, design, prototyping, and implementation.',
-        },
-        {
-          title: 'Multi-platform thinking',
-          description: 'Crafting responsive experiences for Shopify ecosystems, native apps, and bespoke interfaces.',
-        },
-        {
-          title: 'Collaborative build',
-          description: 'Partnering with engineering, product, and marketing to maintain cohesive brand narratives.',
-        },
-      ];
+      {
+        title: 'From research to launch',
+        description: 'Guiding products end-to-end across discovery, design, prototyping, and implementation.',
+      },
+      {
+        title: 'Multi-platform thinking',
+        description: 'Crafting responsive experiences for Shopify ecosystems, native apps, and bespoke interfaces.',
+      },
+      {
+        title: 'Collaborative build',
+        description: 'Partnering with engineering, product, and marketing to maintain cohesive brand narratives.',
+      },
+    ];
 
   return (
     <section id="about" className="relative overflow-hidden py-24">

@@ -67,7 +67,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
 
   const NavigationLinks = () => (
     <>
-      <li>
+      {/* <li>
         <AppLink
           href={portfolioHref}
           className="text-sm font-medium tracking-wide text-zinc-700 transition hover:text-zinc-900 dark:text-zinc-200 dark:hover:text-white"
@@ -75,7 +75,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
         >
           {portfolioLabel}
         </AppLink>
-      </li>
+      </li> */}
       <li>
         <AppLink
           href={resumeHref}
@@ -114,7 +114,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
           >
             <img src="/Logo.png" alt="Jia Sheng Yeap" className="h-12 w-auto sm:h-14" />
             <span className="hidden text-sm font-medium sm:inline-flex">
-              Jia Sheng Yeap {jp ? '| シェーン' : ''}
+              {jp ? 'シェン' : 'Jia Sheng Yeap'}
             </span>
           </AppLink>
         </div>

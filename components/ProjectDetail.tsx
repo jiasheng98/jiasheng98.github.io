@@ -22,17 +22,23 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
   const linksLabel = locale === 'jp' ? '関連リンク' : 'Project Links';
 
   const heroStyle = {
-    background: `radial-gradient(120% 120% at 50% 0%, ${heroBackground} 0%, rgba(248,250,252,0.92) 65%)`,
+    backgroundColor: heroBackground,
   };
 
   return (
     <article className="flex flex-col">
-      <section className="relative isolate overflow-hidden border-b border-zinc-200/70 transition-colors duration-300 dark:border-white/10" style={heroStyle}>
-        <div className="absolute inset-0 bg-white/80 dark:bg-black/65" />
+      <section
+        className="relative isolate overflow-hidden border-b border-zinc-200/70 text-black transition-colors duration-300 dark:border-white/10 dark:text-white"
+        style={heroStyle}
+      >
+        <div
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_120%_at_50%_-10%,rgba(255,255,255,0.95)_0%,rgba(255,255,255,0.75)_45%,rgba(255,255,255,0)_75%)] dark:bg-[radial-gradient(120%_120%_at_50%_-10%,rgba(2,6,23,0.92)_0%,rgba(2,6,23,0.7)_45%,rgba(2,6,23,0)_75%)]"
+          aria-hidden
+        />
         <div className="section-spacing layout-container--narrow flex flex-col items-center gap-10 text-center">
-          <span className="text-xs uppercase tracking-[0.4em] text-zinc-500">{copy.date}</span>
-          <h1 className="text-3xl font-semibold text-zinc-900 transition-colors duration-300 dark:text-white sm:text-5xl">{copy.title}</h1>
-          <p className="max-w-3xl text-base text-zinc-700 transition-colors duration-300 sm:text-lg dark:text-zinc-200">{copy.summary}</p>
+          <span className="text-xs uppercase tracking-[0.4em] text-black/70 transition-colors duration-300 dark:text-white/80">{copy.date}</span>
+          <h1 className="text-3xl font-semibold text-current transition-colors duration-300 sm:text-5xl">{copy.title}</h1>
+          <p className="max-w-3xl text-base text-black transition-colors duration-300 sm:text-lg dark:text-white">{copy.summary}</p>
           <div className="relative w-full max-w-3xl">
             <div className="absolute inset-0 rounded-[3rem] bg-white/70 blur-3xl transition-colors duration-300 dark:bg-white/10" />
             <div className="relative overflow-hidden rounded-[3rem] border border-zinc-200/70 bg-white/90 p-12 backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-black/70">

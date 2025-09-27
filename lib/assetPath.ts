@@ -2,30 +2,64 @@ import getConfig from 'next/config';
 
 const externalPattern = /^(?:[a-z][a-z\d+.-]*:|\/\/)/i;
 
-type NextRuntimeConfig = {
+type RuntimeConfigValue = {
   assetPrefix?: string;
   basePath?: string;
 };
 
+type NextRuntimeConfig = RuntimeConfigValue & {
+  publicRuntimeConfig?: RuntimeConfigValue;
+};
+
+declare global {
+  interface Window {
+    __NEXT_DATA__?: {
+      assetPrefix?: string;
+    };
+  }
+}
+
 let cachedPrefix: string | null = null;
+
+const sanitizePrefix = (value?: string) => value?.replace(/\/$/, '') ?? '';
+
+const resolveRuntimePrefix = () => {
+  try {
+    const config = getConfig() as NextRuntimeConfig | undefined;
+
+    if (!config) {
+      return '';
+    }
+
+    const { assetPrefix, basePath, publicRuntimeConfig } = config;
+
+    return (
+      assetPrefix ||
+      basePath ||
+      publicRuntimeConfig?.assetPrefix ||
+      publicRuntimeConfig?.basePath ||
+      ''
+    );
+  } catch (error) {
+    return '';
+  }
+};
 
 const getPrefix = () => {
   if (cachedPrefix !== null) {
     return cachedPrefix;
   }
 
-  try {
-    const config = getConfig() as NextRuntimeConfig | undefined;
-    const assetPrefix = config?.assetPrefix ?? '';
-    const basePath = config?.basePath ?? '';
-    const prefix = assetPrefix || basePath || '';
+  const envPrefix = sanitizePrefix(process.env.NEXT_PUBLIC_BASE_PATH);
+  const nextDataPrefix = sanitizePrefix(
+    typeof window !== 'undefined' ? window.__NEXT_DATA__?.assetPrefix : undefined
+  );
+  const runtimePrefix = sanitizePrefix(resolveRuntimePrefix());
 
-    cachedPrefix = prefix.replace(/\/$/, '');
-    return cachedPrefix;
-  } catch (error) {
-    cachedPrefix = '';
-    return cachedPrefix;
-  }
+  const prefix = envPrefix || nextDataPrefix || runtimePrefix;
+
+  cachedPrefix = prefix;
+  return cachedPrefix;
 };
 
 export const resolveAssetPath = (path: string) => {

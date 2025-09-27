@@ -22,13 +22,13 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
   const linksLabel = locale === 'jp' ? '関連リンク' : 'Project Links';
 
   const heroStyle = {
-    background: `radial-gradient(120% 120% at 50% 0%, ${heroBackground} 0%, rgba(248,250,252,0.92) 65%)`,
+    background: ``,
   };
 
   return (
     <article className="flex flex-col">
       <section className="relative isolate overflow-hidden border-b border-zinc-200/70 transition-colors duration-300 dark:border-white/10" style={heroStyle}>
-        <div className="absolute inset-0 bg-white/80 dark:bg-black/65" />
+        {/* <div className="absolute inset-0 bg-white/80 dark:bg-black/65" /> */}
         <div className="section-spacing layout-container--narrow flex flex-col items-center gap-10 text-center">
           <span className="text-xs uppercase tracking-[0.4em] text-zinc-500">{copy.date}</span>
           <h1 className="text-3xl font-semibold text-zinc-900 transition-colors duration-300 dark:text-white sm:text-5xl">{copy.title}</h1>

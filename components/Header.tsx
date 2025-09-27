@@ -92,8 +92,8 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
     >
       <span
         className={`inline-flex h-8 w-8 items-center justify-center rounded-full bg-white text-zinc-700 shadow transition duration-300 ease-out ${isDark
-          ? 'translate-x-full text-indigo-200 group-hover:text-indigo-100'
-          : 'translate-x-0 text-amber-400 group-hover:text-amber-300'
+          ? 'translate-x-full text-indigo-800 group-hover:text-indigo-100'
+          : 'translate-x-0 text-amber-800 group-hover:text-amber-300'
           }`}
       >
         {isDark ? <TbMoon className="h-4 w-4" /> : <TbSun className="h-4 w-4" />}
@@ -150,7 +150,8 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
             id={languageSelectId}
             value={jp ? 'jp' : 'en'}
             onChange={handleLanguageChange}
-            className="rounded-full border border-transparent bg-white/70 px-4 py-2 text-sm font-medium text-zinc-700 transition hover:-translate-y-0.5 hover:bg-white focus:border-zinc-400 focus:outline-none dark:bg-white/10 dark:text-zinc-100 dark:hover:bg-white/20 dark:focus:border-zinc-500"
+            style={{ borderRight: '16px solid transparent' }}
+            className="rounded-full border border-transparent bg-white/70 px-4 py-2 text-sm font-medium text-zinc-700 transition hover:-translate-y-0.5 hover:bg-white focus:border-zinc-400 focus:outline-none border-none dark:bg-white/10 dark:text-zinc-100 dark:hover:bg-white/20 dark:focus:border-zinc-500"
           >
             <option value="en">English</option>
             <option value="jp">日本語</option>

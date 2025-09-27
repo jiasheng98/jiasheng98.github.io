@@ -13,7 +13,7 @@ const LandingSection = ({ jp = false }: LandingSectionProps) => {
   const subheadline = jp
     ? 'SteelcaseでUI/UXデザイナーとして働きながら、プロダクト戦略からコードまで、ブランドの魅力を形にしています。'
     : 'UI/UX designer and developer at Steelcase, crafting brand stories and interfaces from strategy through polished code.';
-  const badge = jp ? 'UI/UXデザイナー & デベロッパー' : 'UI/UX Designer & Developer';
+  const badge = jp ? 'UI/UXデザイナー' : 'Product Designer';
   const primaryCta = jp ? '制作実績を見る' : 'Explore Work';
   const secondaryCta = jp ? '履歴書をダウンロード' : 'Download Resume';
   const supportingCopy = jp
@@ -31,10 +31,10 @@ const LandingSection = ({ jp = false }: LandingSectionProps) => {
 
       <div className="layout-container flex flex-col-reverse items-center gap-16 md:flex-row md:items-end md:justify-between">
         <div className="w-full text-center md:text-left">
-          <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200/70 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.4em] text-zinc-700 transition-colors duration-300 dark:border-white/10 dark:bg-white/5 dark:text-zinc-200">
+          {/* <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200/70 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.4em] text-zinc-700 transition-colors duration-300 dark:border-white/10 dark:bg-white/5 dark:text-zinc-200">
             {badge}
-          </span>
-          <h1 className="mt-8 text-4xl font-semibold tracking-tight text-zinc-900 transition-colors duration-300 dark:text-white sm:text-5xl md:text-6xl">
+          </span> */}
+          <h1 className="text-4xl font-semibold tracking-tight text-zinc-900 transition-colors duration-300 dark:text-white sm:text-5xl md:text-6xl">
             {headline}
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-zinc-600 transition-colors duration-300 sm:text-xl dark:text-zinc-300">{subheadline}</p>

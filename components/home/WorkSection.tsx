@@ -62,7 +62,7 @@ const ProjectHighlight = ({ project, locale, index }: ProjectHighlightProps) => 
       className="group relative overflow-hidden rounded-[2.75rem] border border-zinc-200/80 bg-white/80 p-1 shadow-2xl transition-colors duration-300 dark:border-white/10 dark:bg-black/50"
     >
       <div className="absolute inset-0 rounded-[2.75rem] opacity-0 transition duration-500 group-hover:opacity-100" style={gradientStyle} />
-      <div className="relative grid gap-10 rounded-[2.75rem] border border-zinc-200/80 bg-white/90 p-10 backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-black/60 lg:grid-cols-[1.15fr_0.85fr]">
+      <div className="flex flex-col relative gap-10 rounded-[2.75rem] border border-zinc-200/80 bg-white/90 p-10 backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-black/60">
         <div className="flex flex-col justify-between gap-10">
           <div className="space-y-6">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
@@ -94,15 +94,6 @@ const ProjectHighlight = ({ project, locale, index }: ProjectHighlightProps) => 
               </div>
             ) : null} */}
           </div>
-          {/* <div className="flex flex-col gap-3 text-sm text-zinc-600 transition-colors duration-300 sm:flex-row sm:items-center sm:justify-between dark:text-zinc-400">
-            <span>{copy.roleDescription}</span>
-            <AppLink
-              href={href}
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-zinc-200/70 px-6 py-2 text-lg font-semibold text-zinc-800 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:text-zinc-900 dark:border-white/20 dark:text-white dark:hover:border-white"
-            >
-              {copy.cta}
-            </AppLink>
-          </div> */}
         </div>
         {/* <div className="relative flex items-center justify-center">
           <div className="absolute inset-0 rounded-[2.5rem] border border-zinc-200/70 bg-white/70 blur-3xl transition-colors duration-300 dark:border-white/10 dark:bg-white/5" />
@@ -110,6 +101,15 @@ const ProjectHighlight = ({ project, locale, index }: ProjectHighlightProps) => 
             <LazyImage src={project.logo} className="object-contain" alt={`${project.cardTitle} logo`} />
           </div>
         </div> */}
+        <div className="flex flex-col gap-3 text-sm text-zinc-600 transition-colors duration-300 sm:flex-row sm:items-center sm:justify-between dark:text-zinc-400">
+          {/* <span>{copy.roleDescription}</span> */}
+          <AppLink
+            href={href}
+            className="whitespace-nowrap inline-flex items-center justify-center gap-2 rounded-full border border-zinc-200/70 px-6 py-2 text-lg font-semibold text-zinc-800 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:text-zinc-900 dark:border-white/20 dark:text-white dark:hover:border-white"
+          >
+            {copy.cta}
+          </AppLink>
+        </div>
       </div>
     </Reveal>
   );

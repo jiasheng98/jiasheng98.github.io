@@ -28,7 +28,7 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
   return (
     <article className="flex flex-col">
       <section className="relative isolate overflow-hidden border-b border-zinc-200/70 transition-colors duration-300 dark:border-white/10" style={heroStyle}>
-        <div className="absolute inset-0 bg-white/80 dark:bg-black/65" />
+        {/* <div className="absolute inset-0 bg-white/80 dark:bg-black/65" /> */}
         <div className="section-spacing layout-container--narrow flex flex-col items-center gap-10 text-center">
           <span className="text-xs uppercase tracking-[0.4em] text-zinc-500">{copy.date}</span>
           <h1 className="text-3xl font-semibold text-zinc-900 transition-colors duration-300 dark:text-white sm:text-5xl">{copy.title}</h1>
@@ -58,37 +58,37 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
               </div>
             </div>
 
-          <div className="grid gap-4 text-sm text-zinc-600 transition-colors duration-300 sm:grid-cols-2 dark:text-zinc-400">
-            {project.designTools ? (
-              <div className="rounded-2xl border border-zinc-200/70 bg-white/70 p-4 transition-colors duration-300 dark:border-white/10 dark:bg-white/5">
-                <p className="text-xs uppercase tracking-[0.4em] text-zinc-500">{designLabel}</p>
-                <p className="mt-2 text-sm text-zinc-800 transition-colors duration-300 dark:text-zinc-200">{project.designTools}</p>
-              </div>
-            ) : null}
-            {project.developmentTools ? (
-              <div className="rounded-2xl border border-zinc-200/70 bg-white/70 p-4 transition-colors duration-300 dark:border-white/10 dark:bg-white/5">
-                <p className="text-xs uppercase tracking-[0.4em] text-zinc-500">{developmentLabel}</p>
-                <p className="mt-2 text-sm text-zinc-800 transition-colors duration-300 dark:text-zinc-200">{project.developmentTools}</p>
+            <div className="grid gap-4 text-sm text-zinc-600 transition-colors duration-300 sm:grid-cols-2 dark:text-zinc-400">
+              {project.designTools ? (
+                <div className="rounded-2xl border border-zinc-200/70 bg-white/70 p-4 transition-colors duration-300 dark:border-white/10 dark:bg-white/5">
+                  <p className="text-xs uppercase tracking-[0.4em] text-zinc-500">{designLabel}</p>
+                  <p className="mt-2 text-sm text-zinc-800 transition-colors duration-300 dark:text-zinc-200">{project.designTools}</p>
+                </div>
+              ) : null}
+              {project.developmentTools ? (
+                <div className="rounded-2xl border border-zinc-200/70 bg-white/70 p-4 transition-colors duration-300 dark:border-white/10 dark:bg-white/5">
+                  <p className="text-xs uppercase tracking-[0.4em] text-zinc-500">{developmentLabel}</p>
+                  <p className="mt-2 text-sm text-zinc-800 transition-colors duration-300 dark:text-zinc-200">{project.developmentTools}</p>
+                </div>
+              ) : null}
+            </div>
+
+            {project.gallery.length ? (
+              <div>
+                <p className="text-xs uppercase tracking-[0.4em] text-zinc-500">{locale === 'jp' ? 'ビジュアル' : 'Gallery'}</p>
+                <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                  {project.gallery.map((image, index) => (
+                    <div
+                      key={`${project.slug}-gallery-${index}`}
+                      className="overflow-hidden rounded-3xl border border-zinc-200/70 bg-white/80 p-4 transition-colors duration-300 dark:border-white/10 dark:bg-white/5"
+                    >
+                      <LazyImage src={image} alt={`${copy.title} detail ${index + 1}`} className="w-full rounded-2xl object-cover" />
+                    </div>
+                  ))}
+                </div>
               </div>
             ) : null}
           </div>
-
-          {project.gallery.length ? (
-            <div>
-              <p className="text-xs uppercase tracking-[0.4em] text-zinc-500">{locale === 'jp' ? 'ビジュアル' : 'Gallery'}</p>
-              <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                {project.gallery.map((image, index) => (
-                  <div
-                    key={`${project.slug}-gallery-${index}`}
-                    className="overflow-hidden rounded-3xl border border-zinc-200/70 bg-white/80 p-4 transition-colors duration-300 dark:border-white/10 dark:bg-white/5"
-                  >
-                    <LazyImage src={image} alt={`${copy.title} detail ${index + 1}`} className="w-full rounded-2xl object-cover" />
-                  </div>
-                ))}
-              </div>
-            </div>
-          ) : null}
-        </div>
 
           <aside className="w-full max-w-xl space-y-8 rounded-[2.5rem] border border-zinc-200/80 bg-white/90 p-8 shadow-2xl backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-black/60">
             <div className="space-y-2">

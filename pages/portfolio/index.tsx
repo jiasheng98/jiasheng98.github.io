@@ -49,9 +49,9 @@ const ProjectCard = ({ project, locale, index }: ProjectCardProps) => {
       delay={150 + index * 100}
       className="group relative overflow-hidden rounded-[2.5rem] border border-zinc-200/80 bg-white/80 p-1 shadow-2xl transition-colors duration-300 dark:border-white/10 dark:bg-black/50"
     >
-      <div className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100" style={{
+      {/* <div className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100" style={{
         background: `linear-gradient(135deg, ${project.cardBackgroundColor} 0%, rgba(15,15,15,0.65) 70%)`,
-      }} />
+      }} /> */}
       <div className="relative grid gap-10 rounded-[2.5rem] border border-zinc-200/80 bg-white/90 p-8 backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-black/60 lg:grid-cols-[1.15fr_0.85fr]">
         <div className="space-y-6">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">

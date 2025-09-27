@@ -41,7 +41,7 @@ const Contact = ({ icons = false, jp = false }: ContactProps) => {
                 </AppLink>
               </div>
             ) : null}
-            <p className="text-xs uppercase tracking-[0.4em] text-zinc-500">{cta}</p>
+            {/* <p className="text-xs uppercase tracking-[0.4em] text-zinc-500">{cta}</p> */}
           </div>
         </Reveal>
       </div>

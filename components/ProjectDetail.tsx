@@ -28,7 +28,10 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
   return (
     <article className="flex flex-col">
       <section className="relative isolate overflow-hidden border-b border-zinc-200/70 transition-colors duration-300 dark:border-white/10" style={heroStyle}>
-        <div className="absolute inset-0 bg-white/80 dark:bg-black/65" />
+        <div
+          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/90 via-white/70 to-white/50 dark:from-slate-950/80 dark:via-slate-950/60 dark:to-slate-950/40"
+          aria-hidden
+        />
         <div className="section-spacing layout-container--narrow flex flex-col items-center gap-10 text-center">
           <span className="text-xs uppercase tracking-[0.4em] text-zinc-500">{copy.date}</span>
           <h1 className="text-3xl font-semibold text-zinc-900 transition-colors duration-300 dark:text-white sm:text-5xl">{copy.title}</h1>

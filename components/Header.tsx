@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, useId, type ChangeEvent } from 'react';
 import { TbMoon, TbSun, TbWorld } from 'react-icons/tb';
 import HamburgerMenu from 'react-hamburger-menu';
 import AppLink from './common/AppLink';
@@ -37,14 +37,23 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
     setOpen(false);
   };
 
-  const { asPath } = useRouter();
+  const { asPath, push } = useRouter();
+  const languageSelectId = useId();
 
   const portfolioHref = jp ? '/jp/portfolio' : '/portfolio';
   const resumeHref = jp ? '/Resume(JiaSheng)Japanese.pdf' : '/Resume(Jia Sheng).pdf';
-  const languageHref = useMemo(() => {
+  const englishHref = useMemo(() => {
+    if (!jp) {
+      return asPath && asPath !== '' ? asPath : '/';
+    }
+
+    const englishPath = asPath.replace(/^\/jp(?=\/|$)/, '') || '/';
+    return englishPath.startsWith('/') ? englishPath : `/${englishPath}`;
+  }, [asPath, jp]);
+
+  const japaneseHref = useMemo(() => {
     if (jp) {
-      const englishPath = asPath.replace(/^\/jp(?=\/|$)/, '') || '/';
-      return englishPath.startsWith('/') ? englishPath : `/${englishPath}`;
+      return asPath && asPath !== '' ? asPath : '/jp';
     }
 
     if (asPath === '/' || asPath === '') {
@@ -57,7 +66,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
 
     return `/jp${asPath.startsWith('/') ? '' : '/'}${asPath}`;
   }, [asPath, jp]);
-  const languageLabel = jp ? '日本語' : 'English';
+
   const portfolioLabel = jp ? 'ポートフォリオ' : 'Portfolio';
   const resumeLabel = jp ? '履歴書' : 'Resume';
 
@@ -75,13 +84,39 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
     <button
       type="button"
       onClick={toggleTheme}
-      className="inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-2 text-sm font-medium text-zinc-700 transition hover:-translate-y-0.5 hover:bg-white dark:bg-white/10 dark:text-zinc-100 dark:hover:bg-white/20"
+      role="switch"
+      aria-checked={isDark}
       aria-label={jp ? 'テーマを切り替える' : 'Toggle theme'}
+      className={`relative inline-flex h-7 w-12 items-center rounded-full transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-zinc-900 ${
+        isDark ? 'bg-zinc-700 dark:bg-zinc-600' : 'bg-zinc-300 dark:bg-zinc-700'
+      }`}
     >
-      {isDark ? <TbSun className="h-4 w-4" /> : <TbMoon className="h-4 w-4" />}
-      <span className="hidden sm:inline">{isDark ? (jp ? 'ライト' : 'Light') : (jp ? 'ダーク' : 'Dark')}</span>
+      <span
+        className={`absolute inset-y-0 left-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white text-zinc-700 transition ${
+          isDark ? 'translate-x-5' : 'translate-x-0'
+        }`}
+      >
+        {isDark ? <TbMoon className="h-3.5 w-3.5" /> : <TbSun className="h-3.5 w-3.5" />}
+      </span>
     </button>
   );
+
+  const handleLanguageChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    const selectedLanguage = event.target.value;
+
+    if (selectedLanguage === 'jp') {
+      closeMenu();
+      if (!jp) {
+        void push(japaneseHref);
+      }
+      return;
+    }
+
+    closeMenu();
+    if (jp) {
+      void push(englishHref);
+    }
+  };
 
   const NavigationLinks = () => (
     <>
@@ -106,14 +141,21 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
         </AppLink>
       </li>
       <li>
-        <AppLink
-          href={languageHref}
-          className="inline-flex items-center gap-2 text-sm font-medium text-zinc-700 transition hover:text-zinc-900 dark:text-zinc-200 dark:hover:text-white"
-          onClick={closeMenu}
-        >
-          <TbWorld className="h-4 w-4" />
-          {languageLabel}
-        </AppLink>
+        <div className="inline-flex items-center gap-2">
+          <TbWorld className="h-4 w-4 text-zinc-700 dark:text-zinc-200" />
+          <label htmlFor={languageSelectId} className="sr-only">
+            {jp ? '言語を選択' : 'Select language'}
+          </label>
+          <select
+            id={languageSelectId}
+            value={jp ? 'jp' : 'en'}
+            onChange={handleLanguageChange}
+            className="rounded-full border border-transparent bg-white/70 px-4 py-2 text-sm font-medium text-zinc-700 transition hover:-translate-y-0.5 hover:bg-white focus:border-zinc-400 focus:outline-none dark:bg-white/10 dark:text-zinc-100 dark:hover:bg-white/20 dark:focus:border-zinc-500"
+          >
+            <option value="en">English</option>
+            <option value="jp">日本語</option>
+          </select>
+        </div>
       </li>
       <li className="mt-2 lg:mt-0">
         <ThemeToggle />

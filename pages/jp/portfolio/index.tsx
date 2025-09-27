@@ -12,9 +12,9 @@ const PortfolioListPage = () => {
 
   return (
     <MyLayout title="Portfolio" description="Portfolio" jp>
-      <section className="relative overflow-hidden py-24">
+      <section className="section-spacing relative overflow-hidden">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-72 bg-gradient-to-b from-white/10 via-transparent to-transparent blur-3xl" />
-        <div className="mx-auto max-w-6xl px-6 lg:px-12">
+        <div className="layout-container">
           <div className="max-w-3xl">
             <h1 className="text-4xl font-semibold text-white sm:text-5xl">厳選した制作実績</h1>
             <p className="mt-6 text-lg text-zinc-300">

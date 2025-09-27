@@ -105,7 +105,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
 
   return (
     <header className={wrapperClasses}>
-      <div className="list-none mx-auto flex h-20 max-w-6xl items-center justify-between px-6 md:h-24 lg:px-12">
+      <div className="layout-container flex h-20 items-center justify-between gap-6 md:h-24">
         <div className="flex items-center gap-8">
           <AppLink
             href={jp ? '/jp' : '/'}
@@ -119,7 +119,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
           </AppLink>
         </div>
 
-        <nav aria-label="Primary" className="hidden items-center gap-8 lg:flex">
+        <nav aria-label="Primary" className="hidden list-none items-center gap-8 lg:flex">
           <NavigationLinks />
         </nav>
 
@@ -149,7 +149,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
           >
             <nav
               aria-label="Mobile"
-              className="flex flex-col gap-6 text-lg text-zinc-800 dark:text-zinc-100"
+              className="flex list-none flex-col gap-6 text-lg text-zinc-800 dark:text-zinc-100"
             >
               <NavigationLinks />
             </nav>

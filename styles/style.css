@@ -38,6 +38,66 @@
 
 :root {
   --app-background: radial-gradient(120% 120% at 50% 0%, rgba(37, 99, 235, 0.08) 0%, rgba(244, 244, 245, 0) 60%);
+  --space-0: 0px;
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem; /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem; /* 16px */
+  --space-5: 1.25rem; /* 20px */
+  --space-6: 1.5rem; /* 24px */
+  --space-7: 1.75rem; /* 28px */
+  --space-8: 2rem; /* 32px */
+  --space-9: 2.25rem; /* 36px */
+  --space-10: 2.5rem; /* 40px */
+  --space-12: 3rem; /* 48px */
+  --space-14: 3.5rem; /* 56px */
+  --space-16: 4rem; /* 64px */
+  --space-18: 4.5rem; /* 72px */
+  --space-20: 5rem; /* 80px */
+  --space-24: 6rem; /* 96px */
+  --space-28: 7rem; /* 112px */
+  --space-30: 7.5rem; /* 120px */
+  --space-32: 8rem; /* 128px */
+  --space-36: 9rem; /* 144px */
+
+  --section-padding-y: var(--space-24);
+  --section-padding-y-tight: var(--space-20);
+  --section-padding-hero-top: var(--space-28);
+  --section-padding-hero-bottom: var(--space-24);
+
+  --container-inline: var(--space-6);
+  --container-inline-narrow: var(--space-6);
+  --container-inline-tight: var(--space-6);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --container-inline: var(--space-8);
+    --container-inline-narrow: var(--space-7);
+    --container-inline-tight: var(--space-6);
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --section-padding-y: var(--space-28);
+    --section-padding-y-tight: var(--space-24);
+    --section-padding-hero-top: var(--space-32);
+    --section-padding-hero-bottom: var(--space-28);
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --section-padding-y: var(--space-32);
+    --section-padding-y-tight: var(--space-28);
+    --section-padding-hero-top: var(--space-36);
+    --section-padding-hero-bottom: var(--space-32);
+
+    --container-inline: var(--space-12);
+    --container-inline-narrow: var(--space-10);
+    --container-inline-tight: var(--space-8);
+  }
 }
 
 .dark {
@@ -45,6 +105,56 @@
 }
 
 @layer components {
+  .section-spacing {
+    padding-block: var(--section-padding-y);
+  }
+
+  .section-spacing--tight {
+    padding-block: var(--section-padding-y-tight);
+  }
+
+  .section-spacing--hero {
+    padding-top: var(--section-padding-hero-top);
+    padding-bottom: var(--section-padding-hero-bottom);
+  }
+
+  .section-spacing--flush-top {
+    padding-top: var(--space-0);
+  }
+
+  .section-spacing--flush-bottom {
+    padding-bottom: var(--space-0);
+  }
+
+  .layout-container,
+  .layout-container--narrow,
+  .layout-container--tight {
+    margin-inline: auto;
+    width: 100%;
+    padding-inline: var(--container-inline);
+  }
+
+  .layout-container--narrow,
+  .layout-container--tight {
+    padding-inline: var(--container-inline-narrow);
+  }
+
+  .layout-container--tight {
+    padding-inline: var(--container-inline-tight);
+  }
+
+  .layout-container {
+    max-width: 72rem;
+  }
+
+  .layout-container--narrow {
+    max-width: 60rem;
+  }
+
+  .layout-container--tight {
+    max-width: 48rem;
+  }
+
   .reveal {
     opacity: 0;
     transition: opacity 0.6s ease, transform 0.6s ease;

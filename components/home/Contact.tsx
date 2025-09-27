@@ -15,9 +15,9 @@ const Contact = ({ icons = false, jp = false }: ContactProps) => {
   const cta = jp ? 'メッセージを送る' : 'Send a message';
 
   return (
-    <section id="contact" className="relative isolate overflow-hidden py-24">
+    <section id="contact" className="section-spacing relative isolate overflow-hidden">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-72 bg-gradient-to-b from-sky-400/10 via-transparent to-transparent blur-3xl" />
-      <div className="mx-auto max-w-4xl px-6 lg:px-12">
+      <div className="layout-container--tight">
         <Reveal
           delay={200}
           className="relative overflow-hidden rounded-[2.5rem] border border-zinc-200/70 bg-gradient-to-br from-white via-zinc-100 to-zinc-200 p-12 text-center shadow-2xl backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-gradient-to-br dark:from-white/10 dark:via-black/60 dark:to-black/80"

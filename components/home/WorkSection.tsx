@@ -18,10 +18,10 @@ const WorkSection = ({ jp = false }: WorkSectionProps) => {
     : 'Designing immersive brand moments and delivering them through thoughtful UI and code craftsmanship.';
 
   return (
-    <section id="work" className="relative overflow-hidden py-24">
+    <section id="work" className="section-spacing relative overflow-hidden">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-72 bg-gradient-to-b from-indigo-500/20 via-transparent to-transparent blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 left-0 h-72 w-72 rounded-full bg-purple-500/10 blur-3xl" />
-      <div className="mx-auto max-w-6xl px-6 lg:px-12">
+      <div className="layout-container">
         <Reveal animation="fade-right" className="max-w-3xl">
           <span className="text-sm uppercase tracking-[0.35em] text-zinc-500">{jp ? '実績' : 'Selected Work'}</span>
           <h2 className="mt-4 text-3xl font-semibold text-zinc-900 transition-colors duration-300 dark:text-white sm:text-4xl">{title}</h2>

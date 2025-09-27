@@ -23,13 +23,13 @@ const LandingSection = ({ jp = false }: LandingSectionProps) => {
   return (
     <section
       id="welcome"
-      className="relative isolate overflow-hidden bg-gradient-to-b from-white via-white/90 to-zinc-100 transition-colors duration-300 dark:from-black dark:via-black/90 dark:to-night"
+      className="section-spacing section-spacing--hero relative isolate overflow-hidden bg-gradient-to-b from-white via-white/90 to-zinc-100 transition-colors duration-300 dark:from-black dark:via-black/90 dark:to-night"
     >
       <div className="pointer-events-none absolute inset-0 -z-10 bg-hero-soft opacity-60 dark:opacity-80" />
       <div className="pointer-events-none absolute -left-1/2 top-1/4 h-[36rem] w-[36rem] rounded-full bg-indigo-500/20 blur-3xl" />
       <div className="pointer-events-none absolute -right-1/3 bottom-0 h-[28rem] w-[28rem] rounded-full bg-pink-400/20 blur-3xl" />
 
-      <div className="mx-auto flex max-w-6xl flex-col-reverse items-center gap-16 px-6 pb-24 pt-32 md:flex-row md:items-end md:justify-between lg:px-12">
+      <div className="layout-container flex flex-col-reverse items-center gap-16 md:flex-row md:items-end md:justify-between">
         <div className="w-full text-center md:text-left">
           <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200/70 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.4em] text-zinc-700 transition-colors duration-300 dark:border-white/10 dark:bg-white/5 dark:text-zinc-200">
             {badge}

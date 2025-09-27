@@ -1,9 +1,10 @@
 import AppLink from './common/AppLink';
 import LazyImage from './LazyImage';
 import type { Locale, Project } from '../data/projects';
+import { resolveAssetPath } from '../lib/assetPath';
 
-const appStoreIcon = '/images/appstore.png';
-const playStoreIcon = '/images/playstore.png';
+const appStoreIcon = resolveAssetPath('/images/appstore.png');
+const playStoreIcon = resolveAssetPath('/images/playstore.png');
 
 type ProjectDetailProps = {
   project: Project;

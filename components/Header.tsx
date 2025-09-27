@@ -142,19 +142,19 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
       </div>
 
       {open ? (
-        <div className="fixed inset-0 z-40 bg-black/60 backdrop-blur-xl lg:hidden dark:bg-black/80" onClick={closeMenu}>
-          <div
-            className="absolute inset-x-6 top-24 rounded-3xl bg-white p-8 text-left shadow-2xl dark:bg-zinc-900"
-            onClick={(event) => event.stopPropagation()}
+        // <div className="fixed inset-0 z-40 bg-black/60 backdrop-blur-xl lg:hidden dark:bg-black/80" onClick={closeMenu}>
+        <div
+          className="absolute inset-x-6 top-24 rounded-3xl bg-white p-8 text-left shadow-2xl dark:bg-zinc-900"
+          onClick={(event) => event.stopPropagation()}
+        >
+          <nav
+            aria-label="Mobile"
+            className="flex list-none flex-col gap-6 text-lg text-zinc-800 dark:text-zinc-100"
           >
-            <nav
-              aria-label="Mobile"
-              className="flex list-none flex-col gap-6 text-lg text-zinc-800 dark:text-zinc-100"
-            >
-              <NavigationLinks />
-            </nav>
-          </div>
+            <NavigationLinks />
+          </nav>
         </div>
+        // </div>
       ) : null}
     </header>
   );

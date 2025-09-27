@@ -39,7 +39,7 @@ const Layout = ({
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ldJson) }} />
         ) : null}
       </Head>
-      <div className="relative flex min-h-screen flex-col bg-night text-zinc-100">
+      <div className="relative flex min-h-screen flex-col bg-zinc-50 text-zinc-900 transition-colors duration-300 dark:bg-night dark:text-zinc-100">
         <Header overlay={overlay} jp={jp} />
         <main className={mainClasses}>{children}</main>
         <Footer jp={jp} />

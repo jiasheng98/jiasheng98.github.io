@@ -1,4 +1,4 @@
-import { BsLinkedin } from 'react-icons/bs';
+import { TbBrandLinkedin } from 'react-icons/tb';
 import Reveal from '../common/Reveal';
 import AppLink from '../common/AppLink';
 
@@ -16,17 +16,17 @@ const Contact = ({ icons = false, jp = false }: ContactProps) => {
 
   return (
     <section id="contact" className="relative isolate overflow-hidden py-24">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-72 bg-gradient-to-b from-sky-500/10 via-transparent to-transparent blur-3xl" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-72 bg-gradient-to-b from-sky-400/10 via-transparent to-transparent blur-3xl" />
       <div className="mx-auto max-w-4xl px-6 lg:px-12">
         <Reveal
           delay={200}
-          className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-white/10 via-black/60 to-black/80 p-12 text-center shadow-2xl backdrop-blur-xl"
+          className="relative overflow-hidden rounded-[2.5rem] border border-zinc-200/70 bg-gradient-to-br from-white via-zinc-100 to-zinc-200 p-12 text-center shadow-2xl backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-gradient-to-br dark:from-white/10 dark:via-black/60 dark:to-black/80"
         >
-          <div className="pointer-events-none absolute inset-0 bg-hero-radial opacity-60" />
+          <div className="pointer-events-none absolute inset-0 bg-hero-radial opacity-40 dark:opacity-60" />
           <div className="relative space-y-6">
             <p className="text-xs uppercase tracking-[0.4em] text-zinc-500">{jp ? 'コンタクト' : 'Connect'}</p>
-            <h2 className="text-3xl font-semibold text-white sm:text-4xl">{heading}</h2>
-            <p className="mx-auto max-w-2xl text-base text-zinc-300 sm:text-lg">{subheading}</p>
+            <h2 className="text-3xl font-semibold text-zinc-900 transition-colors duration-300 dark:text-white sm:text-4xl">{heading}</h2>
+            <p className="mx-auto max-w-2xl text-base text-zinc-600 transition-colors duration-300 sm:text-lg dark:text-zinc-300">{subheading}</p>
             {icons ? (
               <div className="flex items-center justify-center gap-4">
                 <AppLink
@@ -34,9 +34,9 @@ const Contact = ({ icons = false, jp = false }: ContactProps) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
-                  className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white hover:text-black"
+                  className="inline-flex items-center gap-3 rounded-full border border-zinc-200/70 bg-white/80 px-6 py-3 text-sm font-semibold text-zinc-800 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:bg-white hover:text-zinc-900 dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white dark:hover:text-black"
                 >
-                  <BsLinkedin className="h-5 w-5" />
+                  <TbBrandLinkedin className="h-5 w-5" />
                   LinkedIn
                 </AppLink>
               </div>

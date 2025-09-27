@@ -55,9 +55,9 @@ const About = ({ jp = false }: { jp?: boolean }) => {
       <div className="mx-auto grid max-w-6xl gap-16 px-6 md:grid-cols-[1.1fr_0.9fr] lg:px-12">
         <Reveal animation="fade-right" className="space-y-8">
           <span className="text-sm uppercase tracking-[0.35em] text-zinc-500">{jp ? '紹介' : 'About'}</span>
-          <h2 className="text-3xl font-semibold text-white sm:text-4xl">{heading}</h2>
+          <h2 className="text-3xl font-semibold text-zinc-900 transition-colors duration-300 dark:text-white sm:text-4xl">{heading}</h2>
           {intro.map((paragraph, index) => (
-            <p key={`intro-${index}`} className="text-base leading-relaxed text-zinc-300 sm:text-lg">
+            <p key={`intro-${index}`} className="text-base leading-relaxed text-zinc-600 transition-colors duration-300 sm:text-lg dark:text-zinc-300">
               {paragraph}
             </p>
           ))}
@@ -68,7 +68,7 @@ const About = ({ jp = false }: { jp?: boolean }) => {
               {focusItems.map((item) => (
                 <span
                   key={item}
-                  className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-zinc-200 shadow-sm"
+                  className="rounded-full border border-zinc-200/70 bg-white/70 px-4 py-2 text-sm font-medium text-zinc-700 shadow-sm transition-colors duration-300 dark:border-white/10 dark:bg-white/5 dark:text-zinc-200"
                 >
                   {item}
                 </span>
@@ -78,9 +78,9 @@ const About = ({ jp = false }: { jp?: boolean }) => {
         </Reveal>
 
         <div className="relative">
-          <div className="absolute inset-0 rounded-[3rem] border border-white/5 bg-white/5 blur-2xl" />
-          <div className="relative grid gap-6 rounded-[2.5rem] border border-white/10 bg-black/40 p-8 shadow-2xl backdrop-blur-xl">
-            <Reveal animation="zoom-in" className="overflow-hidden rounded-3xl border border-white/10 bg-black/60 p-6">
+          <div className="absolute inset-0 rounded-[3rem] border border-zinc-200/60 bg-white/70 blur-2xl transition-colors duration-300 dark:border-white/5 dark:bg-white/5" />
+          <div className="relative grid gap-6 rounded-[2.5rem] border border-zinc-200/80 bg-white/80 p-8 shadow-2xl backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-black/40">
+            <Reveal animation="zoom-in" className="overflow-hidden rounded-3xl border border-zinc-200/60 bg-white/70 p-6 transition-colors duration-300 dark:border-white/10 dark:bg-black/60">
               <LazyImage
                 src="/gif/PhoneGIF.gif"
                 alt="Animated interface mockups"
@@ -93,10 +93,10 @@ const About = ({ jp = false }: { jp?: boolean }) => {
                 <Reveal
                   key={card.title}
                   animation="fade-up"
-                  className="rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:bg-white/10"
+                  className="rounded-2xl border border-zinc-200/70 bg-white/70 p-6 transition hover:-translate-y-1 hover:bg-white dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
                 >
-                  <h3 className="text-lg font-semibold text-white">{card.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-zinc-300">{card.description}</p>
+                  <h3 className="text-lg font-semibold text-zinc-900 transition-colors duration-300 dark:text-white">{card.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-zinc-600 transition-colors duration-300 dark:text-zinc-300">{card.description}</p>
                 </Reveal>
               ))}
             </div>

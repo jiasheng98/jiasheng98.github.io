@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { BsGlobe2 } from 'react-icons/bs';
+import { TbMoon, TbSun, TbWorld } from 'react-icons/tb';
 import HamburgerMenu from 'react-hamburger-menu';
 import AppLink from './common/AppLink';
+import { useTheme } from './common/ThemeProvider';
 
 type HeaderProps = {
   jp?: boolean;
@@ -11,6 +12,8 @@ type HeaderProps = {
 const Header = ({ jp = false, overlay = false }: HeaderProps) => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { theme, toggleTheme } = useTheme();
+  const isDark = theme === 'dark';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,17 +48,29 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
     'fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-out',
     isTransparent
       ? 'bg-transparent text-white'
-      : 'border-b border-white/10 bg-black/80 text-zinc-100 backdrop-blur-xl shadow-lg shadow-black/10',
+      : 'border-b border-zinc-200/70 bg-white/80 text-zinc-900 shadow-lg shadow-zinc-900/5 backdrop-blur-xl dark:border-white/10 dark:bg-black/80 dark:text-zinc-100 dark:shadow-black/10',
   ]
     .filter(Boolean)
     .join(' ');
+
+  const ThemeToggle = () => (
+    <button
+      type="button"
+      onClick={toggleTheme}
+      className="inline-flex items-center gap-2 rounded-full border border-zinc-300/80 bg-white/70 px-4 py-2 text-sm font-medium text-zinc-700 transition hover:-translate-y-0.5 hover:bg-white dark:border-white/20 dark:bg-white/10 dark:text-zinc-100 dark:hover:bg-white/20"
+      aria-label={jp ? 'テーマを切り替える' : 'Toggle theme'}
+    >
+      {isDark ? <TbSun className="h-4 w-4" /> : <TbMoon className="h-4 w-4" />}
+      <span className="hidden sm:inline">{isDark ? (jp ? 'ライト' : 'Light') : (jp ? 'ダーク' : 'Dark')}</span>
+    </button>
+  );
 
   const NavigationLinks = () => (
     <>
       <li>
         <AppLink
           href={portfolioHref}
-          className="text-sm font-medium tracking-wide text-zinc-200 transition hover:text-white"
+          className="text-sm font-medium tracking-wide text-zinc-700 transition hover:text-zinc-900 dark:text-zinc-200 dark:hover:text-white"
           onClick={closeMenu}
         >
           {portfolioLabel}
@@ -66,7 +81,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
           href={resumeHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center rounded-full border border-white/20 px-4 py-2 text-sm font-medium transition hover:-translate-y-0.5 hover:bg-white hover:text-black"
+          className="inline-flex items-center rounded-full border border-zinc-300/80 px-4 py-2 text-sm font-medium text-zinc-700 transition hover:-translate-y-0.5 hover:bg-white hover:text-zinc-900 dark:border-white/20 dark:text-zinc-100 dark:hover:bg-white dark:hover:text-black"
           onClick={closeMenu}
         >
           {resumeLabel}
@@ -75,12 +90,15 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
       <li>
         <AppLink
           href={languageHref}
-          className="inline-flex items-center gap-2 text-sm font-medium text-zinc-200 transition hover:text-white"
+          className="inline-flex items-center gap-2 text-sm font-medium text-zinc-700 transition hover:text-zinc-900 dark:text-zinc-200 dark:hover:text-white"
           onClick={closeMenu}
         >
-          <BsGlobe2 className="h-4 w-4" />
+          <TbWorld className="h-4 w-4" />
           {languageLabel}
         </AppLink>
+      </li>
+      <li className="mt-2 lg:mt-0">
+        <ThemeToggle />
       </li>
     </>
   );
@@ -117,19 +135,22 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
             width={22}
             height={18}
             strokeWidth={2}
-            color="#f4f4f5"
+            color={isTransparent ? '#f4f4f5' : isDark ? '#f4f4f5' : '#18181b'}
             animationDuration={0.5}
           />
         </button>
       </div>
 
       {open ? (
-        <div className="fixed inset-0 z-40 bg-black/80 backdrop-blur-xl lg:hidden" onClick={closeMenu}>
+        <div className="fixed inset-0 z-40 bg-black/60 backdrop-blur-xl lg:hidden dark:bg-black/80" onClick={closeMenu}>
           <div
-            className="absolute inset-x-6 top-24 rounded-3xl border border-white/10 bg-black/70 p-8 text-left shadow-2xl"
+            className="absolute inset-x-6 top-24 rounded-3xl border border-zinc-200/80 bg-white/90 p-8 text-left shadow-2xl dark:border-white/10 dark:bg-black/70"
             onClick={(event) => event.stopPropagation()}
           >
-            <nav aria-label="Mobile" className="flex flex-col gap-6 text-lg text-zinc-100">
+            <nav
+              aria-label="Mobile"
+              className="flex flex-col gap-6 text-lg text-zinc-800 dark:text-zinc-100"
+            >
               <NavigationLinks />
             </nav>
           </div>

@@ -58,7 +58,7 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
               </div>
             </div>
 
-            <div className="grid gap-4 text-sm text-zinc-600 transition-colors duration-300 sm:grid-cols-2 dark:text-zinc-400">
+            {/* <div className="grid gap-4 text-sm text-zinc-600 transition-colors duration-300 sm:grid-cols-2 dark:text-zinc-400">
               {project.designTools ? (
                 <div className="rounded-2xl border border-zinc-200/70 bg-white/70 p-4 transition-colors duration-300 dark:border-white/10 dark:bg-white/5">
                   <p className="text-xs uppercase tracking-[0.4em] text-zinc-500">{designLabel}</p>
@@ -71,7 +71,7 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
                   <p className="mt-2 text-sm text-zinc-800 transition-colors duration-300 dark:text-zinc-200">{project.developmentTools}</p>
                 </div>
               ) : null}
-            </div>
+            </div> */}
 
             {project.gallery.length ? (
               <div>
@@ -136,9 +136,9 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
                 ) : null}
               </div>
             </div>
-            <div className="rounded-2xl border border-zinc-200/70 bg-white/70 p-6 text-sm text-zinc-600 transition-colors duration-300 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
+            {/* <div className="rounded-2xl border border-zinc-200/70 bg-white/70 p-6 text-sm text-zinc-600 transition-colors duration-300 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
               <p>{copy.date}</p>
-            </div>
+            </div> */}
           </aside>
         </div>
       </section>

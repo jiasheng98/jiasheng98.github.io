@@ -22,14 +22,14 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
   const linksLabel = locale === 'jp' ? '関連リンク' : 'Project Links';
 
   const heroStyle = {
-    background: `radial-gradient(120% 120% at 50% 0%, ${heroBackground} 0%, rgba(248,250,252,0.92) 65%)`,
+    backgroundColor: heroBackground,
   };
 
   return (
     <article className="flex flex-col">
       <section className="relative isolate overflow-hidden border-b border-zinc-200/70 transition-colors duration-300 dark:border-white/10" style={heroStyle}>
         <div
-          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/90 via-white/70 to-white/50 dark:from-slate-950/80 dark:via-slate-950/60 dark:to-slate-950/40"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_120%_at_50%_-10%,rgba(255,255,255,0.95)_0%,rgba(255,255,255,0.75)_45%,rgba(255,255,255,0)_75%)] dark:bg-[radial-gradient(120%_120%_at_50%_-10%,rgba(2,6,23,0.92)_0%,rgba(2,6,23,0.7)_45%,rgba(2,6,23,0)_75%)]"
           aria-hidden
         />
         <div className="section-spacing layout-container--narrow flex flex-col items-center gap-10 text-center">

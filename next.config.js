@@ -1,13 +1,19 @@
 /** @type {import('next').NextConfig} */
-const repoBasePath = '/jiasheng98.github.io';
+const rawRepoBasePath = process.env.NEXT_PUBLIC_BASE_PATH?.trim();
+const normalizedRepoBasePath = rawRepoBasePath
+  ? rawRepoBasePath.startsWith('/')
+    ? rawRepoBasePath
+    : `/${rawRepoBasePath}`
+  : undefined;
 const isProd = process.env.NODE_ENV === 'production';
+const hasRepoBasePath = Boolean(normalizedRepoBasePath);
 
 const nextConfig = {
   output: 'export',
-  ...(isProd
+  ...(isProd && hasRepoBasePath
     ? {
-        basePath: repoBasePath,
-        assetPrefix: repoBasePath
+        basePath: normalizedRepoBasePath,
+        assetPrefix: normalizedRepoBasePath
       }
     : {}),
   poweredByHeader: false,

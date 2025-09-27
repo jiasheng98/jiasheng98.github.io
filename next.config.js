@@ -1,13 +1,14 @@
 /** @type {import('next').NextConfig} */
-const repoBasePath = '/jiasheng98.github.io';
+const repoName = process.env.GITHUB_REPOSITORY?.split('/')?.[1] ?? '';
+const isProjectPageRepo = Boolean(repoName && !repoName.endsWith('.github.io'));
 const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
   output: 'export',
-  ...(isProd
+  ...(isProd && isProjectPageRepo
     ? {
-        basePath: repoBasePath,
-        assetPrefix: repoBasePath
+        basePath: `/${repoName}`,
+        assetPrefix: `/${repoName}`
       }
     : {}),
   poweredByHeader: false,

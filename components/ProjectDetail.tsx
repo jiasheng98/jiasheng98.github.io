@@ -33,7 +33,7 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
 
   const heroStyle = heroBackground
     ? {
-        backgroundColor: heroBackground,
+        background: `radial-gradient(120% 120% at 50% 0%, ${heroBackground} 0%, rgba(248, 250, 252, 0.92) 65%)`,
       }
     : undefined;
 

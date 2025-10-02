@@ -24,6 +24,7 @@ export type Project = {
   cardTitle: string;
   logo: string;
   heroImage: string;
+  heroImageMobile?: string;
   gallery: string[];
   cardBackgroundColor: string;
   cardTextColor: string;
@@ -40,7 +41,8 @@ const projects: Project[] = [
     slug: 'steelcase',
     cardTitle: 'Steelcase',
     logo: '/images/steelcase-logo.png',
-    heroImage: '/images/steelcase_ui_home.png',
+    heroImage: '/images/steelcase.png',
+    heroImageMobile: '/images/steelcasemobile.png',
     gallery: [],
     cardBackgroundColor: '#272725',
     cardTextColor: '#FFFFFF',

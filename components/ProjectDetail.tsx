@@ -20,10 +20,22 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
   const developmentLabel = locale === 'jp' ? '開発' : 'Development';
   const roleLabel = locale === 'jp' ? '役割' : 'Role';
   const linksLabel = locale === 'jp' ? '関連リンク' : 'Project Links';
+  const designShowcaseTitle = locale === 'jp' ? 'デザイン解説' : 'Design Showcase';
+  const workProcessTitle = locale === 'jp' ? '制作プロセス' : 'Work Process';
+  const placeholderDescription =
+    locale === 'jp'
+      ? 'ここにデザインの背景やモックアップの説明を追加してください。'
+      : 'Use this space to describe your mockups, design decisions, or any supporting notes.';
+  const placeholderProcess =
+    locale === 'jp'
+      ? 'ここにプロジェクトの進め方、重要なステップ、学んだことなどを書き込んでください。'
+      : 'Add details about your workflow, important milestones, or lessons learned from the project.';
 
-  const heroStyle = {
-    background: ``,
-  };
+  const heroStyle = heroBackground
+    ? {
+        backgroundColor: heroBackground,
+      }
+    : undefined;
 
   return (
     <article className="flex flex-col">
@@ -33,15 +45,50 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
           <span className="typography-meta text-zinc-500 transition-colors duration-300 dark:text-zinc-400">{copy.date}</span>
           <h1 className="typography-display text-zinc-900 transition-colors duration-300 dark:text-white">{copy.title}</h1>
           <p className="typography-body max-w-3xl text-zinc-700 transition-colors duration-300 dark:text-zinc-200">{copy.summary}</p>
-          <div className="relative w-full max-w-3xl">
+          <div className="relative w-full max-w-4xl">
             <div className="absolute inset-0 rounded-[3rem] bg-white/70 blur-3xl transition-colors duration-300 dark:bg-white/10" />
-            {/* <div className="relative overflow-hidden rounded-[3rem] border border-zinc-200/70 bg-white/90 p-12 backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-black/70">
-              <LazyImage
-                src={project.heroImage}
-                alt={copy.title}
-                className="mx-auto w-full max-w-md object-contain drop-shadow-[0_40px_80px_rgba(15,23,42,0.45)]"
-              />
-            </div> */}
+            <div className="relative overflow-hidden rounded-[3rem] border border-zinc-200/70 bg-white/90 p-6 backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-black/70">
+              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-[2rem] bg-zinc-100 transition-colors duration-300 dark:bg-zinc-900">
+                {project.heroImage ? (
+                  <LazyImage
+                    src={project.heroImage}
+                    alt={copy.title}
+                    className="h-full w-full object-contain p-6 drop-shadow-[0_40px_80px_rgba(15,23,42,0.45)]"
+                  />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center p-6 text-center">
+                    <p className="typography-body text-zinc-500 transition-colors duration-300 dark:text-zinc-400">
+                      {locale === 'jp' ? 'ここにスクリーンモックアップを配置してください。' : 'Add your screen mockup in this placeholder.'}
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-spacing border-b border-zinc-200/70 transition-colors duration-300 dark:border-white/10">
+        <div className="layout-container space-y-12">
+          <div className="space-y-4 text-center">
+            <p className="typography-meta text-zinc-500 transition-colors duration-300 dark:text-zinc-400">{designShowcaseTitle}</p>
+            <h2 className="typography-display text-zinc-900 transition-colors duration-300 dark:text-white">{copy.title}</h2>
+            <p className="typography-body mx-auto max-w-3xl text-zinc-700 transition-colors duration-300 dark:text-zinc-200">
+              {placeholderDescription}
+            </p>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-2">
+            <div className="space-y-4 rounded-3xl border border-zinc-200/70 bg-white/90 p-8 transition-colors duration-300 dark:border-white/10 dark:bg-white/5">
+              <h3 className="typography-subheading text-zinc-900 transition-colors duration-300 dark:text-white">
+                {locale === 'jp' ? 'デザイン意図' : 'Design Intent'}
+              </h3>
+              <p className="typography-body text-zinc-700 transition-colors duration-300 dark:text-zinc-200">{placeholderDescription}</p>
+            </div>
+            <div className="space-y-4 rounded-3xl border border-zinc-200/70 bg-white/90 p-8 transition-colors duration-300 dark:border-white/10 dark:bg-white/5">
+              <h3 className="typography-subheading text-zinc-900 transition-colors duration-300 dark:text-white">{workProcessTitle}</h3>
+              <p className="typography-body text-zinc-700 transition-colors duration-300 dark:text-zinc-200">{placeholderProcess}</p>
+            </div>
           </div>
         </div>
       </section>

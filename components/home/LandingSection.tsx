@@ -6,7 +6,7 @@ type LandingSectionProps = {
 };
 
 const LandingSection = ({ jp = false }: LandingSectionProps) => {
-  const resumeHref = jp ? '/Resume(JiaSheng)Japanese.pdf' : '/Resume(Jia Sheng).pdf';
+  const resumeHref = jp ? '/Resume_Japanese.pdf' : '/Resume_English.pdf';
   const headline = jp
     ? '体験をデザインし、細部まで仕上げる。'
     : 'Designing experiences with an obsessive finish.';

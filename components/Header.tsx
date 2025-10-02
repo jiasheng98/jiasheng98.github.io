@@ -41,7 +41,7 @@ const Header = ({ jp = false, overlay = false }: HeaderProps) => {
   const languageSelectId = useId();
 
   const portfolioHref = jp ? '/jp/portfolio' : '/portfolio';
-  const resumeHref = jp ? '/Resume(JiaSheng)Japanese.pdf' : '/Resume(Jia Sheng).pdf';
+  const resumeHref = jp ? '/Resume_Japanese.pdf' : '/Resume_English.pdf';
   const englishHref = useMemo(() => {
     if (!jp) {
       return asPath && asPath !== '' ? asPath : '/';

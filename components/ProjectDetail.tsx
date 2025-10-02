@@ -50,11 +50,22 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
             <div className="relative overflow-hidden rounded-[3rem] border border-zinc-200/70 bg-white/90 p-6 backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-black/70">
               <div className="relative aspect-[16/10] w-full overflow-hidden rounded-[2rem] bg-zinc-100 transition-colors duration-300 dark:bg-zinc-900">
                 {project.heroImage ? (
-                  <LazyImage
-                    src={project.heroImage}
-                    alt={copy.title}
-                    className="h-full w-full object-contain p-6 drop-shadow-[0_40px_80px_rgba(15,23,42,0.45)]"
-                  />
+                  <>
+                    <LazyImage
+                      src={project.heroImage}
+                      alt={copy.title}
+                      className="h-full w-full object-contain p-6 drop-shadow-[0_40px_80px_rgba(15,23,42,0.45)]"
+                    />
+                    <div className="pointer-events-none absolute -right-6 bottom-10 w-32 min-w-[8rem] max-w-[9rem] rotate-2 overflow-hidden rounded-[2.25rem] border border-zinc-200/70 bg-white/95 p-3 shadow-2xl transition-all duration-300 dark:border-white/10 dark:bg-zinc-900/90 sm:-right-4 sm:bottom-12 sm:w-36 md:-right-2 md:bottom-14 md:w-40">
+                      <div className="aspect-[9/19] overflow-hidden rounded-[1.75rem] bg-zinc-100 transition-colors duration-300 dark:bg-zinc-950">
+                        <LazyImage
+                          src={project.heroImage}
+                          alt={`${copy.title} mobile preview`}
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
+                    </div>
+                  </>
                 ) : (
                   <div className="flex h-full w-full items-center justify-center p-6 text-center">
                     <p className="typography-body text-zinc-500 transition-colors duration-300 dark:text-zinc-400">

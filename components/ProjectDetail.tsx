@@ -14,23 +14,10 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
   const copy = project.copy[locale];
   const heroBackground = project.heroBackgroundColor ?? project.cardBackgroundColor;
   const websiteLabel = project.links?.website?.label?.[locale] ?? project.links?.website?.label?.en ?? undefined;
-
-  const overviewTitle = locale === 'jp' ? '概要' : 'Overview';
   const designLabel = locale === 'jp' ? 'デザイン' : 'Design';
   const developmentLabel = locale === 'jp' ? '開発' : 'Development';
   const roleLabel = locale === 'jp' ? '役割' : 'Role';
-  const linksLabel = locale === 'jp' ? '関連リンク' : 'Project Links';
   const designShowcaseTitle = locale === 'jp' ? 'デザイン解説' : 'Design Showcase';
-  const workProcessTitle = locale === 'jp' ? '制作プロセス' : 'Work Process';
-  const placeholderDescription =
-    locale === 'jp'
-      ? 'ここにデザインの背景やモックアップの説明を追加してください。'
-      : 'Use this space to describe your mockups, design decisions, or any supporting notes.';
-  const placeholderProcess =
-    locale === 'jp'
-      ? 'ここにプロジェクトの進め方、重要なステップ、学んだことなどを書き込んでください。'
-      : 'Add details about your workflow, important milestones, or lessons learned from the project.';
-
   const heroStyle = heroBackground
     ? {
       background: ``,
@@ -40,28 +27,30 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
   return (
     <article className="flex flex-col">
       <section className="relative isolate overflow-hidden border-b border-zinc-200/70 transition-colors duration-300 dark:border-white/10" style={heroStyle}>
-        {/* <div className="absolute inset-0 bg-white/80 dark:bg-black/65" /> */}
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-hero-soft opacity-60 dark:opacity-80" />
+        <div className="pointer-events-none absolute -left-1/2 top-1/4 h-[36rem] w-[36rem] rounded-full bg-indigo-500/20 blur-3xl" />
+        <div className="pointer-events-none absolute -right-1/3 bottom-0 h-[28rem] w-[28rem] rounded-full bg-pink-400/20 blur-3xl" />
         <div className="section-spacing layout-container--narrow flex flex-col items-center gap-10 text-center">
           <span className="typography-meta text-zinc-500 transition-colors duration-300 dark:text-zinc-400">{copy.date}</span>
           <h1 className="typography-display text-zinc-900 transition-colors duration-300 dark:text-white">{copy.title}</h1>
-          <p className="typography-body max-w-3xl text-zinc-700 transition-colors duration-300 dark:text-zinc-200">{copy.summary}</p>
+          <p className="typography-body max-w-3xl text-zinc-700 transition-colors duration-300 dark:text-zinc-200">{copy.overview}</p>
           <div className="relative w-full max-w-4xl">
             <div className="absolute inset-0 rounded-[3rem] bg-white/70 blur-3xl transition-colors duration-300 dark:bg-white/10" />
-            <div className="relative overflow-hidden rounded-[3rem] border border-zinc-200/70 bg-white/90 p-6 backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-black/70">
-              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-[2rem] bg-zinc-100 transition-colors duration-300 dark:bg-zinc-900">
+            <div className="relative overflow-hidden rounded-[1.2rem] md:rounded-[3rem] border border-zinc-200/70 bg-white/90 p-3 md:p-6 backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-black/70">
+              <div className="relative aspect-[26/19] w-full overflow-hidden rounded-[1rem] md:rounded-[2rem] bg-zinc-100 transition-colors duration-300 dark:bg-zinc-900">
                 {project.heroImage && project.heroImageMobile ? (
                   <>
                     <LazyImage
                       src={project.heroImage}
                       alt={copy.title}
-                      className="h-full w-full object-cover drop-shadow-[0_40px_80px_rgba(15,23,42,0.45)]"
+                      className="h-full w-full object-cover drop-shadow-[0_40px_80px_rgba(15,23,42,0.45)] object-top"
                     />
-                    <div className="pointer-events-none absolute -right-6 bottom-10 w-32 min-w-[8rem] max-w-[20rem] rotate-0 overflow-hidden rounded-[2.25rem] border border-zinc-200/70 bg-white/95 p-3 shadow-2xl transition-all duration-300 dark:border-black dark:bg-black sm:-right-4 sm:bottom-12 sm:w-36 md:right-5 md:bottom-5 md:w-60">
-                      <div className="aspect-[9/19] overflow-hidden rounded-[1.75rem] bg-zinc-100 transition-colors duration-300 dark:bg-zinc-950">
+                    <div className="pointer-events-none hidden md:block absolute -right-6 bottom-10 w-32 min-w-[8rem] max-w-[20rem] rotate-0 overflow-hidden rounded-[2.25rem] border border-zinc-200/70 bg-white/95 p-3 shadow-2xl transition-all duration-300 dark:border-black dark:bg-black sm:-right-4 sm:bottom-12 sm:w-36 md:right-5 md:bottom-5 md:w-60">
+                      <div className="aspect-[8/18] overflow-hidden rounded-[1.75rem] bg-zinc-100 transition-colors duration-300 dark:bg-zinc-950">
                         <LazyImage
                           src={project.heroImageMobile}
                           alt={`${copy.title} mobile preview`}
-                          className="h-full w-full object-cover"
+                          className="h-full w-full object-cover object-top"
                         />
                       </div>
                     </div>
@@ -79,114 +68,75 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
         </div>
       </section>
 
-      <section className="section-spacing border-b border-zinc-200/70 transition-colors duration-300 dark:border-white/10">
+      <section className="relative section-spacing border-b border-zinc-200/70 transition-colors duration-300 dark:border-white/10">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-72 bg-gradient-to-b from-indigo-500/20 via-transparent to-transparent blur-3xl" />
         <div className="layout-container space-y-12">
           <div className="space-y-4 text-center">
             <p className="typography-meta text-zinc-500 transition-colors duration-300 dark:text-zinc-400">{designShowcaseTitle}</p>
-            <h2 className="typography-display text-zinc-900 transition-colors duration-300 dark:text-white">{copy.title}</h2>
             <p className="typography-body mx-auto max-w-3xl text-zinc-700 transition-colors duration-300 dark:text-zinc-200">
-              {placeholderDescription}
+              {copy.summary}
             </p>
           </div>
 
           <div className="grid gap-8 lg:grid-cols-2">
-            <div className="space-y-4 rounded-3xl border border-zinc-200/70 bg-white/90 p-8 transition-colors duration-300 dark:border-white/10 dark:bg-white/5">
+            <div className="rounded-3xl border border-zinc-200/70 bg-white/90 p-8 transition-colors duration-300 dark:border-white/10 dark:bg-white/5">
               <h3 className="typography-subheading text-zinc-900 transition-colors duration-300 dark:text-white">
-                {locale === 'jp' ? 'デザイン意図' : 'Design Intent'}
+                {copy.feature1_header}
               </h3>
-              <p className="typography-body text-zinc-700 transition-colors duration-300 dark:text-zinc-200">{placeholderDescription}</p>
+              <p className="p-0 mt-2 typography-body text-zinc-700 transition-colors duration-300 dark:text-zinc-200">{copy.feature1_description}</p>
+              <div className="mt-8 relative aspect-[16/9] w-full overflow-hidden rounded-[1rem] bg-zinc-100 transition-colors duration-300 dark:bg-zinc-900">
+                <LazyImage
+                  src={project.feature1}
+                  alt={copy.title}
+                  className="h-full w-full object-cover drop-shadow-[0_40px_80px_rgba(15,23,42,0.45)] object-top"
+                />
+              </div>
             </div>
-            <div className="space-y-4 rounded-3xl border border-zinc-200/70 bg-white/90 p-8 transition-colors duration-300 dark:border-white/10 dark:bg-white/5">
-              <h3 className="typography-subheading text-zinc-900 transition-colors duration-300 dark:text-white">{workProcessTitle}</h3>
-              <p className="typography-body text-zinc-700 transition-colors duration-300 dark:text-zinc-200">{placeholderProcess}</p>
+            <div className="rounded-3xl border border-zinc-200/70 bg-white/90 p-8 transition-colors duration-300 dark:border-white/10 dark:bg-white/5">
+              <h3 className="typography-subheading text-zinc-900 transition-colors duration-300 dark:text-white">{copy.feature2_header}</h3>
+              <p className="p-0 mt-2 typography-body text-zinc-700 transition-colors duration-300 dark:text-zinc-200">{copy.feature2_description}</p>
+              <div className="mt-8 relative aspect-[16/9] w-full overflow-hidden rounded-[1rem] bg-zinc-100 transition-colors duration-300 dark:bg-zinc-900">
+                <LazyImage
+                  src={project.feature2}
+                  alt={copy.title}
+                  className="h-full w-full object-cover drop-shadow-[0_40px_80px_rgba(15,23,42,0.45)] object-top"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section-spacing">
-        <div className="layout-container flex flex-col gap-16 lg:flex-row">
-          <div className="flex-1 space-y-8">
-            <div>
-              <p className="typography-meta text-zinc-500 transition-colors duration-300 dark:text-zinc-400">{overviewTitle}</p>
-              <div className="mt-4 space-y-4 text-zinc-700 transition-colors duration-300 dark:text-zinc-300">
-                {copy.overview.map((paragraph, index) => (
-                  <p key={`${project.slug}-overview-${index}`} className="typography-body">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-            </div>
-
-            {/* <div className="grid gap-4 text-sm text-zinc-600 transition-colors duration-300 sm:grid-cols-2 dark:text-zinc-400">
-              {project.designTools ? (
-                <div className="rounded-2xl border border-zinc-200/70 bg-white/70 p-4 transition-colors duration-300 dark:border-white/10 dark:bg-white/5">
-                  <p className="text-xs uppercase tracking-[0.4em] text-zinc-500">{designLabel}</p>
-                  <p className="mt-2 text-sm text-zinc-800 transition-colors duration-300 dark:text-zinc-200">{project.designTools}</p>
-                </div>
-              ) : null}
-              {project.developmentTools ? (
-                <div className="rounded-2xl border border-zinc-200/70 bg-white/70 p-4 transition-colors duration-300 dark:border-white/10 dark:bg-white/5">
-                  <p className="text-xs uppercase tracking-[0.4em] text-zinc-500">{developmentLabel}</p>
-                  <p className="mt-2 text-sm text-zinc-800 transition-colors duration-300 dark:text-zinc-200">{project.developmentTools}</p>
-                </div>
-              ) : null}
-            </div> */}
-
-            {project.gallery.length ? (
-              <div>
-                <p className="typography-meta text-zinc-500 transition-colors duration-300 dark:text-zinc-400">{locale === 'jp' ? 'ビジュアル' : 'Gallery'}</p>
-                <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                  {project.gallery.map((image, index) => (
-                    <div
-                      key={`${project.slug}-gallery-${index}`}
-                      className="overflow-hidden rounded-3xl border border-zinc-200/70 bg-white/80 p-4 transition-colors duration-300 dark:border-white/10 dark:bg-white/5"
-                    >
-                      <LazyImage src={image} alt={`${copy.title} detail ${index + 1}`} className="w-full rounded-2xl object-cover" />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ) : null}
-          </div>
-
-          <aside className="w-full max-w-xl space-y-8 rounded-[2.5rem] border border-zinc-200/80 bg-white/90 p-8 shadow-2xl backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-black/60">
+      <section className="relative section-spacing border-b border-zinc-200/70 transition-colors duration-300 dark:border-white/10">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-72 bg-gradient-to-b from-sky-400/10 via-transparent to-transparent blur-3xl" />
+        <div className="layout-container--tight">
+          <aside className="w-full overflow-hidden space-y-8 rounded-[2.5rem] border border-zinc-200/80 bg-white/90 p-8 shadow-2xl backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-black/60">
+            <div className="pointer-events-none absolute inset-0 bg-hero-radial opacity-40 dark:opacity-60" />
             <div className="space-y-2">
               <p className="typography-meta text-zinc-500 transition-colors duration-300 dark:text-zinc-400">{roleLabel}</p>
               <p className="typography-subheading text-zinc-900 transition-colors duration-300 dark:text-white">{copy.role}</p>
               <p className="typography-body-sm text-zinc-600 transition-colors duration-300 dark:text-zinc-300">{copy.roleDescription}</p>
             </div>
             <div>
-              <p className="typography-meta text-zinc-500 transition-colors duration-300 dark:text-zinc-400">{linksLabel}</p>
+              <p className="typography-meta text-zinc-500 transition-colors duration-300 dark:text-zinc-400">{designLabel}</p>
               <div className="mt-4 flex flex-wrap gap-3">
-                {project.links?.appStore ? (
-                  <AppLink
-                    href={project.links.appStore}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 rounded-2xl border border-zinc-200/70 bg-white/80 px-5 py-3 typography-button text-zinc-800 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:bg-white hover:text-zinc-900 dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white dark:hover:text-black"
-                  >
-                    <img src={appStoreIcon} alt="App Store" className="h-5 w-auto" />
-                    App Store
-                  </AppLink>
-                ) : null}
-                {project.links?.playStore ? (
-                  <AppLink
-                    href={project.links.playStore}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 rounded-2xl border border-zinc-200/70 bg-white/80 px-5 py-3 typography-button text-zinc-800 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:bg-white hover:text-zinc-900 dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white dark:hover:text-black"
-                  >
-                    <img src={playStoreIcon} alt="Google Play" className="h-5 w-auto" />
-                    Google Play
-                  </AppLink>
-                ) : null}
+                {project.designTools}
+              </div>
+            </div>
+            <div>
+              <p className="typography-meta text-zinc-500 transition-colors duration-300 dark:text-zinc-400">{developmentLabel}</p>
+              <div className="mt-4 flex flex-wrap gap-3">
+                {project.developmentTools}
+              </div>
+            </div>
+            <div>
+              <div className="flex flex-col gap-3 text-zinc-600 transition-colors duration-300 sm:flex-row sm:items-center sm:justify-between dark:text-zinc-400">
                 {project.links?.website ? (
                   <AppLink
                     href={project.links.website.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 rounded-2xl border border-zinc-200/70 bg-white/80 px-5 py-3 typography-button text-zinc-800 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:bg-white hover:text-zinc-900 dark:border-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white dark:hover:text-black"
+                    className="whitespace-nowrap text-xl inline-flex items-center justify-center gap-2 rounded-full border border-zinc-200/70 px-6 py-2 typography-button text-zinc-800 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:text-zinc-900 dark:border-white/20 dark:text-white dark:hover:border-white"
                   >
                     <span>
                       {locale === 'jp' ? 'ウェブサイト' : 'Visit Website'}
@@ -196,9 +146,6 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
                 ) : null}
               </div>
             </div>
-            {/* <div className="rounded-2xl border border-zinc-200/70 bg-white/70 p-6 text-sm text-zinc-600 transition-colors duration-300 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300">
-              <p>{copy.date}</p>
-            </div> */}
           </aside>
         </div>
       </section>

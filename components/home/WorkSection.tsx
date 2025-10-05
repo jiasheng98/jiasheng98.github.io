@@ -65,50 +65,42 @@ const ProjectHighlight = ({ project, locale, index }: ProjectHighlightProps) => 
       <div className="flex flex-col relative gap-10 rounded-[2.75rem] border border-zinc-200/80 bg-white/90 p-10 backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-black/60">
         <div className="flex flex-col justify-between gap-10">
           <div className="space-y-6">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <div className="flex items-center gap-4">
+            <div className="flex gap-4 md:gap-8 flex-col-reverse md:flex-row sm:items-center sm:justify-between">
+
+              <div className="flex items-center gap-4 w-full md:w-50">
                 <div>
-                  {/* <p className="text-xs uppercase tracking-[0.35em] text-zinc-500">{copy.role}</p> */}
-                  <h3 className="mt-1 typography-subheading text-zinc-900 transition-colors duration-300 dark:text-white">{project.cardTitle}</h3>
+                  <h3 className="mt-4 md:mt-0 typography-subheading text-zinc-900 transition-colors duration-300 dark:text-white">{project.cardTitle}</h3>
+                  <p className="mt-2 typography-body text-zinc-600 transition-colors duration-300 dark:text-zinc-300">{copy.summary}</p>
+                  <div className="flex flex-col gap-3 text-zinc-600 transition-colors duration-300 sm:flex-row sm:items-center sm:justify-between dark:text-zinc-400">
+                    <AppLink
+                      href={href}
+                      className="mt-8 whitespace-nowrap text-xl inline-flex items-center justify-center gap-2 rounded-full border border-zinc-200/70 px-6 py-2 typography-button text-zinc-800 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:text-zinc-900 dark:border-white/20 dark:text-white dark:hover:border-white"
+                    >
+                      {copy.cta}
+                    </AppLink>
+                  </div>
                 </div>
               </div>
-              {/* <span className="rounded-full border border-zinc-200/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-zinc-700 transition-colors duration-300 dark:border-white/20 dark:text-zinc-100">
-                {copy.date}
-              </span> */}
-            </div>
-            <p className="typography-body text-zinc-600 transition-colors duration-300 dark:text-zinc-300">{copy.summary}</p>
-            {/* {project.gallery.length ? (
-              <div className="flex gap-4 overflow-x-auto pb-2">
-                {project.gallery.map((image, imageIndex) => (
-                  <div
-                    key={`${project.slug}-detail-${imageIndex}`}
-                    className="min-w-[9rem] flex-1 overflow-hidden rounded-2xl border border-zinc-200/70 bg-white/70 p-3 transition duration-300 hover:-translate-y-1 hover:bg-white dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10"
-                  >
+
+              <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[1rem] bg-zinc-100 transition-colors duration-300 dark:bg-zinc-900">
+                {project.heroImage && project.heroImageMobile ? (
+                  <>
                     <LazyImage
-                      src={image}
-                      className="h-32 w-full rounded-2xl object-cover"
-                      alt={`${project.cardTitle} detail ${imageIndex + 1}`}
+                      src={project.heroImage}
+                      alt={copy.title}
+                      className="h-full w-full object-cover drop-shadow-[0_40px_80px_rgba(15,23,42,0.45)] object-top"
                     />
+                  </>
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center p-6 text-center">
+                    <p className="typography-body text-zinc-500 transition-colors duration-300 dark:text-zinc-400">
+                      {locale === 'jp' ? 'ここにスクリーンモックアップを配置してください。' : 'Add your screen mockup in this placeholder.'}
+                    </p>
                   </div>
-                ))}
+                )}
               </div>
-            ) : null} */}
+            </div>
           </div>
-        </div>
-        {/* <div className="relative flex items-center justify-center">
-          <div className="absolute inset-0 rounded-[2.5rem] border border-zinc-200/70 bg-white/70 blur-3xl transition-colors duration-300 dark:border-white/10 dark:bg-white/5" />
-          <div className="p-4 flex h-40 w-60 items-center justify-center rounded-2xl border border-zinc-200/70 bg-white/80 transition-colors duration-300 dark:border-white/10 dark:bg-white/10">
-            <LazyImage src={project.logo} className="object-contain" alt={`${project.cardTitle} logo`} />
-          </div>
-        </div> */}
-        <div className="flex flex-col gap-3 text-zinc-600 transition-colors duration-300 sm:flex-row sm:items-center sm:justify-between dark:text-zinc-400">
-          {/* <span>{copy.roleDescription}</span> */}
-          <AppLink
-            href={href}
-            className="whitespace-nowrap inline-flex items-center justify-center gap-2 rounded-full border border-zinc-200/70 px-6 py-2 typography-button text-zinc-800 transition hover:-translate-y-0.5 hover:border-zinc-900 hover:text-zinc-900 dark:border-white/20 dark:text-white dark:hover:border-white"
-          >
-            {copy.cta}
-          </AppLink>
         </div>
       </div>
     </Reveal>

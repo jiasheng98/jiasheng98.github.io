@@ -8,6 +8,10 @@ export type ProjectCopy = {
   roleDescription: string;
   date: string;
   cta: string;
+  feature1_header: string;
+  feature2_header: string;
+  feature1_description: string;
+  feature2_description: string;
 };
 
 export type ProjectLinks = {
@@ -24,12 +28,14 @@ export type Project = {
   cardTitle: string;
   logo: string;
   heroImage: string;
-  heroImageMobile?: string;
+  heroImageMobile: string;
   gallery: string[];
   cardBackgroundColor: string;
   cardTextColor: string;
   cardHoverGradient?: [string, string];
   heroBackgroundColor?: string;
+  feature1: string;
+  feature2: string;
   designTools?: string;
   developmentTools?: string;
   links?: ProjectLinks;
@@ -43,6 +49,8 @@ const projects: Project[] = [
     logo: '/images/steelcase-logo.png',
     heroImage: '/images/steelcase.png',
     heroImageMobile: '/images/steelcasemobile.png',
+    feature1: '/images/steelcase1.png',
+    feature2: '/images/steelcase2.png',
     gallery: [],
     cardBackgroundColor: '#272725',
     cardTextColor: '#FFFFFF',
@@ -54,8 +62,8 @@ const projects: Project[] = [
       website: {
         href: 'https://shop.steelcase.com/',
         label: {
-          en: 'Landing Page',
-          jp: 'Steelcase',
+          en: '',
+          jp: '',
         },
       },
     },
@@ -68,10 +76,14 @@ const projects: Project[] = [
           'Steelcase is an international manufacturer of furniture, casegoods, seating, and storage and partitioning systems for offices, hospitals, classrooms, and residential interiors.',
           'The Shopify website was designed using a sleek, clean and modern approach.',
         ],
-        role: 'UI/UX Designer, UI Developer',
+        role: 'UI/UX Designer',
         roleDescription: 'Interaction, visual design, prototyping, wireframe, testing and copywriting',
         date: 'March 2022 - Present',
         cta: 'Check it Out',
+        feature1_header: 'Gaming Focused',
+        feature2_header: 'Conversion Focused',
+        feature1_description: 'Feature 1',
+        feature2_description: 'Feature 2',
       },
       jp: {
         title: 'Steelcase（スチールケース）',
@@ -81,18 +93,25 @@ const projects: Project[] = [
           'Steelcase（スチールケース）は、オフィス、病院、教室、および住宅インテリア向けの家具、ケースグッズ、シーティング、収納および仕切りシステムの国際的な製造メーカーです。',
           'Shopifyのウェブサイトは、洗練された、清潔でモダンなアプローチを用いてデザインされました。',
         ],
-        role: 'UI/UX デザイナー, UI 開発者',
+        role: 'UI/UX デザイナー',
         roleDescription: 'ビジュアルデザイン, インタラクション, プロトタイピング, ワイヤーフレーム',
         date: '2022年3月 - 現在',
         cta: '詳しくはこちら',
+        feature1_header: 'Gaming Focused',
+        feature2_header: 'Conversion Focused',
+        feature1_description: 'Feature 1',
+        feature2_description: 'Feature 2',
       },
     },
   },
   {
     slug: 'ttracing',
     cardTitle: 'TTRacing',
-    logo: '/images/ttracing-logo.png',
-    heroImage: '/images/ttracing_ui_home.png',
+    logo: '/images/ttracingwhite.png',
+    heroImage: '/images/ttracing.png',
+    heroImageMobile: '/images/ttracingmobile.png',
+    feature1: '/images/steelcase1.png',
+    feature2: '/images/steelcase2.png',
     gallery: [],
     cardBackgroundColor: '#FFFFFF',
     cardTextColor: '#000000',
@@ -104,8 +123,8 @@ const projects: Project[] = [
       website: {
         href: 'http://ttracing.my/',
         label: {
-          en: 'Landing Page',
-          jp: 'TTRacing',
+          en: '',
+          jp: '',
         },
       },
     },
@@ -118,10 +137,14 @@ const projects: Project[] = [
           'TTRacing is a gaming chair company that strives to give everyone the best comfort experience for when they’re working or playing for long hours.',
           'The Shopify website was designed using a sleek, clean and modern approach.',
         ],
-        role: 'Creative Lead, UI/UX Designer, UI Developer',
+        role: 'Creative Lead',
         roleDescription: 'Interaction, visual design, prototyping, wireframe, testing and copywriting',
         date: 'January 2021 - March 2022',
         cta: 'Check it Out',
+        feature1_header: 'Gaming Focused',
+        feature2_header: 'Conversion Focused',
+        feature1_description: 'Feature 1',
+        feature2_description: 'Feature 2',
       },
       jp: {
         title: 'TTRacing（ティーティーレーシング）',
@@ -131,16 +154,142 @@ const projects: Project[] = [
           'TTRacing（ティーティーレーシング）は、ゲーミングチェアの企業であり、誰もが長時間働いたりプレイしたりする際に最高の快適な体験を提供しようと努力しています。',
           'Shopifyのウェブサイトは、洗練された、清潔でモダンなアプローチを用いてデザインされました。',
         ],
-        role: 'クリエイティブリード, UI/UX デザイナー, UI 開発者',
+        role: 'クリエイティブリード',
         roleDescription: 'ビジュアルデザイン, インタラクション, プロトタイピング, ワイヤーフレーム',
         date: '2021年1月 - 2022年3月',
         cta: '詳しくはこちら',
+        feature1_header: 'Gaming Focused',
+        feature2_header: 'Conversion Focused',
+        feature1_description: 'Feature 1',
+        feature2_description: 'Feature 2',
+      },
+    },
+  },
+  {
+    slug: 'gptchart',
+    cardTitle: 'GPTChart',
+    logo: '/images/steelcase-logo.png',
+    heroImage: '/images/gptchart.png',
+    heroImageMobile: '/images/gptchartmobile.png',
+    feature1: '/images/steelcase1.png',
+    feature2: '/images/steelcase2.png',
+    gallery: [],
+    cardBackgroundColor: '#272725',
+    cardTextColor: '#FFFFFF',
+    cardHoverGradient: ['#6610f2', '#FFFFFF'],
+    heroBackgroundColor: '#000000',
+    designTools: 'Adobe XD, Shopify, Adobe Photoshop, Adobe Illustrator',
+    developmentTools: 'Liquid Template Language (Liquid), HTML, CSS, jQuery, Javascript',
+    links: {
+      website: {
+        href: 'https://shop.steelcase.com/',
+        label: {
+          en: '',
+          jp: '',
+        },
+      },
+    },
+    copy: {
+      en: {
+        title: 'Steelcase',
+        summary:
+          'Took part in the entire Shopify UI/UX design and development for Steelcase - an international manufacturer of furniture, casegoods, seating, and storage and partitioning systems for offices, hospitals, classrooms, and residential interiors.',
+        overview: [
+          'Steelcase is an international manufacturer of furniture, casegoods, seating, and storage and partitioning systems for offices, hospitals, classrooms, and residential interiors.',
+          'The Shopify website was designed using a sleek, clean and modern approach.',
+        ],
+        role: 'UI/UX Designer',
+        roleDescription: 'Interaction, visual design, prototyping, wireframe, testing and copywriting',
+        date: 'March 2022 - Present',
+        cta: 'Check it Out',
+        feature1_header: 'Gaming Focused',
+        feature2_header: 'Conversion Focused',
+        feature1_description: 'Feature 1',
+        feature2_description: 'Feature 2',
+      },
+      jp: {
+        title: 'Steelcase（スチールケース）',
+        summary:
+          'Steelcase（国際的な家具、ケースグッズ、シーティング、オフィス、病院、教室、住宅インテリア向けの収納および仕切りシステムの製造メーカー）において、ShopifyのUI/UXデザインおよび開発全般に参加しました。',
+        overview: [
+          'Steelcase（スチールケース）は、オフィス、病院、教室、および住宅インテリア向けの家具、ケースグッズ、シーティング、収納および仕切りシステムの国際的な製造メーカーです。',
+          'Shopifyのウェブサイトは、洗練された、清潔でモダンなアプローチを用いてデザインされました。',
+        ],
+        role: 'UI/UX デザイナー',
+        roleDescription: 'ビジュアルデザイン, インタラクション, プロトタイピング, ワイヤーフレーム',
+        date: '2022年3月 - 現在',
+        cta: '詳しくはこちら',
+        feature1_header: 'Gaming Focused',
+        feature2_header: 'Conversion Focused',
+        feature1_description: 'Feature 1',
+        feature2_description: 'Feature 2',
+      },
+    },
+  },
+  {
+    slug: 'ctflife',
+    cardTitle: 'CTFLife',
+    logo: '/images/steelcase-logo.png',
+    heroImage: '/images/ctflife.png',
+    heroImageMobile: '/images/steelcasemobile.png',
+    feature1: '/images/steelcase1.png',
+    feature2: '/images/steelcase2.png',
+    gallery: [],
+    cardBackgroundColor: '#272725',
+    cardTextColor: '#FFFFFF',
+    cardHoverGradient: ['#009188', '#004846'],
+    heroBackgroundColor: '#000000',
+    designTools: 'Adobe XD, Shopify, Adobe Photoshop, Adobe Illustrator',
+    developmentTools: 'Liquid Template Language (Liquid), HTML, CSS, jQuery, Javascript',
+    links: {
+      website: {
+        href: 'https://shop.steelcase.com/',
+        label: {
+          en: '',
+          jp: '',
+        },
+      },
+    },
+    copy: {
+      en: {
+        title: 'Steelcase',
+        summary:
+          'Took part in the entire Shopify UI/UX design and development for Steelcase - an international manufacturer of furniture, casegoods, seating, and storage and partitioning systems for offices, hospitals, classrooms, and residential interiors.',
+        overview: [
+          'Steelcase is an international manufacturer of furniture, casegoods, seating, and storage and partitioning systems for offices, hospitals, classrooms, and residential interiors.',
+          'The Shopify website was designed using a sleek, clean and modern approach.',
+        ],
+        role: 'UI/UX Designer',
+        roleDescription: 'Interaction, visual design, prototyping, wireframe, testing and copywriting',
+        date: 'March 2022 - Present',
+        cta: 'Check it Out',
+        feature1_header: 'Gaming Focused',
+        feature2_header: 'Conversion Focused',
+        feature1_description: 'Feature 1',
+        feature2_description: 'Feature 2',
+      },
+      jp: {
+        title: 'Steelcase（スチールケース）',
+        summary:
+          'Steelcase（国際的な家具、ケースグッズ、シーティング、オフィス、病院、教室、住宅インテリア向けの収納および仕切りシステムの製造メーカー）において、ShopifyのUI/UXデザインおよび開発全般に参加しました。',
+        overview: [
+          'Steelcase（スチールケース）は、オフィス、病院、教室、および住宅インテリア向けの家具、ケースグッズ、シーティング、収納および仕切りシステムの国際的な製造メーカーです。',
+          'Shopifyのウェブサイトは、洗練された、清潔でモダンなアプローチを用いてデザインされました。',
+        ],
+        role: 'UI/UX デザイナー',
+        roleDescription: 'ビジュアルデザイン, インタラクション, プロトタイピング, ワイヤーフレーム',
+        date: '2022年3月 - 現在',
+        cta: '詳しくはこちら',
+        feature1_header: 'Gaming Focused',
+        feature2_header: 'Conversion Focused',
+        feature1_description: 'Feature 1',
+        feature2_description: 'Feature 2',
       },
     },
   },
 ];
 
-export const featuredProjectSlugs = ['steelcase', 'ttracing'] as const;
+export const featuredProjectSlugs = ['steelcase', 'ttracing', 'gptchart', 'ctflife'] as const;
 
 export const getProjects = () => projects;
 

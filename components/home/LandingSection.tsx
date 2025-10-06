@@ -11,7 +11,7 @@ const LandingSection = ({ jp = false }: LandingSectionProps) => {
     ? '体験をデザインし、細部まで仕上げる。'
     : 'Designing experiences with an obsessive finish.';
   const subheadline = jp
-    ? 'SteelcaseでUI/UXデザイナーとして働きながら、プロダクト戦略からコードまで、ブランドの魅力を形にしています。'
+    ? 'EPAMでUI/UXデザイナーとして、ブランドストーリーから完成したコードまで、一貫して体験を形にしています。'
     : 'UI/UX designer at EPAM, crafting brand stories and interfaces from strategy through polished code.';
   const badge = jp ? 'UI/UXデザイナー' : 'Product Designer';
   const primaryCta = jp ? '制作実績を見る' : 'Explore Work';

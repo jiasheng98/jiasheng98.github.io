@@ -30,11 +30,11 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
         <div className="pointer-events-none absolute inset-0 -z-10 bg-hero-soft opacity-60 dark:opacity-80" />
         <div className="pointer-events-none absolute -left-1/2 top-1/4 h-[36rem] w-[36rem] rounded-full bg-indigo-500/20 blur-3xl" />
         <div className="pointer-events-none absolute -right-1/3 bottom-0 h-[28rem] w-[28rem] rounded-full bg-pink-400/20 blur-3xl" />
-        <div className="section-spacing layout-container--narrow flex flex-col items-center gap-10 text-center">
+        <div className="section-spacing layout-container flex flex-col items-center gap-10 text-center">
           <span className="typography-meta text-zinc-500 transition-colors duration-300 dark:text-zinc-400">{copy.date}</span>
           <h1 className="typography-display text-zinc-900 transition-colors duration-300 dark:text-white">{copy.title}</h1>
           <p className="typography-body max-w-3xl text-zinc-700 transition-colors duration-300 dark:text-zinc-200">{copy.overview}</p>
-          <div className="relative w-full max-w-4xl">
+          <div className="relative w-full">
             <div className="absolute inset-0 rounded-[3rem] bg-white/70 blur-3xl transition-colors duration-300 dark:bg-white/10" />
             <div className="relative overflow-hidden rounded-[1.2rem] md:rounded-[3rem] border border-zinc-200/70 bg-white/90 p-3 md:p-6 backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-black/70">
               <div className="relative aspect-[26/19] w-full overflow-hidden rounded-[1rem] md:rounded-[2rem] bg-zinc-100 transition-colors duration-300 dark:bg-zinc-900">
@@ -45,8 +45,8 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
                       alt={copy.title}
                       className="h-full w-full object-cover drop-shadow-[0_40px_80px_rgba(15,23,42,0.45)] object-top"
                     />
-                    <div className="pointer-events-none hidden md:block absolute -right-6 bottom-10 w-32 min-w-[8rem] max-w-[20rem] rotate-0 overflow-hidden rounded-[2.25rem] border border-zinc-200/70 bg-white/95 p-3 shadow-2xl transition-all duration-300 dark:border-black dark:bg-black sm:-right-4 sm:bottom-12 sm:w-36 md:right-5 md:bottom-5 md:w-60">
-                      <div className="aspect-[8/18] overflow-hidden rounded-[1.75rem] bg-zinc-100 transition-colors duration-300 dark:bg-zinc-950">
+                    <div className="pointer-events-none hidden md:block absolute -right-6 bottom-10 w-32 min-w-[12rem] max-w-[30rem] rotate-0 overflow-hidden rounded-[2.25rem] border border-zinc-200/70 bg-white/95 p-3 shadow-2xl transition-all duration-300 dark:border-black dark:bg-black sm:-right-4 sm:bottom-12 sm:w-36 md:right-5 md:bottom-5 md:w-80">
+                      <div className="aspect-[18/36] overflow-hidden rounded-[1.75rem] bg-zinc-100 transition-colors duration-300 dark:bg-zinc-950">
                         <LazyImage
                           src={project.heroImageMobile}
                           alt={`${copy.title} mobile preview`}
@@ -78,7 +78,7 @@ const ProjectDetail = ({ project, locale }: ProjectDetailProps) => {
             </p>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-2">
+          <div className="grid gap-8 lg:grid-cols-1">
             <div className="rounded-3xl border border-zinc-200/70 bg-white/90 p-8 transition-colors duration-300 dark:border-white/10 dark:bg-white/5">
               <h3 className="typography-subheading text-zinc-900 transition-colors duration-300 dark:text-white">
                 {copy.feature1_header}

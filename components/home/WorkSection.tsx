@@ -70,7 +70,7 @@ const ProjectHighlight = ({ project, locale, index }: ProjectHighlightProps) => 
               <div className="flex items-center gap-4 w-full md:w-50">
                 <div>
                   <h3 className="mt-4 md:mt-0 typography-subheading text-zinc-900 transition-colors duration-300 dark:text-white">{project.cardTitle}</h3>
-                  <p className="mt-2 typography-body text-zinc-600 transition-colors duration-300 dark:text-zinc-300">{copy.summary}</p>
+                  <p className="mt-2 typography-body text-zinc-600 transition-colors duration-300 dark:text-zinc-300">{copy.overview}</p>
                   <div className="flex flex-col gap-3 text-zinc-600 transition-colors duration-300 sm:flex-row sm:items-center sm:justify-between dark:text-zinc-400">
                     <AppLink
                       href={href}

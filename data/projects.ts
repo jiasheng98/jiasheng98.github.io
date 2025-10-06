@@ -77,7 +77,7 @@ const projects: Project[] = [
           'The Shopify website was designed using a sleek, clean and modern approach.',
         ],
         role: 'UI/UX Designer',
-        roleDescription: 'Interaction, visual design, prototyping, wireframe, testing and copywriting',
+        roleDescription: 'Interaction, Visual Design, Prototyping, Wireframe, Testing and Copywriting',
         date: 'March 2022 - Present',
         cta: 'Check it Out',
         feature1_header: 'Gaming Focused',
@@ -138,7 +138,7 @@ const projects: Project[] = [
           'The Shopify website was designed using a sleek, clean and modern approach.',
         ],
         role: 'Creative Lead',
-        roleDescription: 'Interaction, visual design, prototyping, wireframe, testing and copywriting',
+        roleDescription: 'Interaction, Visual Design, Prototyping, Wireframe, Testing and Copywriting',
         date: 'January 2021 - March 2022',
         cta: 'Check it Out',
         feature1_header: 'Gaming Focused',
@@ -178,11 +178,11 @@ const projects: Project[] = [
     cardTextColor: '#FFFFFF',
     cardHoverGradient: ['#6610f2', '#FFFFFF'],
     heroBackgroundColor: '#000000',
-    designTools: 'Adobe XD, Shopify, Adobe Photoshop, Adobe Illustrator',
-    developmentTools: 'Liquid Template Language (Liquid), HTML, CSS, jQuery, Javascript',
+    designTools: 'Figma',
+    developmentTools: 'React, Next.js, Firebase, Google Cloud, OpenAI API, Codex, ChatGPT',
     links: {
       website: {
-        href: 'https://shop.steelcase.com/',
+        href: 'https://gptchart.ai/',
         label: {
           en: '',
           jp: '',
@@ -191,15 +191,15 @@ const projects: Project[] = [
     },
     copy: {
       en: {
-        title: 'Steelcase',
+        title: 'GPTChart',
         summary:
           'Took part in the entire Shopify UI/UX design and development for Steelcase - an international manufacturer of furniture, casegoods, seating, and storage and partitioning systems for offices, hospitals, classrooms, and residential interiors.',
         overview: [
           'Steelcase is an international manufacturer of furniture, casegoods, seating, and storage and partitioning systems for offices, hospitals, classrooms, and residential interiors.',
           'The Shopify website was designed using a sleek, clean and modern approach.',
         ],
-        role: 'UI/UX Designer',
-        roleDescription: 'Interaction, visual design, prototyping, wireframe, testing and copywriting',
+        role: 'Founder',
+        roleDescription: 'UI/UX Design, Frontend, Backend, Marketing',
         date: 'March 2022 - Present',
         cta: 'Check it Out',
         feature1_header: 'Gaming Focused',
@@ -231,7 +231,7 @@ const projects: Project[] = [
     cardTitle: 'CTFLife',
     logo: '/images/steelcase-logo.png',
     heroImage: '/images/ctflife.png',
-    heroImageMobile: '/images/steelcasemobile.png',
+    heroImageMobile: '/images/ctflifemobile.png',
     feature1: '/images/steelcase1.png',
     feature2: '/images/steelcase2.png',
     gallery: [],
@@ -239,11 +239,11 @@ const projects: Project[] = [
     cardTextColor: '#FFFFFF',
     cardHoverGradient: ['#009188', '#004846'],
     heroBackgroundColor: '#000000',
-    designTools: 'Adobe XD, Shopify, Adobe Photoshop, Adobe Illustrator',
-    developmentTools: 'Liquid Template Language (Liquid), HTML, CSS, jQuery, Javascript',
+    designTools: 'Figma, Power BI',
+    developmentTools: '-',
     links: {
       website: {
-        href: 'https://shop.steelcase.com/',
+        href: 'https://corpagyprospect.b2clogin.com/corpagyprospect.onmicrosoft.com/b2c_1_recruitment_signin_flow_prd/oauth2/v2.0/authorize?client_id=7b6f9da8-6e92-45c9-b01a-f9d79cbb639e&scope=openid%20offline_access%20profile&redirect_uri=https%3A%2F%2Fsmartrecruit.ctflife.com.hk&client-request-id=4ff22c77-1607-4bb6-bee5-484ce81db2af&response_mode=fragment&response_type=code&x-client-SKU=msal.js.browser&x-client-VER=2.31.0&client_info=1&code_challenge=rNjIkJ3XlGXM0OLn64s0U8BQYUeYeGSDbwjXmHA1fmI&code_challenge_method=S256&nonce=0982ea8e-235c-446a-a861-ddfe7c88b375&state=eyJpZCI6IjI4MDc5YjMxLTQ1OTAtNDA4Ny04ZTZkLTZmNDJjMWZlNzM2MyIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D&lang=zh-HK',
         label: {
           en: '',
           jp: '',
@@ -252,7 +252,7 @@ const projects: Project[] = [
     },
     copy: {
       en: {
-        title: 'Steelcase',
+        title: 'CTFLife',
         summary:
           'Took part in the entire Shopify UI/UX design and development for Steelcase - an international manufacturer of furniture, casegoods, seating, and storage and partitioning systems for offices, hospitals, classrooms, and residential interiors.',
         overview: [
@@ -260,7 +260,68 @@ const projects: Project[] = [
           'The Shopify website was designed using a sleek, clean and modern approach.',
         ],
         role: 'UI/UX Designer',
-        roleDescription: 'Interaction, visual design, prototyping, wireframe, testing and copywriting',
+        roleDescription: 'UI/UX design, Prototyping, Wireframe, Testing and Copywriting',
+        date: 'March 2022 - Present',
+        cta: 'Check it Out',
+        feature1_header: 'Gaming Focused',
+        feature2_header: 'Conversion Focused',
+        feature1_description: 'Feature 1',
+        feature2_description: 'Feature 2',
+      },
+      jp: {
+        title: 'Steelcase（スチールケース）',
+        summary:
+          'Steelcase（国際的な家具、ケースグッズ、シーティング、オフィス、病院、教室、住宅インテリア向けの収納および仕切りシステムの製造メーカー）において、ShopifyのUI/UXデザインおよび開発全般に参加しました。',
+        overview: [
+          'Steelcase（スチールケース）は、オフィス、病院、教室、および住宅インテリア向けの家具、ケースグッズ、シーティング、収納および仕切りシステムの国際的な製造メーカーです。',
+          'Shopifyのウェブサイトは、洗練された、清潔でモダンなアプローチを用いてデザインされました。',
+        ],
+        role: 'UI/UX デザイナー',
+        roleDescription: 'ビジュアルデザイン, インタラクション, プロトタイピング, ワイヤーフレーム',
+        date: '2022年3月 - 現在',
+        cta: '詳しくはこちら',
+        feature1_header: 'Gaming Focused',
+        feature2_header: 'Conversion Focused',
+        feature1_description: 'Feature 1',
+        feature2_description: 'Feature 2',
+      },
+    },
+  },
+  {
+    slug: 'resiclub',
+    cardTitle: 'Mitsubishi Residence Club',
+    logo: '/images/steelcase-logo.png',
+    heroImage: '/images/resiclub.png',
+    heroImageMobile: '/images/resiclubmobile.png',
+    feature1: '/images/steelcase1.png',
+    feature2: '/images/steelcase2.png',
+    gallery: [],
+    cardBackgroundColor: '#272725',
+    cardTextColor: '#FFFFFF',
+    cardHoverGradient: ['#B81C22', '#FBF1F2'],
+    heroBackgroundColor: '#000000',
+    designTools: 'Figma, ChatGPT, Recraft',
+    developmentTools: '-',
+    links: {
+      website: {
+        href: 'https://www.resiclub.com/',
+        label: {
+          en: '',
+          jp: '',
+        },
+      },
+    },
+    copy: {
+      en: {
+        title: 'Mitsubishi Residence Club',
+        summary:
+          'Took part in the entire Shopify UI/UX design and development for Steelcase - an international manufacturer of furniture, casegoods, seating, and storage and partitioning systems for offices, hospitals, classrooms, and residential interiors.',
+        overview: [
+          'Steelcase is an international manufacturer of furniture, casegoods, seating, and storage and partitioning systems for offices, hospitals, classrooms, and residential interiors.',
+          'The Shopify website was designed using a sleek, clean and modern approach.',
+        ],
+        role: 'UI/UX Designer',
+        roleDescription: 'UI/UX design, Prototyping, Wireframe, Testing and Copywriting',
         date: 'March 2022 - Present',
         cta: 'Check it Out',
         feature1_header: 'Gaming Focused',
@@ -289,7 +350,7 @@ const projects: Project[] = [
   },
 ];
 
-export const featuredProjectSlugs = ['steelcase', 'ttracing', 'gptchart', 'ctflife'] as const;
+export const featuredProjectSlugs = ['resiclub', 'ctflife', 'gptchart', 'steelcase', 'ttracing'] as const;
 
 export const getProjects = () => projects;
 
